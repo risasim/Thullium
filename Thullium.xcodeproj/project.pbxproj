@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */; };
+		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
+		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
+		790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D62AB39A0A00D1CD3A /* ElementOverview.swift */; };
+		790070D92AB39A2000D1CD3A /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D82AB39A2000D1CD3A /* ElementView.swift */; };
+		793464742AB572EA00407F15 /* InfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464732AB572EA00407F15 /* InfoImage.swift */; };
+		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
+		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
+		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
+		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
+		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
+		795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E532AB4E33B00BB077C /* ElementInfoView.swift */; };
+		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
+		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
+		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
 		79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD92AB21F400075DC69 /* ContentView.swift */; };
 		79F93DDC2AB21F400075DC69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DDB2AB21F400075DC69 /* Item.swift */; };
@@ -15,6 +30,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
+		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
+		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
+		790070D62AB39A0A00D1CD3A /* ElementOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementOverview.swift; sourceTree = "<group>"; };
+		790070D82AB39A2000D1CD3A /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
+		793464732AB572EA00407F15 /* InfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImage.swift; sourceTree = "<group>"; };
+		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
+		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
+		7938C57C2AB70018001189D2 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
+		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
+		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
+		795C6E532AB4E33B00BB077C /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
+		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
+		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
 		79F93DD92AB21F400075DC69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +64,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		790070CD2AB37C5900D1CD3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		790070D22AB37CC200D1CD3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7968576F2AB885CA00A0594C /* Game */,
+				795C6E502AB4976400BB077C /* SwiftData */,
+				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		790070D32AB399E700D1CD3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7938C57B2AB62C87001189D2 /* Chemistry */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		793464722AB572AD00407F15 /* ElementInfoGroup */ = {
+			isa = PBXGroup;
+			children = (
+				793464732AB572EA00407F15 /* InfoImage.swift */,
+				793464752AB573FA00407F15 /* InfoSign.swift */,
+				793464772AB57F7A00407F15 /* InfoBasic.swift */,
+			);
+			path = ElementInfoGroup;
+			sourceTree = "<group>";
+		};
+		7938C57B2AB62C87001189D2 /* Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				790070D42AB399FA00D1CD3A /* ChemistryView.swift */,
+				7968576C2AB72E5B00A0594C /* ChemistryGroup */,
+			);
+			path = Chemistry;
+			sourceTree = "<group>";
+		};
+		795C6E502AB4976400BB077C /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				79F93DDB2AB21F400075DC69 /* Item.swift */,
+				790070D02AB37C8E00D1CD3A /* ElementModel.swift */,
+				795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
+			isa = PBXGroup;
+			children = (
+				7938C57C2AB70018001189D2 /* PeriodicTableView.swift */,
+				796857722AB8906500A0594C /* GamePeriodicTableView.swift */,
+				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
+				790070D82AB39A2000D1CD3A /* ElementView.swift */,
+				795C6E532AB4E33B00BB077C /* ElementInfoView.swift */,
+				793464722AB572AD00407F15 /* ElementInfoGroup */,
+			);
+			path = ChemistryGroup;
+			sourceTree = "<group>";
+		};
+		7968576F2AB885CA00A0594C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				796857702AB885D800A0594C /* GameModel.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		79F93DCB2AB21F3F0075DC69 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +158,13 @@
 		79F93DD62AB21F400075DC69 /* FlashCards */ = {
 			isa = PBXGroup;
 			children = (
+				790070D32AB399E700D1CD3A /* Views */,
+				790070D22AB37CC200D1CD3A /* Models */,
 				79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */,
 				79F93DD92AB21F400075DC69 /* ContentView.swift */,
-				79F93DDB2AB21F400075DC69 /* Item.swift */,
+				795C6E512AB4DBC600BB077C /* testdata.json */,
+				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
+				790070CD2AB37C5900D1CD3A /* Resources */,
 				79F93DDD2AB21F420075DC69 /* Assets.xcassets */,
 				79F93DDF2AB21F420075DC69 /* Preview Content */,
 			);
@@ -130,6 +239,8 @@
 			files = (
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
+				790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */,
+				795C6E522AB4DBC600BB077C /* testdata.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +251,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
+				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
+				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
+				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
+				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */,
+				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				79F93DDC2AB21F400075DC69 /* Item.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
+				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
+				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
+				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
+				790070D92AB39A2000D1CD3A /* ElementView.swift in Sources */,
+				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
+				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
+				795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +403,8 @@
 				DEVELOPMENT_TEAM = 6Q38DY93CU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Thullium;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -289,7 +415,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richie.FlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,6 +434,8 @@
 				DEVELOPMENT_TEAM = 6Q38DY93CU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Thullium;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richie.FlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
