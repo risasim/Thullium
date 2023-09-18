@@ -1,0 +1,15 @@
+{
+    "elements": [
+        {
+            "name": "Hydrogen",
+            "appearance": "colorless gas",
+            "atomic_mass": 1.008
+        },
+        {
+            "name": "Helium",
+            "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
+            "atomic_mass": 4.0026022
+            
+        }
+    ]
+}
