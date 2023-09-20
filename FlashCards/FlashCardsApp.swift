@@ -8,11 +8,14 @@
 import SwiftUI
 import SwiftData
 
+// data https://github.com/Bowserinator/Periodic-Table-JSON/blob/master/PeriodicTableJSON.json
+
 @main
 struct FlashCardsApp: App {
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ElementsData.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +28,9 @@ struct FlashCardsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           // ContentView()
+            ChemistryView()
+              
         }
         .modelContainer(sharedModelContainer)
     }

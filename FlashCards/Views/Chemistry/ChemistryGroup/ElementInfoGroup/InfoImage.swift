@@ -17,7 +17,7 @@ struct InfoImage: View {
             case .success(let image):
                 image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
             case.empty:
                 ProgressView()
             case.failure:
@@ -27,7 +27,7 @@ struct InfoImage: View {
             }
         }
         .background(Color.white)
-        .frame(maxWidth: .infinity, minHeight: 100)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
         .padding()
     }

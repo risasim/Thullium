@@ -11,7 +11,9 @@
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
 		790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D62AB39A0A00D1CD3A /* ElementOverview.swift */; };
-		790070D92AB39A2000D1CD3A /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D82AB39A2000D1CD3A /* ElementView.swift */; };
+		791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */; };
+		791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 791C59722ABB317F007CCAB8 /* Localizable.strings */; };
+		791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C59742ABB3392007CCAB8 /* SearchTable.swift */; };
 		793464742AB572EA00407F15 /* InfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464732AB572EA00407F15 /* InfoImage.swift */; };
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
@@ -22,6 +24,8 @@
 		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
 		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
 		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
+		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
+		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
 		79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD92AB21F400075DC69 /* ContentView.swift */; };
 		79F93DDC2AB21F400075DC69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DDB2AB21F400075DC69 /* Item.swift */; };
@@ -34,7 +38,10 @@
 		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
 		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
 		790070D62AB39A0A00D1CD3A /* ElementOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementOverview.swift; sourceTree = "<group>"; };
-		790070D82AB39A2000D1CD3A /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
+		791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerodicTest.swift; sourceTree = "<group>"; };
+		791C59712ABB317F007CCAB8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		791C59732ABB3181007CCAB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		791C59742ABB3392007CCAB8 /* SearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
 		793464732AB572EA00407F15 /* InfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImage.swift; sourceTree = "<group>"; };
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
@@ -45,7 +52,9 @@
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
-		79F93DD42AB21F400075DC69 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
+		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
+		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
 		79F93DD92AB21F400075DC69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79F93DDB2AB21F400075DC69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 				7968576F2AB885CA00A0594C /* Game */,
 				795C6E502AB4976400BB077C /* SwiftData */,
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
+				791C59742ABB3392007CCAB8 /* SearchTable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +97,18 @@
 				7938C57B2AB62C87001189D2 /* Chemistry */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		791C596D2ABB307D007CCAB8 /* PeriodicTable */ = {
+			isa = PBXGroup;
+			children = (
+				7938C57C2AB70018001189D2 /* PeriodicTableView.swift */,
+				791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */,
+				796857722AB8906500A0594C /* GamePeriodicTableView.swift */,
+				79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */,
+				79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */,
+			);
+			path = PeriodicTable;
 			sourceTree = "<group>";
 		};
 		793464722AB572AD00407F15 /* ElementInfoGroup */ = {
@@ -121,10 +143,8 @@
 		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
 			isa = PBXGroup;
 			children = (
-				7938C57C2AB70018001189D2 /* PeriodicTableView.swift */,
-				796857722AB8906500A0594C /* GamePeriodicTableView.swift */,
+				791C596D2ABB307D007CCAB8 /* PeriodicTable */,
 				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
-				790070D82AB39A2000D1CD3A /* ElementView.swift */,
 				795C6E532AB4E33B00BB077C /* ElementInfoView.swift */,
 				793464722AB572AD00407F15 /* ElementInfoGroup */,
 			);
@@ -150,7 +170,7 @@
 		79F93DD52AB21F400075DC69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79F93DD42AB21F400075DC69 /* FlashCards.app */,
+				79F93DD42AB21F400075DC69 /* Thullium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +187,7 @@
 				790070CD2AB37C5900D1CD3A /* Resources */,
 				79F93DDD2AB21F420075DC69 /* Assets.xcassets */,
 				79F93DDF2AB21F420075DC69 /* Preview Content */,
+				791C59722ABB317F007CCAB8 /* Localizable.strings */,
 			);
 			path = FlashCards;
 			sourceTree = "<group>";
@@ -182,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79F93DD32AB21F400075DC69 /* FlashCards */ = {
+		79F93DD32AB21F400075DC69 /* Thullium */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "FlashCards" */;
+			buildConfigurationList = 79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "Thullium" */;
 			buildPhases = (
 				79F93DD02AB21F400075DC69 /* Sources */,
 				79F93DD12AB21F400075DC69 /* Frameworks */,
@@ -194,9 +215,9 @@
 			);
 			dependencies = (
 			);
-			name = FlashCards;
+			name = Thullium;
 			productName = FlashCards;
-			productReference = 79F93DD42AB21F400075DC69 /* FlashCards.app */;
+			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,20 +235,21 @@
 					};
 				};
 			};
-			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */;
+			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79F93DD32AB21F400075DC69 /* FlashCards */,
+				79F93DD32AB21F400075DC69 /* Thullium */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */,
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
 				790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */,
@@ -256,14 +279,17 @@
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
+				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				79F93DDC2AB21F400075DC69 /* Item.swift in Sources */,
+				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
+				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
+				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
-				790070D92AB39A2000D1CD3A /* ElementView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
 				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
 				795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */,
@@ -271,6 +297,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		791C59722ABB317F007CCAB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				791C59712ABB317F007CCAB8 /* cs */,
+				791C59732ABB3181007CCAB8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		79F93DE22AB21F420075DC69 /* Debug */ = {
@@ -457,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */ = {
+		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F93DE22AB21F420075DC69 /* Debug */,
@@ -466,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "FlashCards" */ = {
+		79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "Thullium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F93DE52AB21F420075DC69 /* Debug */,

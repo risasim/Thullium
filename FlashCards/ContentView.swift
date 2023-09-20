@@ -11,6 +11,7 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    var elemntals = JSONtoSwiftDataconverter()
 
     var body: some View {
         NavigationSplitView {
@@ -41,7 +42,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Item(timestamp: Date(), term: "")
             modelContext.insert(newItem)
         }
     }

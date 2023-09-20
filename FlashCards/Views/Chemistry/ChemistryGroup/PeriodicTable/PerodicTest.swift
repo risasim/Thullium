@@ -12,6 +12,7 @@ struct PeriodicTest:View {
     
     var el:Element
     var gues: [String]?
+    var searchQuery : [String]?
     var hint: String?
     var number:Int?
     @State var popUp = false
@@ -20,15 +21,19 @@ struct PeriodicTest:View {
     }
     
     var body: some View {
+        // check if the gamemodel exists and then chooses right version
         if let guess = gues{
             if guess.contains(el.name){
                normalView
             }else{
                 baseView.opacity(hint==el.name ? 0.85 : 0.6)
-                   
             }
-        }else{
-           normalView
+        }else if (searchQuery != nil){
+            if (searchQuery!.contains(el.name)){
+                normalView
+            }else{
+                baseView.opacity(hint==el.name ? 0.85 : 0.6)
+            }
         }
     }
 // MARK: - The constructed peroidic table element

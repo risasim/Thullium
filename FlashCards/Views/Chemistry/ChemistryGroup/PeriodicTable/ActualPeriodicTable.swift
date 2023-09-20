@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ActualPeriodicTable: View {
+    
+    @State var searchEng = SearchTable()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       PeriodicTableView(searchEngine: searchEng)
+            .searchable(text: $searchEng.search, prompt: "searchElement")
     }
 }
 

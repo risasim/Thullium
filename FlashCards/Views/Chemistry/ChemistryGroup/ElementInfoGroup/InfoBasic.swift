@@ -72,6 +72,9 @@ struct InfoBasic: View {
                     VStack(alignment: .leading,content: {
                         Text(info.electron_configuration_semantic)
                             .bold()
+                            .scaledToFit()
+                            .minimumScaleFactor(0.01)
+                            .lineLimit(1)
                         Text("Elecron config.")
                             .font(.footnote)
                     })
@@ -83,5 +86,5 @@ struct InfoBasic: View {
 }
 
 #Preview {
-    InfoBasic(info: JSONtoSwiftDataconverter().eData[56])
+    InfoBasic(info: JSONtoSwiftDataconverter().eData[111])
 }

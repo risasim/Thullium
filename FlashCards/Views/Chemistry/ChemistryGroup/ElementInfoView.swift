@@ -10,19 +10,34 @@ import SwiftUI
 struct ElementInfoView: View {
     var element:Element
     var body: some View {
-        ScrollView{
-            InfoSign(info: element)
-                .frame(width: 220, height: 220)
-                .padding()
-            Divider()
-            InfoBasic(info: element)
-            Divider()
-            HStack{
-                InfoImage(image: element.image)
-                InfoImage(image: ElementImage(title: "Bohr Model", url: element.bohr_model_image ?? "/", attribution: ""))
+        ZStack {
+            Color(determineColorFromCategory(category: element.category))
+                .ignoresSafeArea()
+            ScrollView{
+                InfoSign(info: element)
+                    .frame(width: 220, height: 220)
+                    .padding()
+                VStack{
+                    InfoBasic(info: element)
+                        .padding()
+                    Divider()
+                    Text(element.summary)
+                        .padding()
+                    Divider()
+                    HStack{
+                        InfoImage(image: element.image)
+                        InfoImage(image: ElementImage(title: "Bohr Model", url: element.bohr_model_image ?? "/", attribution: ""))
+                    }
+                    Divider()
+                }
+                .background{
+                    RoundedRectangle(cornerRadius: 20.0, style: .circular)
+                        .foregroundStyle(.regularMaterial)
+                }
+                    
             }
-            Divider()
-                
+            .scrollIndicators(.hidden)
+           // .background(determineColorFromCategory(category: element.category).opacity(0.7))
         }
     }
 }

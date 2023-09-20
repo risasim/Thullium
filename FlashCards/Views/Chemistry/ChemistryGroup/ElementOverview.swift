@@ -50,6 +50,7 @@ struct ElementOverview: View {
             .navigationTitle("Elements")
             .searchable(text: $search)
         }
+        .tint(.black)
         var searchResults: [Element] {
                 if search.isEmpty {
                     return elements
