@@ -162,7 +162,7 @@
 		79F93DCB2AB21F3F0075DC69 = {
 			isa = PBXGroup;
 			children = (
-				79F93DD62AB21F400075DC69 /* FlashCards */,
+				79F93DD62AB21F400075DC69 /* Thullium */,
 				79F93DD52AB21F400075DC69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79F93DD62AB21F400075DC69 /* FlashCards */ = {
+		79F93DD62AB21F400075DC69 /* Thullium */ = {
 			isa = PBXGroup;
 			children = (
 				790070D32AB399E700D1CD3A /* Views */,
@@ -189,7 +189,7 @@
 				79F93DDF2AB21F420075DC69 /* Preview Content */,
 				791C59722ABB317F007CCAB8 /* Localizable.strings */,
 			);
-			path = FlashCards;
+			path = Thullium;
 			sourceTree = "<group>";
 		};
 		79F93DDF2AB21F420075DC69 /* Preview Content */ = {
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */;
+			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -495,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */ = {
+		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F93DE22AB21F420075DC69 /* Debug */,
