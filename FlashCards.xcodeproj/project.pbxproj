@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */;
+			buildConfigurationList = 79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -495,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */ = {
+		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "FlashCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F93DE22AB21F420075DC69 /* Debug */,
