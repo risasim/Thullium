@@ -22,7 +22,7 @@
 "Liquid"="Kapalné";
 "Solid"="Pevné";
 "Elecron config."="Elektronová konfig.";
-"Mass (AMU)"="Atomová hmotnost";
+"Mass (AMU)"="Atomo. hmotnost";
 
 //Categories
 "noble gas"="Vzácné plyny";
@@ -74,5 +74,9 @@
 "Chromium"="Chrom";
 "Fluorine"="Fluor";
 "Platinum"="Platina";
+"Arsenic"="Arsen";
+"Vanadium" = "Vanad";
+
+
 
 

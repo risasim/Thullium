@@ -13,6 +13,7 @@ import TipKit
 // MARK: - Global constants
 let feedbackGenerator = UINotificationFeedbackGenerator()
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
+let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal"]
 
 // MARK: - Global functions
 func determineColorFromCategory(category cat: String) ->Color{

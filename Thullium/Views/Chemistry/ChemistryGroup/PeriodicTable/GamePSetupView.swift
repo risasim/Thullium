@@ -12,7 +12,20 @@ struct GamePSetupView: View {
     var gameModel:GameModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            List{
+                ForEach(gameModel.categories, id: \.name) { cat in
+                    HStack{
+                        Text(LocalizedStringKey(cat.name))
+                        Spacer()
+                        Image(systemName: cat.selected ? "checkmark.circle":"circle")
+                    }
+                    .onTapGesture {
+                        gameModel.toggleCategory(n: cat.name)
+                    }
+                }
+            }
+        }
     }
 }
 

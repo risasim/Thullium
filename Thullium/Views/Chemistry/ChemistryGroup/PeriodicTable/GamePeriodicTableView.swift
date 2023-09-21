@@ -19,7 +19,7 @@ struct GamePeriodicTableView: View {
                     VStack{
                         HStack{
                             Spacer()
-                            Text(JSONtoSwiftDataconverter().eData[JSONtoSwiftDataconverter().eData.firstIndex(where: {$0.name == gameModel.currentGuess})!].name)
+                            Text(LocalizedStringKey(JSONtoSwiftDataconverter().eData[JSONtoSwiftDataconverter().eData.firstIndex(where: {$0.name == gameModel.currentGuess})!].name))
                                 .bold()
                                 .font(.title)
                                 .padding()
@@ -42,6 +42,7 @@ struct GamePeriodicTableView: View {
 
 #Preview {
     GamePeriodicTableView()
+        .environment(\.locale, .init(identifier: "cs"))
 }
 
 

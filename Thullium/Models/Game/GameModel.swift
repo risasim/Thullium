@@ -45,6 +45,8 @@ class GameModel{
             }
         }
     }
+    var categories:[Category] = []
+    
     
     init(){
         // add maybe an other variable to get swiftdata into this
@@ -54,10 +56,17 @@ class GameModel{
         }
         namesReady = array.shuffled()
         currentGuess = namesReady[currentNumber]
+        for cat in allCategories{
+            categories.append(Category(name: cat, selected: true))
+        }
     }
     
     func endGame(){
         showAlert = true
+    }
+    
+    func toggleCategory(n:String){
+        categories.contains(where: {$0.name == n})
     }
     
     func restartGame(){
@@ -87,5 +96,16 @@ class GameModel{
                 }
             }
         }
+    }
+}
+
+
+struct Category{
+    var name:String
+    var selected: Bool
+    
+    init(name: String, selected: Bool) {
+        self.name = name
+        self.selected = selected
     }
 }
