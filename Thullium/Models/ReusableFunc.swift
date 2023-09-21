@@ -13,7 +13,7 @@ import TipKit
 // MARK: - Global constants
 let feedbackGenerator = UINotificationFeedbackGenerator()
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
-let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal"]
+let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal"]
 
 // MARK: - Global functions
 func determineColorFromCategory(category cat: String) ->Color{
@@ -88,4 +88,26 @@ func mayuselater(){
         openedFirstTime = true
     }
 
+}
+
+// MARK: - Reusable Views
+struct CloseButtonView:View {
+    
+    @Binding var popUp:Bool
+    
+    var body: some View {
+        VStack {
+            HStack{
+                Spacer()
+                Button(action: {popUp = false}, label: {
+                    Image(systemName: "multiply")
+                        .font(.largeTitle)
+                        .padding()
+                        .foregroundStyle(Color.primary)
+                        .background(Color.clear.ignoresSafeArea(.container, edges: .top))
+                })
+            }
+            Spacer()
+        }
+    }
 }

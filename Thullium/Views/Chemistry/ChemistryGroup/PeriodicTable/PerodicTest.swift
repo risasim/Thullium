@@ -13,6 +13,7 @@ struct PeriodicTest:View {
     var el:Element
     var gues: [String]?
     var searchQuery : [String]?
+    var categories: [Category]?
     var hint: String?
     var number:Int?
     @State var popUp = false
@@ -49,7 +50,7 @@ struct PeriodicTest:View {
                 ZStack{
                     ElementInfoView(element: el)
                         .padding(.top)
-                    closeView
+                    CloseButtonView(popUp: $popUp)
                     
                 }
                 .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
@@ -61,22 +62,7 @@ struct PeriodicTest:View {
             .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 32, height: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 32)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 4, height: 4)))
     }
-// MARK: - Close button on popupView
-    private var closeView: some View{
-        VStack {
-            HStack{
-                Spacer()
-                Button(action: {popUp = false}, label: {
-                    Image(systemName: "multiply")
-                        .font(.largeTitle)
-                        .padding()
-                        .foregroundStyle(Color.primary)
-                        .background(Color.clear.ignoresSafeArea(.container, edges: .top))
-                })
-            }
-            Spacer()
-        }
-    }
+    
 // MARK: - What is written in the square
     private var infoView: some View{
         VStack{

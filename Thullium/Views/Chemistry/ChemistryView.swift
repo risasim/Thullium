@@ -13,10 +13,10 @@ struct ChemistryView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [ElementsData]
     @State var gameModel = GameModel()
+    @State var popUp = false
     
     var body: some View {
         VStack{
-
             NavigationStack{
                 NavigationLink {
                     ActualPeriodicTable()
@@ -38,8 +38,10 @@ struct ChemistryView: View {
                         Label("game", systemImage: "arcade.stick")
                             .font(.title)
                         Spacer()
-                        Button(action: {print("heelo")}, label: {
-                            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                        Button(action: {
+                            popUp = true
+                        }, label: {
+                            Label(LocalizedStringKey("gameSettings"), systemImage: "gear")
                         })
                         
                     }
@@ -54,6 +56,9 @@ struct ChemistryView: View {
             }
             .tint(Color.primary)
         }
+        .sheet(isPresented: $popUp, content: {
+            GamePSetupView(gameModel: gameModel, pop: $popUp)
+        })
     }
 }
 

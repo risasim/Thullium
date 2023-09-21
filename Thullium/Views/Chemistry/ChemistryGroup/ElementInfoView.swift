@@ -21,7 +21,7 @@ struct ElementInfoView: View {
                     InfoBasic(info: element)
                         .padding()
                     Divider()
-                    Text(element.summary)
+                    Text(LocalizedStringKey(element.summary))
                         .padding()
                     Divider()
                     HStack{

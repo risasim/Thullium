@@ -45,7 +45,18 @@ class GameModel{
             }
         }
     }
-    var categories:[Category] = []
+    var categories:[Category] = []{
+        // MARK: - Add implementation for managing the categories needed in the game: mayber start the game on tap of navigation link
+        didSet{
+            for cat in allCategories{
+                for el in JSONtoSwiftDataconverter().eData{
+                    if(el.category==cat){
+                        
+                    }
+                }
+            }
+        }
+    }
     
     
     init(){
@@ -63,10 +74,6 @@ class GameModel{
     
     func endGame(){
         showAlert = true
-    }
-    
-    func toggleCategory(n:String){
-        categories.contains(where: {$0.name == n})
     }
     
     func restartGame(){
@@ -99,8 +106,8 @@ class GameModel{
     }
 }
 
-
-struct Category{
+@Observable
+class Category{
     var name:String
     var selected: Bool
     

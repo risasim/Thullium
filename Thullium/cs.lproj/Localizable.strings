@@ -10,6 +10,8 @@
 "periodicTable" =  "Periodická tabulka";
 "game"  =  "Hra";
 "Wikipedia"="Wikipedie";
+"gameSettings"= "Nastavení";
+"selectCategories"="Vyberte kategorie, které chcete opakovat";
 
 //Variables of data
 "Phase"="Skupenství";
@@ -76,6 +78,14 @@
 "Platinum"="Platina";
 "Arsenic"="Arsen";
 "Vanadium" = "Vanad";
+
+//Translations of summary
+
+"Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass." = "Vodík je chemický prvek s chemickou značkou H a atomovým číslem 1. S atomovou hmotností 1,00794 u je vodík nejlehčím prvkem v periodické tabulce prvků. Jeho monatomická forma (H) je nejrozšířenější chemickou látkou ve vesmíru, tvoří zhruba 75 % veškeré baryonové hmoty.";
+
+"Helium is a chemical element with symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas that heads the noble gas group in the periodic table. Its boiling and melting points are the lowest among all the elements."="Helium je chemický prvek se symbolem He a atomovým číslem 2. Je to bezbarvý, nejedovatý, inertní, jednoatomový plyn bez zápachu a chuti, který v periodické tabulce vede skupinu vzácných plynů. Jeho teplota varu a tání je nejnižší ze všech prvků.";
+
+"Lithium (from Greek:λίθος lithos, \"stone\") is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element."="Lithium (z řečtiny:λίθος lithos, \"kámen\") je chemický prvek se symbolem Li a atomovým číslem 3. Je to měkký, stříbřitě bílý kov patřící do skupiny alkalických kovů chemických prvků. Za standardních podmínek je nejlehčím kovem a nejméně hustým pevným prvkem.";
 
 
 
