@@ -44,4 +44,5 @@ struct ElementInfoView: View {
 
 #Preview {
     ElementInfoView(element: JSONtoSwiftDataconverter().eData[0])
+        .environment(\.locale, .init(identifier: "cs"))
 }

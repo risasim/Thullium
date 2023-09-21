@@ -19,4 +19,5 @@ struct ActualPeriodicTable: View {
 
 #Preview {
     ActualPeriodicTable()
+        .environment(\.locale, .init(identifier: "cs"))
 }

@@ -21,7 +21,7 @@ struct ChemistryView: View {
                 NavigationLink {
                     ActualPeriodicTable()
                 } label: {
-                    Label("Periodic table", systemImage: "flask")
+                    Label("periodicTable", systemImage: "flask")
                         .font(.title)
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -31,24 +31,11 @@ struct ChemistryView: View {
                         })
                 }
                 .padding()
-             //   NavigationLink {
-             //       ElementOverview(elements: JSONtoSwiftDataconverter().eData)
-             //   } label: {
-             //       Label("Elements overview", systemImage: "square.stack")
-             //           .font(.title)
-             //           .padding()
-             //           .frame(minWidth: 0, maxWidth: .infinity)
-             //           .overlay(content: {
-             //               RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-             //                   .stroke(Color.blue, lineWidth: 5)
-             //           })
-             //   }
-             //   .padding()
                 NavigationLink {
                    GamePeriodicTableView()
                 } label: {
                     HStack {
-                        Label("Game", systemImage: "arcade.stick")
+                        Label("game", systemImage: "arcade.stick")
                             .font(.title)
                         Spacer()
                         Button(action: {print("heelo")}, label: {
@@ -72,4 +59,5 @@ struct ChemistryView: View {
 
 #Preview {
     ChemistryView()
+        .environment(\.locale, .init(identifier: "cs"))
 }

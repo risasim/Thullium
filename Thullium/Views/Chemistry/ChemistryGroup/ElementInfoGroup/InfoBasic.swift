@@ -15,16 +15,16 @@ struct InfoBasic: View {
         VStack(alignment:.leading){
             HStack{
                 VStack(alignment:.leading){
-                    Text(info.category.capitalized)
+                    Text(LocalizedStringKey(info.category))
                         .bold()
                         .padding(.leading)
-                    Text("Category")
+                    Text(LocalizedStringKey("Category"))
                         .font(.footnote)
                         .padding(.leading)
                 }
                 Spacer()
                 Link(destination: URL(string: info.source)!) {
-                    Label("Wikipedia", systemImage: "arrow.up.right")
+                    Label(LocalizedStringKey("Wikipedia"), systemImage: "arrow.up.right")
                         .font(.footnote)
                         .padding(.trailing)
                 }
@@ -33,15 +33,15 @@ struct InfoBasic: View {
             HStack{
                 VStack(alignment: .leading,content: {
                     VStack(alignment: .leading,content: {
-                        Text(info.phase)
+                        Text(LocalizedStringKey(info.phase))
                             .bold()
-                        Text("Phase")
+                        Text(LocalizedStringKey("Phase"))
                             .font(.footnote)
                     })
                     VStack(alignment: .leading,content: {
                         Text(String(format: "%.1f",info.boil ?? "-"))
                             .bold()
-                        Text("Boiling point(K)")
+                        Text(LocalizedStringKey("Boiling point(K)"))
                             .font(.footnote)
                     })
                     
@@ -51,13 +51,13 @@ struct InfoBasic: View {
                     VStack(alignment: .leading,content: {
                         Text(String(format: "%.3f",info.atomic_mass))
                             .bold()
-                        Text("Mass (AMU)")
+                        Text(LocalizedStringKey("Mass (AMU)"))
                             .font(.footnote)
                     })
                     VStack(alignment: .leading,content: {
                         Text(String(format: "%.1f",info.melt ?? "-"))
                             .bold()
-                        Text("Melting point(K)")
+                        Text(LocalizedStringKey("Melting point(K)"))
                             .font(.footnote)
                     })
                 })
@@ -66,7 +66,7 @@ struct InfoBasic: View {
                     VStack(alignment: .leading,content: {
                         Text(String(format: "%.2f",info.electronegativity_pauling ?? "-"))
                             .bold()
-                        Text("Electronegativity")
+                        Text(LocalizedStringKey("Electronegativity"))
                             .font(.footnote)
                     })
                     VStack(alignment: .leading,content: {
@@ -75,7 +75,7 @@ struct InfoBasic: View {
                             .scaledToFit()
                             .minimumScaleFactor(0.01)
                             .lineLimit(1)
-                        Text("Elecron config.")
+                        Text(LocalizedStringKey("Elecron config."))
                             .font(.footnote)
                     })
                 })
@@ -86,5 +86,6 @@ struct InfoBasic: View {
 }
 
 #Preview {
-    InfoBasic(info: JSONtoSwiftDataconverter().eData[111])
+    InfoBasic(info: JSONtoSwiftDataconverter().eData[0])
+        .environment(\.locale, .init(identifier: "cs"))
 }

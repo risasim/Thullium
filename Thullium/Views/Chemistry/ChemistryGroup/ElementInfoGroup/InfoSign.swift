@@ -20,7 +20,7 @@ struct InfoSign: View {
             Text(info.symbol)
                 .font(.system(size: 80))
                 .fontWeight(.bold)
-            Text(info.name)
+            Text(LocalizedStringKey(info.name))
                 .font(.system(size: 30))
             Text(String(format: "%.2f",info.atomic_mass))
                 .font(.system(size: 20))
@@ -35,5 +35,6 @@ struct InfoSign: View {
 }
 
 #Preview {
-    InfoSign(info: JSONtoSwiftDataconverter().eData[2])
+    InfoSign(info: JSONtoSwiftDataconverter().eData[0])
+        .environment(\.locale, .init(identifier: "en"))
 }

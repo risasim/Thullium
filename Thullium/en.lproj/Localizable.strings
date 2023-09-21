@@ -6,5 +6,25 @@
   
 */
 
+
+
+//Categories
+"noble gas"="Noble Gas";
+"diatomic nonmetal"="Diatomic Nonmetal";
+"alkali metal"="Alkali Metal";
+"alkaline earth metal"="Alkaline Earth Metal";
+"metalloid"="Metalloid";
+"post-transition metal"="Post-transition Metal";
+"lanthanide"="Lanthanide";
+"transition metal"="Transition Metal";
+"actinide"="Acitnide";
+"reactive nonmetal"="Reactive Nonmetal";
+"polyatomic nonmetal"="Polyatomic Nonmetal";
+
+
+
 "searchElement" = "Search for element..";
 "Hydrogen" = "Hydrogen";
+"Lead" = "Lead";
+"periodicTable" =  "Periodic table";
+"game"  =  "Game";

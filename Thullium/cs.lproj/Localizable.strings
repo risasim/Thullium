@@ -7,4 +7,72 @@
 */
 
 "searchElement" = "Vyhledejte prvek...";
+"periodicTable" =  "Periodická tabulka";
+"game"  =  "Hra";
+"Wikipedia"="Wikipedie";
+
+//Variables of data
+"Phase"="Skupenství";
+"Category"="Kategorie";
+"Density"="Hustota";
+"Boiling point(K)"="Bod varu(K)";
+"Melting point(K)"="Bod tání(K)";
+"Electronegativity"="Elektronegativita";
+"Gas"="Plynné";
+"Liquid"="Kapalné";
+"Solid"="Pevné";
+"Elecron config."="Elektronová konfig.";
+"Mass (AMU)"="Atomová hmotnost";
+
+//Categories
+"noble gas"="Vzácné plyny";
+"diatomic nonmetal"="Halogeny";
+"alkali metal"="Alkalické kovy";
+"alkaline earth metal"="Kovy alkalických zemin";
+"metalloid"="Polokovy";
+"post-transition metal"="Nepřechodné kovy";
+"lanthanide"="Lanthanoidy";
+"transition metal"="Přechodné kovy";
+"actinide"="Aktinoidy";
+"reactive nonmetal"="";
+"polyatomic nonmetal"="Nekovy";
+
+
+
+
+//Prvky
 "Hydrogen" = "Vodík";
+"Lead" = "Olovo";
+"Actinium" = "Aktinium";
+"Antimony" = "Antimon";
+"Boron" = "Bor";
+"Tin" = "Cín";
+"Pottassium" = "Draslík";
+"Nitrogen" = "Dusík";
+"Carbon" = "Uhlík";
+"Oxygen" = "Kyslík";
+"Chlorine" = "Chlor";
+"Aluminium" = "Hliník";
+"Silicone" = "Křemík";
+"Phosphorus" = "Fosfor";
+"Copper" = "Měď";
+"Iodine" = "Jód";
+"Nickel"= "Nikl";
+"Iron"="Železo";
+"Cobalt"= "Kobalt";
+"Manganese"="Mangan";
+"Uranium"="Uran";
+"Sulfur"="Síra";
+"Mercury"="Rtuť";
+"Gold"="Zlato";
+"Silver"="Stříbro";
+"Titanium"="Titan";
+"Sodium"="Sodík";
+"Tungsten"="Wolfram";
+"Calcium"="Vápník";
+"Tantalum"="Tantal";
+"Chromium"="Chrom";
+"Fluorine"="Fluor";
+"Platinum"="Platina";
+
+
