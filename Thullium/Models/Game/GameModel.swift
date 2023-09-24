@@ -12,11 +12,8 @@ import SwiftUI
 class GameModel{
     var numberOfAttempts = 0{
         willSet{
-            print("Number aded")
             print(numberOfAttempts)
-            print(hint)
             if newValue>5{
-                print("get here")
                 hint = currentGuess
             }else if newValue == 0{
                 hint = ""
@@ -24,11 +21,7 @@ class GameModel{
         }
     }
     var currentGuess = ""
-    var hint = ""{
-        didSet{
-            print("hint changed")
-        }
-    }
+    var hint = ""
     var currentNumber = 0
     var showAlert = false
     var namesReady:[String] = []
@@ -46,17 +39,39 @@ class GameModel{
         }
     }
     var categories:[Category] = []{
-        // MARK: - Add implementation for managing the categories needed in the game: mayber start the game on tap of navigation link
+// MARK: - Add implementation for managing the categories needed in the game: mayber start the game on tap of navigation link
         didSet{
-            for cat in allCategories{
+          //  namesReady = []
+          //  alreadyGuessed = []
+            //Logic doesnt have to be handled in periodic test just add to guessed the names and retracted them from namesReady
+            //wtf does trigger the gueesed part == probably needed to change the order of loops?
+            for cat in categories{
                 for el in JSONtoSwiftDataconverter().eData{
-                    if(el.category==cat){
-                        
-                    }
+                   // if(el.category==cat.name){
+                   //     if cat.selected == true{
+                   //         namesReady.append(el.name)
+                   //     }else{
+                   //         alreadyGuessed.append(el.name)
+                   //     }
+                   // }
                 }
             }
         }
     }
+    
+    
+    // func startGame(){
+    //     for el in JSONtoSwiftDataconverter().eData.shuffled(){
+    //         for cat in categories{
+    //             if el.category = ca
+    //         }
+    //     }
+    //     currentGuess = namesReady[currentNumber]
+    //     for cat in allCategories{
+    //         categories.append(Category(name: cat, selected: true))
+    //     }
+    // }
+    
     
     
     init(){

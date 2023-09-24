@@ -25,7 +25,8 @@ struct PeriodicTest:View {
         // check if the gamemodel exists and then chooses right version
         if let guess = gues{
             if guess.contains(el.name){
-               normalView
+                normalView
+                    .animation(.bouncy, value: 0.6)
             }else{
                 baseView.opacity(hint==el.name ? 0.85 : 0.6)
             }

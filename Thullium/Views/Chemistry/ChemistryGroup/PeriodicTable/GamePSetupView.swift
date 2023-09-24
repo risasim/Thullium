@@ -17,21 +17,30 @@ struct GamePSetupView: View {
         ZStack{
             VStack{
                 List{
-                    Section(header: 
-                        Text("selectCategories")
-                            .bold()
-                            .font(.headline)
-                            .foregroundStyle(Color.primary)
-                            .padding(.top)){
-                        ForEach(gameModel.categories, id: \.name) { cat in
-                            HStack{
-                                Text(LocalizedStringKey(cat.name))
-                                Spacer()
-                                Image(systemName: cat.selected ? "checkmark.circle":"circle")
+                    Section(header:
+                    Label("selectCategories", systemImage: showCategories ? "chevron.down" : "chevron.up")
+                        .bold()
+                        .font(.headline)
+                        .foregroundStyle(Color.primary)
+                        .padding(.top, 30)
+                        .onTapGesture {
+                            withAnimation(.easeIn) {
+                                showCategories.toggle()
                             }
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                cat.selected.toggle()
+                        }
+                    ){
+                        if showCategories{
+                            ForEach(gameModel.categories, id: \.name) { cat in
+                                HStack{
+                                    Text(LocalizedStringKey(cat.name))
+                                    Spacer()
+                                    Image(systemName: cat.selected ? "checkmark.circle":"circle")
+                                }
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    cat.selected.toggle()
+                                }
+                                .animation(.linear(duration: 0.3), value: cat.selected==false)
                             }
                         }
                     }
