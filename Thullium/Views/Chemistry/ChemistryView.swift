@@ -21,43 +21,45 @@ struct ChemistryView: View {
                 NavigationLink {
                     ActualPeriodicTable()
                 } label: {
-                    Label("periodicTable", systemImage: "flask")
-                        .font(.title)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .overlay(content: {
-                            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                                .stroke(Color.blue, lineWidth: 5)
-                        })
+                    ChemistryMenuItemView(text: "periodicTable", sysIm: "flask")
                 }
                 .padding()
-                NavigationLink {
-                   GamePeriodicTableView()
-                } label: {
-                    HStack {
-                        Label("game", systemImage: "arcade.stick")
-                            .font(.title)
-                        Spacer()
+                ZStack{
+                    HStack(spacing: 0){
+                        NavigationLink {
+                            GamePeriodicTableView(gameModel: $gameModel)
+                        } label: {
+                            Label(LocalizedStringKey("game"), systemImage: "arcade.stick")
+                                .font(.largeTitle)
+                                .frame(maxWidth: .infinity,maxHeight:.infinity)
+                                .padding(0)
+                                .background(.ultraThickMaterial)
+                                .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+                        }
+                        Divider()
+                            .frame(width: 2)
+                            .overlay(.primary)
                         Button(action: {
-                            popUp = true
+                            popUp.toggle()
                         }, label: {
                             Label(LocalizedStringKey("gameSettings"), systemImage: "gear")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity,maxHeight:.infinity)
+                                .background(.ultraThickMaterial)
+                                .cornerRadius(20, corners: [.topRight, .bottomRight])
                         })
-                        
                     }
                     .padding()
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .overlay(content: {
-                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                            .stroke(Color.blue, lineWidth: 5)
-                    })
+                    
                 }
-                .padding()
             }
             .tint(Color.primary)
         }
         .sheet(isPresented: $popUp, content: {
             GamePSetupView(gameModel: gameModel, pop: $popUp)
+                .onDisappear(perform: {
+                    gameModel.startGame()
+                })
         })
     }
 }

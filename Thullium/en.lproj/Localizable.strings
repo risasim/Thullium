@@ -22,6 +22,8 @@
 "polyatomic nonmetal"="Polyatomic Nonmetal";
 "gameSettings"= "Settings";
 "selectCategories"="Select categories you want to learn";
+"congratsOnCompleteGame"="Congratulations on completing the game!";
+"unknown"="Unknown category";
 
 
 
@@ -30,3 +32,4 @@
 "Lead" = "Lead";
 "periodicTable" =  "Periodic table";
 "game"  =  "Game";
+"playAgain" = "Play again";

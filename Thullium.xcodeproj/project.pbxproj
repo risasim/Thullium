@@ -18,6 +18,7 @@
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
+		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
 		795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E532AB4E33B00BB077C /* ElementInfoView.swift */; };
@@ -46,6 +47,7 @@
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
 		7938C57C2AB70018001189D2 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
+		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
 		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		795C6E532AB4E33B00BB077C /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
@@ -144,9 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				791C596D2ABB307D007CCAB8 /* PeriodicTable */,
-				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
 				795C6E532AB4E33B00BB077C /* ElementInfoView.swift */,
+				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
 				793464722AB572AD00407F15 /* ElementInfoGroup */,
+				7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */,
 			);
 			path = ChemistryGroup;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				79F93DDC2AB21F400075DC69 /* Item.swift in Sources */,
+				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,

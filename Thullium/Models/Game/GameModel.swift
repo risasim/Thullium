@@ -10,6 +10,7 @@ import SwiftUI
 
 @Observable
 class GameModel{
+    var started = false
     var numberOfAttempts = 0{
         willSet{
             print(numberOfAttempts)
@@ -27,50 +28,56 @@ class GameModel{
     var namesReady:[String] = []
     var alreadyGuessed:[String] = []{
         didSet{
-            //On change of value - done from view
-            print("Guessed \(currentGuess)")
-            if currentNumber != alreadyGuessed.count{
-                print(namesReady)
-                currentNumber += 1
-                currentGuess = namesReady[currentNumber]
-            }else if currentNumber > alreadyGuessed.count{
-                endGame()
-            }
-        }
-    }
-    var categories:[Category] = []{
-// MARK: - Add implementation for managing the categories needed in the game: mayber start the game on tap of navigation link
-        didSet{
-          //  namesReady = []
-          //  alreadyGuessed = []
-            //Logic doesnt have to be handled in periodic test just add to guessed the names and retracted them from namesReady
-            //wtf does trigger the gueesed part == probably needed to change the order of loops?
-            for cat in categories{
-                for el in JSONtoSwiftDataconverter().eData{
-                   // if(el.category==cat.name){
-                   //     if cat.selected == true{
-                   //         namesReady.append(el.name)
-                   //     }else{
-                   //         alreadyGuessed.append(el.name)
-                   //     }
-                   // }
+            if started{
+                //On change of value - done from view
+                print("Guessed \(currentGuess)")
+                if currentNumber < namesReady.count-1{
+                    print(namesReady)
+                    currentNumber += 1
+                    currentGuess = namesReady[currentNumber]
+                }else{
+                    print("gone here")
+                    endGame()
                 }
             }
         }
     }
+    var categories:[Category] = []
     
-    
-    // func startGame(){
-    //     for el in JSONtoSwiftDataconverter().eData.shuffled(){
-    //         for cat in categories{
-    //             if el.category = ca
-    //         }
-    //     }
-    //     currentGuess = namesReady[currentNumber]
-    //     for cat in allCategories{
-    //         categories.append(Category(name: cat, selected: true))
-    //     }
-    // }
+    func startGame(){
+        started = false
+        print("whz")
+        namesReady = []
+        alreadyGuessed = []
+        var prepareNames:[String] = []
+        print("though")
+        for el in JSONtoSwiftDataconverter().eData{
+            var determined = false
+            for cat in categories{
+                if el.category == cat.name && cat.selected == true{
+                    print("\(el.name) in \(cat.name) and gonna be displayed")
+                    determined=true
+                    prepareNames.append(el.name)
+                    break
+                }
+                // not sure about that
+              //  else if cat.name.contains("unknown") && el.name.contains("unknown"){
+              //      if cat.selected == true{
+              //          namesReady.append(el.name)
+              //          break
+              //      }
+              //  }
+            }
+            if !determined{
+                print("\(el.name) not gonna be displayed")
+                alreadyGuessed.append(el.name)
+            }
+        }
+        started = true
+        namesReady = prepareNames.shuffled()
+       // print(namesReady)
+        currentGuess = namesReady[currentNumber]
+    }
     
     
     
@@ -88,16 +95,14 @@ class GameModel{
     }
     
     func endGame(){
+        print("this happened")
         showAlert = true
     }
     
     func restartGame(){
-        namesReady = alreadyGuessed.shuffled()
-        alreadyGuessed = []
+        numberOfAttempts = 0
         currentNumber = 0
-        print(alreadyGuessed)
-        print(namesReady)
-        print(currentNumber)
+        self.startGame()
     }
     
     //Called from the actual view ====== maybe they will be given the acess just to the array

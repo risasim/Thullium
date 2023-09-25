@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ChemistryMenuItemView: View {
+    
+    var text:String
+    var sysIm:String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 18)
+                .fill(.ultraThickMaterial)
+            Label(LocalizedStringKey(text), systemImage: sysIm)
+                .font(.largeTitle)
+        }
+        
     }
 }
 
 #Preview {
-    ChemistryMenuItemView()
+    ChemistryMenuItemView(text: "periodicTable", sysIm: "flask")
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GamePeriodicTableView: View {
     
-    @State var gameModel = GameModel()
-    @State var alert = false
+    @Binding var gameModel:GameModel
+    //@State var alert = false
     
     var body: some View {
         ZStack{
@@ -33,22 +33,22 @@ struct GamePeriodicTableView: View {
                         Spacer()
                     }
                 }
-            if alert{
-                CustomAlertView(alert: $alert)
+            if gameModel.showAlert{
+                CustomAlertView(model: $gameModel)
             }
         }
     }
 }
 
 #Preview {
-    GamePeriodicTableView()
+    GamePeriodicTableView(gameModel: .constant(GameModel()))
         .environment(\.locale, .init(identifier: "cs"))
 }
 
 
 struct CustomAlertView:View {
     
-    @Binding var alert:Bool
+    @Binding var model:GameModel
     
     var body: some View {
         VStack{
@@ -57,18 +57,23 @@ struct CustomAlertView:View {
                 Spacer()
                 VStack{
                     Image(systemName: "trophy")
-                        .font(.largeTitle)
-                    Text("Congratulations on completing the game!")
-                    Button("Play again") {
-                        alert.toggle()
+                        .font(.system(size: 100))
+                    Text("congratsOnCompleteGame")
+                        .bold()
+                        .font(.title)
+                        .multilineTextAlignment(.center)
+                    Button("playAgain") {
+                        model.restartGame()
+                        model.showAlert.toggle()
                     }
+                    .font(.headline)
                     .foregroundStyle(Color.white)
                     .padding()
-                    .buttonBorderShape(.capsule)
-                    .background(Color.blue)
+                    .buttonStyle(.borderedProminent)
                 }
-                .foregroundStyle(Color.black)
                 .padding()
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                .foregroundStyle(Color.black)
                 .background {
                     RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                         .fill(Color.white)
@@ -79,4 +84,9 @@ struct CustomAlertView:View {
         }
         .background(.ultraThinMaterial)
     }
+}
+
+#Preview{
+    CustomAlertView(model: .constant(GameModel()))
+        .environment(\.locale, .init(identifier: "cs"))
 }

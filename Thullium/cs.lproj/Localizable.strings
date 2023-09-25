@@ -12,6 +12,8 @@
 "Wikipedia"="Wikipedie";
 "gameSettings"= "Nastavení";
 "selectCategories"="Vyberte kategorie, které chcete opakovat";
+"playAgain"= "Hrát znova";
+"congratsOnCompleteGame"="Gratuluace k uhádnutí všech prvků!";
 
 //Variables of data
 "Phase"="Skupenství";
@@ -38,6 +40,7 @@
 "actinide"="Aktinoidy";
 "reactive nonmetal"="";
 "polyatomic nonmetal"="Nekovy";
+"unknown"="Neznámá kategorie";
 
 
 
