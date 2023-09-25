@@ -32,6 +32,7 @@
 		79F93DDC2AB21F400075DC69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DDB2AB21F400075DC69 /* Item.swift */; };
 		79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DDD2AB21F420075DC69 /* Assets.xcassets */; };
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
+		79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		79F93DDB2AB21F400075DC69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		79F93DDD2AB21F420075DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79FBF7AF2AC1C81400C4286B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		790070D32AB399E700D1CD3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
 				7938C57B2AB62C87001189D2 /* Chemistry */,
 			);
 			path = Views;
@@ -181,6 +185,7 @@
 		79F93DD62AB21F400075DC69 /* Thullium */ = {
 			isa = PBXGroup;
 			children = (
+				79FBF7AF2AC1C81400C4286B /* Info.plist */,
 				790070D32AB399E700D1CD3A /* Views */,
 				790070D22AB37CC200D1CD3A /* Models */,
 				79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */,
@@ -262,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */,
 				791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */,
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
@@ -445,11 +451,12 @@
 				DEVELOPMENT_TEAM = 6Q38DY93CU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thullium/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Thullium;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,11 +483,12 @@
 				DEVELOPMENT_TEAM = 6Q38DY93CU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thullium/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Thullium;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
