@@ -178,6 +178,7 @@ struct PeriodicTableView: View {
                 print("This happened")
                 print(gameModel!.numberOfAttempts)
                 gameModel!.numberOfAttempts += 1
+                print("Got here")
                 
             }
         }

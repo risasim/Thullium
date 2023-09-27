@@ -89,6 +89,7 @@ class GameModel{
         for cat in allCategories{
             categories.append(Category(name: cat, selected: true))
         }
+        started = true
     }
     
     func endGame(){
