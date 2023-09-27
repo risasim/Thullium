@@ -14,6 +14,12 @@ import TipKit
 let feedbackGenerator = UINotificationFeedbackGenerator()
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
 let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal", "unknown"]
+let JSONtoSwiftConverted = JSONtoSwiftDataconverter()
+// var allPeriods:[String]{
+//     for i in 1...18{
+//         allPeriods.append(String(i))
+//     }
+// }
 
 // MARK: - Global functions
 func determineColorFromCategory(category cat: String) ->Color{

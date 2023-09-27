@@ -18,32 +18,19 @@ struct GamePSetupView: View {
             VStack{
                 List{
                     Section(header:
-                    Label("selectCategories", systemImage: showCategories ? "chevron.down" : "chevron.up")
-                        .bold()
-                        .font(.headline)
-                        .foregroundStyle(Color.primary)
+                    GSetupLabel(text: "selectCategories", isPresented: $showCategories)
                         .padding(.top, 30)
-                        .onTapGesture {
-                            withAnimation(.easeIn) {
-                                showCategories.toggle()
-                            }
-                        }
                     ){
                         if showCategories{
-                            ForEach(gameModel.categories, id: \.name) { cat in
-                                HStack{
-                                    Text(LocalizedStringKey(cat.name))
-                                    Spacer()
-                                    Image(systemName: cat.selected ? "checkmark.circle":"circle")
-                                }
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    cat.selected.toggle()
-                                }
-                                .animation(.linear(duration: 0.3), value: cat.selected==false)
-                            }
+                            GSetupViewList(criteria: gameModel.categories)
                         }
                     }
+                 //   Section {
+                 //       //
+                 //   } header: {
+                 //       GSetupLabel(text: "selectPeriods", isPresented: .constant(false))
+                 //   }
+//
                 }
             }
             CloseButtonView(popUp: $pop)
@@ -58,4 +45,47 @@ struct GamePSetupView: View {
 #Preview{
     GamePSetupView(gameModel: GameModel(), pop: .constant(true))
         .environment(\.locale, .init(identifier: "cs"))
+}
+
+struct GSetupLabel:View {
+    
+    var text:String
+    @Binding var isPresented:Bool
+    
+    var body: some View {
+        Label(LocalizedStringKey(text), systemImage: isPresented ? "chevron.down" : "chevron.up")
+            .bold()
+            .font(.headline)
+            .foregroundStyle(Color.primary)
+            .onTapGesture {
+                withAnimation(.easeIn) {
+                    isPresented.toggle()
+                }
+            }
+    }
+}
+
+
+struct GSetupViewList: View {
+    
+    var criteria:[Category]
+    
+    var body: some View {
+        ForEach(criteria, id: \.name) { cat in
+            HStack{
+                Text(LocalizedStringKey(cat.name))
+                Spacer()
+                Image(systemName: cat.selected ? "checkmark.circle":"circle")
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                cat.selected.toggle()
+            }
+            .animation(.linear(duration: 0.3), value: cat.selected==false)
+        }
+    }
+}
+
+#Preview {
+    GSetupViewList(criteria: GameModel().categories)
 }

@@ -60,13 +60,11 @@ class GameModel{
                     prepareNames.append(el.name)
                     break
                 }
-                // not sure about that
-              //  else if cat.name.contains("unknown") && el.name.contains("unknown"){
-              //      if cat.selected == true{
-              //          namesReady.append(el.name)
-              //          break
-              //      }
-              //  }
+                if (cat.name.contains("unknown") && el.category.contains("unknown")&&cat.selected==true){
+                    prepareNames.append(el.name)
+                    determined=true
+                    break
+                }
             }
             if !determined{
                 print("\(el.name) not gonna be displayed")
@@ -75,7 +73,6 @@ class GameModel{
         }
         started = true
         namesReady = prepareNames.shuffled()
-       // print(namesReady)
         currentGuess = namesReady[currentNumber]
     }
     
