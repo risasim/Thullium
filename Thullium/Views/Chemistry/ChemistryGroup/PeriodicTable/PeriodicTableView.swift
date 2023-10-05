@@ -9,6 +9,9 @@ import SwiftUI
 import SwiftData
 import TipKit
 
+
+/// Complete view of periodic table.
+/// - Warning: This view does not work on it's own, ``GameModel`` or  ``SearchTable`` is needed as a paramter
 struct PeriodicTableView: View {
     
     @Environment(\.modelContext) private var modelContext
@@ -23,7 +26,7 @@ struct PeriodicTableView: View {
             Grid{
                 // MARK: - First
                 GridRow {
-                    PeriodicTest(el: elements[0], gues: gameModel?.alreadyGuessed, searchQuery: searchEngine?.showThese,hint: gameModel?.hint)
+                    PeriodicTest(el: elements[0], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                         .onTapGesture {
                            manageTap(gameModel: gameModel, index: 0)
                         }
@@ -31,7 +34,7 @@ struct PeriodicTableView: View {
                         Color.clear
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
-                    PeriodicTest(el: elements[1], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                    PeriodicTest(el: elements[1],searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                         .onTapGesture {
                             manageTap(gameModel: gameModel, index: 1)
                         }
@@ -40,7 +43,7 @@ struct PeriodicTableView: View {
                 // MARK: - Second
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+2], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+2], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+2)
                             }
@@ -50,7 +53,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<6, id: \.self){i in
-                        PeriodicTest(el: elements[i+4], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+4], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+4)
                             }
@@ -59,7 +62,7 @@ struct PeriodicTableView: View {
                 // MARK: - Third
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+10],gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+10],searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+10)
                             }
@@ -69,7 +72,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<6, id: \.self){i in
-                        PeriodicTest(el: elements[i+12], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+12], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+12)
                             }
@@ -78,7 +81,7 @@ struct PeriodicTableView: View {
                 // MARK: - Fourth
                 GridRow {
                     ForEach(0..<18, id: \.self){i in
-                        PeriodicTest(el: elements[i+18], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+18], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                               manageTap(gameModel: gameModel, index: i+18)
                             }
@@ -87,7 +90,7 @@ struct PeriodicTableView: View {
                 // MARK: - Fifth
                 GridRow {
                     ForEach(0..<18, id: \.self){i in
-                        PeriodicTest(el:elements[i+36], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el:elements[i+36], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+36)
                             }
@@ -96,7 +99,7 @@ struct PeriodicTableView: View {
                 // MARK: - Sixth
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+54], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+54], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+54)
                             }
@@ -104,7 +107,7 @@ struct PeriodicTableView: View {
                     Color.clear
                         .gridCellUnsizedAxes([.horizontal, .vertical])
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+71], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+71], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+71)
                             }
@@ -113,7 +116,7 @@ struct PeriodicTableView: View {
                 // MARK: - Seventh
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+86], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+86], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+86)
                             }
@@ -121,7 +124,7 @@ struct PeriodicTableView: View {
                     Color.clear
                         .gridCellUnsizedAxes([.horizontal, .vertical])
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+103], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+103], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+103)
                             }
@@ -129,7 +132,7 @@ struct PeriodicTableView: View {
                 }
                 // MARK: - Eight
                 GridRow {
-                    PeriodicTest(el: elements[118], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                    PeriodicTest(el: elements[118], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                         .onTapGesture {
                             manageTap(gameModel: gameModel, index: 118)
                         }
@@ -143,7 +146,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+56], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+56], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+56)
                             }
@@ -156,7 +159,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+88], gues: gameModel?.alreadyGuessed,searchQuery: searchEngine?.showThese, hint: gameModel?.hint)
+                        PeriodicTest(el: elements[i+88], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+88)
                             }
@@ -167,17 +170,17 @@ struct PeriodicTableView: View {
         .scrollIndicators(.hidden)
         
     }
-    
+    /// React to tap on element and then either add to alreadyGuessed or increment numAt in ``GameData``
     private func manageTap(gameModel : GameModel?, index i: Int){
         if gameModel != nil{
-            if gameModel!.currentGuess == elements[i].name{
+            if gameModel!.gData.currentGuess == elements[i].name{
                 gameModel!.addToGuessed(name: elements[i].name)
                 feedbackGenerator.notificationOccurred(.success)
             }else{
                 feedbackGenerator.notificationOccurred(.error)
                 print("This happened")
-                print(gameModel!.numberOfAttempts)
-                gameModel!.numberOfAttempts += 1
+                print(gameModel!.gData.numAt)
+                gameModel!.gData.numAt += 1
                 print("Got here")
                 
             }
@@ -186,7 +189,7 @@ struct PeriodicTableView: View {
 }
 
 #Preview {
-    PeriodicTableView()
+    PeriodicTableView(gameModel: GameModel())
         .task {
             try? await Tips.configure()
         }

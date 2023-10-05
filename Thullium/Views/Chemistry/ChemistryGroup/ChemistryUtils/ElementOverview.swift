@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Presenting all elements in grid navigating to ``ElementInfoView``
 struct ElementOverview: View {
     
     var elements:[Element]

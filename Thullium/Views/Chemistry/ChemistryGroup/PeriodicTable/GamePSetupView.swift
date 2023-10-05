@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// View that creates the setting for ``GameModel``
 struct GamePSetupView: View {
     
     var gameModel:GameModel
@@ -47,6 +49,8 @@ struct GamePSetupView: View {
         .environment(\.locale, .init(identifier: "cs"))
 }
 
+
+/// Label used for presenting optional category in ``GamePSetupView``
 struct GSetupLabel:View {
     
     var text:String
@@ -66,6 +70,7 @@ struct GSetupLabel:View {
 }
 
 
+/// List with all options presented with ``GSetupLabel``
 struct GSetupViewList: View {
     
     var criteria:[Category]

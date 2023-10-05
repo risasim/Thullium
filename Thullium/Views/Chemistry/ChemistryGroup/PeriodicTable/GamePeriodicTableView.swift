@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+
+/// View of ``PeriodicTableView`` that provides ``GameModel`` as parameter
 struct GamePeriodicTableView: View {
     
     @Binding var gameModel:GameModel
-    //@State var alert = false
     
     var body: some View {
         ZStack{
@@ -19,12 +20,12 @@ struct GamePeriodicTableView: View {
                     VStack{
                         HStack{
                             Spacer()
-                            Text(LocalizedStringKey(JSONtoSwiftDataconverter().eData[JSONtoSwiftDataconverter().eData.firstIndex(where: {$0.name == gameModel.currentGuess})!].name))
+                            Text(LocalizedStringKey(JSONtoSwiftConverted.eData[JSONtoSwiftConverted.eData.firstIndex(where: {$0.name == gameModel.gData.currentGuess})!].name))
                                 .bold()
                                 .font(.title)
                                 .padding()
                             Button {
-                                gameModel.numberOfAttempts=6
+                                gameModel.gData.numAt=6
                             } label: {
                                 Image(systemName: "lightbulb.max")
                             }
@@ -33,7 +34,7 @@ struct GamePeriodicTableView: View {
                         Spacer()
                     }
                 }
-            if gameModel.showAlert{
+            if gameModel.gData.showAlert{
                 CustomAlertView(model: $gameModel)
             }
         }
@@ -46,6 +47,7 @@ struct GamePeriodicTableView: View {
 }
 
 
+/// View that shows up after the game has ended
 struct CustomAlertView:View {
     
     @Binding var model:GameModel
@@ -64,12 +66,13 @@ struct CustomAlertView:View {
                         .multilineTextAlignment(.center)
                     Button("playAgain") {
                         model.restartGame()
-                        model.showAlert.toggle()
+                        model.gData.showAlert.toggle()
                     }
                     .font(.headline)
                     .foregroundStyle(Color.white)
                     .padding()
-                    .buttonStyle(.borderedProminent)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .padding()
                 .frame(maxWidth: .infinity,maxHeight: .infinity)

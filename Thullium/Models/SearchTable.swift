@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// Prepares the elements that are searched into array
 @Observable
 class SearchTable{
     var showThese:[String] = []

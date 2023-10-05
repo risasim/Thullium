@@ -11,9 +11,13 @@ import TipKit
 
 
 // MARK: - Global constants
+///Global variable for creating Feedback
 let feedbackGenerator = UINotificationFeedbackGenerator()
+///Global variable used to determine if the app was ever opened and thus if Onboarding Views are needed.
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
+///Global variable containg all categories possible. Used in for inicialization of class ``Category``
 let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal", "unknown"]
+///Global variable so there are not many variants created during apps lifetime.
 let JSONtoSwiftConverted = JSONtoSwiftDataconverter()
 // var allPeriods:[String]{
 //     for i in 1...18{
@@ -22,6 +26,7 @@ let JSONtoSwiftConverted = JSONtoSwiftDataconverter()
 // }
 
 // MARK: - Global functions
+///Global function that determines color of each category. Used in ``PeriodicTest``.
 func determineColorFromCategory(category cat: String) ->Color{
     switch cat{
     case "noble gas":
@@ -51,6 +56,7 @@ func determineColorFromCategory(category cat: String) ->Color{
     }
 }
 
+///Global function that determines what color is the `` PeriodicTest`` background
 func determineColorFromPhase(phase: String)-> Color{
     switch phase{
     case "Solid":
@@ -97,6 +103,8 @@ func mayuselater(){
 }
 
 // MARK: - Reusable Views
+
+/// Close button used on top of  views called like sheets
 struct CloseButtonView:View {
     
     @Binding var popUp:Bool
@@ -119,7 +127,7 @@ struct CloseButtonView:View {
 }
 
 
-// MARK: - ViewModifiers
+// MARK: - ViewModifiers --maybe isnt needed??
 struct CornerRadiusStyle: ViewModifier {
     var radius: CGFloat
     var corners: UIRectCorner

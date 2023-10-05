@@ -25,11 +25,11 @@
 		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
 		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
 		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
+		797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 797ADA932ACD69690039E86C /* element_003_lithium.usdz */; };
+		797ADA962ACD6AA70039E86C /* ARtest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797ADA952ACD6AA70039E86C /* ARtest.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
-		79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD92AB21F400075DC69 /* ContentView.swift */; };
-		79F93DDC2AB21F400075DC69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DDB2AB21F400075DC69 /* Item.swift */; };
 		79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DDD2AB21F420075DC69 /* Assets.xcassets */; };
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
 		79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */; };
@@ -55,12 +55,12 @@
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
+		797ADA932ACD69690039E86C /* element_003_lithium.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = element_003_lithium.usdz; sourceTree = "<group>"; };
+		797ADA952ACD6AA70039E86C /* ARtest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARtest.swift; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
-		79F93DD92AB21F400075DC69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		79F93DDB2AB21F400075DC69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		79F93DDD2AB21F420075DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79FBF7AF2AC1C81400C4286B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +81,9 @@
 		790070CD2AB37C5900D1CD3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				797ADA932ACD69690039E86C /* element_003_lithium.usdz */,
+				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
+				795C6E512AB4DBC600BB077C /* testdata.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -101,8 +104,19 @@
 			children = (
 				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
 				7938C57B2AB62C87001189D2 /* Chemistry */,
+				797ADA952ACD6AA70039E86C /* ARtest.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7919495F2ACF0CB20077ED38 /* ChemistryUtils */ = {
+			isa = PBXGroup;
+			children = (
+				795C6E532AB4E33B00BB077C /* ElementInfoView.swift */,
+				7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */,
+				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
+			);
+			path = ChemistryUtils;
 			sourceTree = "<group>";
 		};
 		791C596D2ABB307D007CCAB8 /* PeriodicTable */ = {
@@ -139,7 +153,6 @@
 		795C6E502AB4976400BB077C /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
-				79F93DDB2AB21F400075DC69 /* Item.swift */,
 				790070D02AB37C8E00D1CD3A /* ElementModel.swift */,
 				795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */,
 			);
@@ -149,11 +162,9 @@
 		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
 			isa = PBXGroup;
 			children = (
+				7919495F2ACF0CB20077ED38 /* ChemistryUtils */,
 				791C596D2ABB307D007CCAB8 /* PeriodicTable */,
-				795C6E532AB4E33B00BB077C /* ElementInfoView.swift */,
-				790070D62AB39A0A00D1CD3A /* ElementOverview.swift */,
 				793464722AB572AD00407F15 /* ElementInfoGroup */,
-				7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */,
 			);
 			path = ChemistryGroup;
 			sourceTree = "<group>";
@@ -189,9 +200,6 @@
 				790070D32AB399E700D1CD3A /* Views */,
 				790070D22AB37CC200D1CD3A /* Models */,
 				79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */,
-				79F93DD92AB21F400075DC69 /* ContentView.swift */,
-				795C6E512AB4DBC600BB077C /* testdata.json */,
-				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
 				790070CD2AB37C5900D1CD3A /* Resources */,
 				79F93DDD2AB21F420075DC69 /* Assets.xcassets */,
 				79F93DDF2AB21F420075DC69 /* Preview Content */,
@@ -268,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */,
+				797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */,
 				791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */,
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
@@ -289,9 +298,8 @@
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
-				79F93DDA2AB21F400075DC69 /* ContentView.swift in Sources */,
+				797ADA962ACD6AA70039E86C /* ARtest.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
-				79F93DDC2AB21F400075DC69 /* Item.swift in Sources */,
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,

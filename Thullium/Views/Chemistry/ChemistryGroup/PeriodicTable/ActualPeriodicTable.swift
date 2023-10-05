@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// View of periodic table that is presented to user giving the ``SearchTable`` parameter
 struct ActualPeriodicTable: View {
     
     @State var searchEng = SearchTable()

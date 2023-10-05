@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// Menu item for ``ChemistryView``
 struct ChemistryMenuItemView: View {
     
     var text:String
+    /// System image string
     var sysIm:String
     
     var body: some View {

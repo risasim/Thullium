@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+
+/// Main View for chemistry themed content
 struct ChemistryView: View {
     
     @Environment(\.modelContext) private var modelContext

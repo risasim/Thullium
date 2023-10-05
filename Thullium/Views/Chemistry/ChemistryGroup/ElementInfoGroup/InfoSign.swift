@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// Table like view that represents basic data from ``Element``
 struct InfoSign: View {
     
     var info:Element

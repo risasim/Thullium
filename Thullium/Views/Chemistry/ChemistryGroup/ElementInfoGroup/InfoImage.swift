@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// Presenting image found in ``Element``
 struct InfoImage: View {
     
     var image:ElementImage
@@ -35,4 +37,5 @@ struct InfoImage: View {
 
 #Preview {
     InfoImage(image: JSONtoSwiftDataconverter().eData[68].image)
+        .padding()
 }

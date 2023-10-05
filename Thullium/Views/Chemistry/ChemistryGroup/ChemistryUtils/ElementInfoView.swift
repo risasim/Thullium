@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+/// View presenting data about element
 struct ElementInfoView: View {
     var element:Element
     var body: some View {

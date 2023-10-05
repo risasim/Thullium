@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Presenting basic information about element. Contains link to wikipedia
 struct InfoBasic: View {
     
     var info:Element
