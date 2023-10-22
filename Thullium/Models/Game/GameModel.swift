@@ -24,13 +24,13 @@ class GameModel{
      */
     
     init(){
-        // add maybe an other variable to get swiftdata into this
-        var array:[String] = []
-        for el in JSONtoSwiftDataconverter().eData{
-            array.append(el.name)
-        }
-        gData.namesReady = array.shuffled()
-        gData.currentGuess = gData.getGuess()
+        // add maybe an other variable to get swiftdata into this NOT NEEDED BECAUSE OF INIT IN SWIFTDATA
+    //    var array:[String] = []
+    //    for el in JSONtoSwiftDataconverter().eData{
+    //        array.append(el.name)
+    //    }
+    //    gData.namesReady = array.shuffled()
+        gData.getGuess()
         for cat in allCategories{
             categories.append(Category(name: cat, selected: true))
         }
@@ -40,7 +40,6 @@ class GameModel{
     func startGame(){
         gData.ready = false
         gData.namesReady = []
-        gData.alreadyGuessed = []
         gData.resetUserStat()
         var prepareNames:[String] = []
         for el in JSONtoSwiftDataconverter().eData{
@@ -63,11 +62,12 @@ class GameModel{
                 gData.alreadyGuessed.append(el.name)
             }
         }
-        gData.ready = true
         gData.namesReady = prepareNames.shuffled()
-        gData.currentGuess = gData.getGuess()
+        gData.ready = true
+        gData.getGuess()
     }
     
+    ///Resets data and call ``startGame()`` to prepare for new game
     func restartGame(){
         gData.resetUserStat()
         self.startGame()
@@ -77,6 +77,10 @@ class GameModel{
     func addToGuessed(name:String){
         gData.alreadyGuessed.append(name)
         gData.numAt = 0
+    }
+    
+    func prepareGameWithFilter(){
+        
     }
     
     //Filter by category selected in ChemistryPopUpView
@@ -156,14 +160,18 @@ class GameData{
         for el in JSONtoSwiftConverted.eData{
             namesPreset.append(el.name)
         }
-        namesReady = namesPreset
+        namesReady = namesPreset.shuffled()
     }
     
-    func getGuess() -> String{
-        return namesReady[arIndex]
+  //  func getGuess() -> String{
+  //      return namesReady[arIndex]
+  //  }
+    func getGuess(){
+        self.currentGuess = namesReady[arIndex]
     }
     
     func resetUserStat(){
+        self.alreadyGuessed = []
         self.numAt = 0
         self.arIndex = 0
     }

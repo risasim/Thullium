@@ -23,7 +23,6 @@ struct PeriodicTest:View {
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
-    
     /// Handles logic of making sure that either ``GameModel`` or  ``SearchTable`` exists and based on that creates the right view in three variants
     var body: some View {
         if let data = gData{
@@ -31,7 +30,8 @@ struct PeriodicTest:View {
                 normalView
                     .animation(.bouncy, value: 0.6)
             }else{
-                baseView.opacity(data.hint==el.name ? 0.85 : 0.6)
+                baseView
+                    .opacity(data.hint==el.name ? 0.85 : 0.6)
             }
         }else if (searchQuery != nil){
             if (searchQuery!.contains(el.name)){

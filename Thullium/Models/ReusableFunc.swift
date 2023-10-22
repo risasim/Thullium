@@ -16,7 +16,7 @@ let feedbackGenerator = UINotificationFeedbackGenerator()
 ///Global variable used to determine if the app was ever opened and thus if Onboarding Views are needed.
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
 ///Global variable containg all categories possible. Used in for inicialization of class ``Category``
-let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "reactive nonmetal", "polyatomic nonmetal", "unknown"]
+let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "polyatomic nonmetal", "unknown"]
 ///Global variable so there are not many variants created during apps lifetime.
 let JSONtoSwiftConverted = JSONtoSwiftDataconverter()
 // var allPeriods:[String]{
@@ -153,4 +153,10 @@ extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         ModifiedContent(content: self, modifier: CornerRadiusStyle(radius: radius, corners: corners))
     }
+}
+
+// MARK: - Enums
+enum GSetupChoices{
+    case categories
+    case periods
 }

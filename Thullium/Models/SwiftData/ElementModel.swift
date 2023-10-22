@@ -110,6 +110,7 @@ struct Elements:Codable{
  }
 
  // MARK: - Element
+///Structure to parse the JSON data
 struct Element:Codable {
     let name:String
     let appearance: String?
@@ -140,6 +141,7 @@ struct Element:Codable {
  }
 
  // MARK: - Image
+///Structure same as in JSON file, basic data about image
 struct ElementImage :Codable{
      let title: String
      let url: String

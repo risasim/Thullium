@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 /// View that creates the setting for ``GameModel``
 struct GamePSetupView: View {
     
