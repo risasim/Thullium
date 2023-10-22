@@ -31,7 +31,7 @@ struct PeriodicTest:View {
                     .animation(.bouncy, value: 0.6)
             }else{
                 baseView
-                    .opacity(data.hint==el.name ? 0.85 : 0.6)
+                    .opacity(data.hinted==el.name ? 0.85 : 0.6)
             }
         }else if (searchQuery != nil){
             if (searchQuery!.contains(el.name)){

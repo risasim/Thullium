@@ -133,6 +133,8 @@ class GameData{
         }
     }
     /// String that is filled with name of elment if needed. Used in ``PeriodicTest``
+    var hinted = ""
+    /// String showing base info about the element
     var hint = ""
     /// Guessed name of element, that will be shown on top of ``GamePeriodicTableView``
     var currentGuess = ""

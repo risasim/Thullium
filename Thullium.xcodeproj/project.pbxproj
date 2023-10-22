@@ -57,6 +57,7 @@
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
 		797ADA932ACD69690039E86C /* element_003_lithium.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = element_003_lithium.usdz; sourceTree = "<group>"; };
 		797ADA952ACD6AA70039E86C /* ARtest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARtest.swift; sourceTree = "<group>"; };
+		79820FD82AE5081700B53520 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +181,7 @@
 		79F93DCB2AB21F3F0075DC69 = {
 			isa = PBXGroup;
 			children = (
+				79820FD82AE5081700B53520 /* README.md */,
 				79F93DD62AB21F400075DC69 /* Thullium */,
 				79F93DD52AB21F400075DC69 /* Products */,
 			);
