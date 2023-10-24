@@ -13,6 +13,7 @@ struct GamePSetupView: View {
     var gameModel:GameModel
     @Binding var pop: Bool
     @State var showCategories = true
+    @State var showMessage = false
     
     var body: some View {
         ZStack{
@@ -23,7 +24,7 @@ struct GamePSetupView: View {
                         .padding(.top, 30)
                     ){
                         if showCategories{
-                            GSetupViewList(criteria: gameModel.categories)
+                            GSetupViewList(criteria: gameModel.categories, showMessage: $showMessage)
                         }
                     }
                  //   Section {
@@ -34,7 +35,11 @@ struct GamePSetupView: View {
 //
                 }
             }
+            .alert("categoriesAlert", isPresented: $showMessage) {
+                Button("OK", role: .cancel) { }
+            }
             CloseButtonView(popUp: $pop)
+            
         }
     }
 }
@@ -73,6 +78,7 @@ struct GSetupLabel:View {
 struct GSetupViewList: View {
     
     var criteria:[Category]
+    @Binding var showMessage:Bool
     
     var body: some View {
         ForEach(criteria, id: \.name) { cat in
@@ -83,13 +89,30 @@ struct GSetupViewList: View {
             }
             .contentShape(Rectangle())
             .onTapGesture {
-                cat.selected.toggle()
+               checkTheSelection(cat)
             }
             .animation(.linear(duration: 0.3), value: cat.selected==false)
+        }
+    }
+    
+    ///Function that ensures that the game is not started with zero categories to choose from
+    func checkTheSelection(_ cat: Category){
+        var select:Category = Category(name: "Random", selected: false)
+        var counter = 0
+        for c in criteria{
+            if c.selected==true{
+                counter+=1
+                select = c
+            }
+        }
+        if counter<2 && cat.name==select.name{
+            showMessage.toggle()
+        }else{
+            cat.selected.toggle()
         }
     }
 }
 
 #Preview {
-    GSetupViewList(criteria: GameModel().categories)
+    GSetupViewList(criteria: GameModel().categories, showMessage: .constant(false))
 }

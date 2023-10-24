@@ -15,6 +15,7 @@
 "playAgain"= "Hrát znova";
 "congratsOnCompleteGame"="Gratuluace k uhádnutí všech prvků!";
 "selectPeriods"="Vyberte periody, které chcete opakovat";
+"categoriesAlert"="Pro hru potřebujete alsepoň jednu kategorii na hádání";
 
 //Variables of data
 "Phase"="Skupenství";
