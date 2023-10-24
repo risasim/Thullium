@@ -32,7 +32,6 @@ struct GamePSetupView: View {
                  //   } header: {
                  //       GSetupLabel(text: "selectPeriods", isPresented: .constant(false))
                  //   }
-//
                 }
             }
             .alert("categoriesAlert", isPresented: $showMessage) {
