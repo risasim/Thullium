@@ -8,5 +8,6 @@
 import Foundation
 
 struct PreferencesModel{
+    var minRandSelection = 3
     
 }
