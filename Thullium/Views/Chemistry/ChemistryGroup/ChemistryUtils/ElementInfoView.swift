@@ -26,9 +26,11 @@ struct ElementInfoView: View {
                     Text(LocalizedStringKey(element.summary))
                         .padding()
                     Divider()
-                    HStack{
-                        InfoImage(image: element.image)
-                        InfoImage(image: ElementImage(title: "Bohr Model", url: element.bohr_model_image ?? "/", attribution: ""))
+                    ScrollView(.horizontal) {
+                        HStack{
+                            InfoImage(image: element.image)
+                            InfoImage(image: ElementImage(title: "Bohr Model", url: element.bohr_model_image ?? "/", attribution: ""))
+                        }
                     }
                     Divider()
                 }
@@ -45,6 +47,6 @@ struct ElementInfoView: View {
 }
 
 #Preview {
-    ElementInfoView(element: JSONtoSwiftDataconverter().eData[0])
+    ElementInfoView(element: JSONtoSwiftDataconverter().eData[50])
         .environment(\.locale, .init(identifier: "cs"))
 }

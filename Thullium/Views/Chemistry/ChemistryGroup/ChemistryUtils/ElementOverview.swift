@@ -65,3 +65,6 @@ struct ElementOverview: View {
 #Preview {
     ElementOverview(elements: JSONtoSwiftDataconverter().eData)
 }
+#Preview{
+    ElementOverview(elements: JSONtoSwiftDataconverter().eData)
+}

@@ -34,11 +34,11 @@ struct GamePSetupView: View {
                  //   }
                 }
             }
+            .background(.gray)
             .alert("categoriesAlert", isPresented: $showMessage) {
                 Button("OK", role: .cancel) { }
             }
             CloseButtonView(popUp: $pop)
-            
         }
     }
 }
@@ -115,3 +115,20 @@ struct GSetupViewList: View {
 #Preview {
     GSetupViewList(criteria: GameModel().categories, showMessage: .constant(false))
 }
+
+
+
+
+
+// HStack {
+//     Button(LocalizedStringKey("randCategories")) {
+//         //
+//     }
+//     Spacer()
+//     Button("deselect") {
+//         //
+//     }
+// }
+// .padding(.top)
+// //.listRowBackground(Color.clear)
+// .buttonStyle(.bordered)

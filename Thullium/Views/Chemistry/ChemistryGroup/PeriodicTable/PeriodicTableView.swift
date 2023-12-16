@@ -30,6 +30,7 @@ struct PeriodicTableView: View {
                         .onTapGesture {
                            manageTap(gameModel: gameModel, index: 0)
                         }
+                        .popoverTip(ClickableTip(), arrowEdge: .trailing)
                     ForEach(0..<16, id: \.self){_ in
                         Color.clear
                             .gridCellUnsizedAxes([.horizontal, .vertical])
@@ -38,7 +39,6 @@ struct PeriodicTableView: View {
                         .onTapGesture {
                             manageTap(gameModel: gameModel, index: 1)
                         }
-                        .popoverTip(ClickableTip(), arrowEdge: .trailing)
                 }
                 // MARK: - Second
                 GridRow {
@@ -189,7 +189,7 @@ struct PeriodicTableView: View {
 }
 
 #Preview {
-    PeriodicTableView(gameModel: GameModel())
+    PeriodicTableView(searchEngine: SearchTable())
         .task {
             try? await Tips.configure()
         }

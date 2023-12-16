@@ -24,6 +24,7 @@
 "selectCategories"="Select categories you want to learn";
 "congratsOnCompleteGame"="Congratulations on completing the game!";
 "unknown"="Unknown category";
+"randCategories" = "Get random categories";
 
 
 
