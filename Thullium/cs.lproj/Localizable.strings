@@ -17,6 +17,7 @@
 "selectPeriods"="Vyberte periody, které chcete opakovat";
 "categoriesAlert"="Pro hru potřebujete minimálně jednu kategorii na hádání";
 "randCategories" = "Vybrat náhodně";
+"selectAllCategories" = "Vybrat vše";
 
 //Variables of data
 "Phase"="Skupenství";

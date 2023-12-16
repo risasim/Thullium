@@ -13,7 +13,7 @@ struct GamePSetupView: View {
     var gameModel:GameModel
     @Binding var pop: Bool
     @State var showCategories = true
-    @State var showMessage = false
+    @State var model = GSetupModel()
     
     var body: some View {
         ZStack{
@@ -24,18 +24,30 @@ struct GamePSetupView: View {
                         .padding(.top, 30)
                     ){
                         if showCategories{
-                            GSetupViewList(criteria: gameModel.categories, showMessage: $showMessage)
+                            GSetupViewList(model: $model)
                         }
                     }
-                 //   Section {
-                 //       //
-                 //   } header: {
-                 //       GSetupLabel(text: "selectPeriods", isPresented: .constant(false))
-                 //   }
+                    if showCategories{
+                        HStack {
+                            Button(LocalizedStringKey("randCategories")) {
+                                model.randomSelection()
+                            }
+                            Spacer()
+                            Button("selectAllCategories") {
+                                model.selectAll()
+                            }
+                        }
+                        .listRowBackground(Color.clear)
+                        .font(.title3)
+                        .buttonStyle(.bordered)
+                        .foregroundColor(.primary)
+                    }
                 }
+                .padding(0)
+                .listSectionSpacing(5)
             }
             .background(.gray)
-            .alert("categoriesAlert", isPresented: $showMessage) {
+            .alert("categoriesAlert", isPresented: $model.showMessage) {
                 Button("OK", role: .cancel) { }
             }
             CloseButtonView(popUp: $pop)
@@ -55,7 +67,6 @@ struct GamePSetupView: View {
 
 /// Label used for presenting optional category in ``GamePSetupView``
 struct GSetupLabel:View {
-    
     var text:String
     @Binding var isPresented:Bool
     
@@ -76,11 +87,10 @@ struct GSetupLabel:View {
 /// List with all options presented with ``GSetupLabel``
 struct GSetupViewList: View {
     
-    var criteria:[Category]
-    @Binding var showMessage:Bool
+    @Binding var model:GSetupModel
     
     var body: some View {
-        ForEach(criteria, id: \.name) { cat in
+        ForEach(model.criteria, id: \.name) { cat in
             HStack{
                 Text(LocalizedStringKey(cat.name))
                 Spacer()
@@ -88,32 +98,15 @@ struct GSetupViewList: View {
             }
             .contentShape(Rectangle())
             .onTapGesture {
-               checkTheSelection(cat)
+                model.checkTheSelection(cat)
             }
             .animation(.linear(duration: 0.3), value: cat.selected==false)
-        }
-    }
-    
-    ///Function that ensures that the game is not started with zero categories to choose from
-    func checkTheSelection(_ cat: Category){
-        var select:Category = Category(name: "Random", selected: false)
-        var counter = 0
-        for c in criteria{
-            if c.selected==true{
-                counter+=1
-                select = c
-            }
-        }
-        if counter<2 && cat.name==select.name{
-            showMessage.toggle()
-        }else{
-            cat.selected.toggle()
         }
     }
 }
 
 #Preview {
-    GSetupViewList(criteria: GameModel().categories, showMessage: .constant(false))
+    GSetupViewList(model: .constant(GSetupModel()))
 }
 
 
@@ -132,3 +125,28 @@ struct GSetupViewList: View {
 // .padding(.top)
 // //.listRowBackground(Color.clear)
 // .buttonStyle(.bordered)
+
+//   Section {
+//       //
+//   } header: {
+//       GSetupLabel(text: "selectPeriods", isPresented: .constant(false))
+//   }
+
+
+
+///Function that ensures that the game is not started with zero categories to choose from
+//  func checkTheSelection(_ cat: Category){
+//      var select:Category = Category(name: "Random", selected: false)
+//      var counter = 0
+//      for c in criteria{
+//          if c.selected==true{
+//              counter+=1
+//              select = c
+//          }
+//      }
+//      if counter<2 && cat.name==select.name{
+//          showMessage.toggle()
+//      }else{
+//          cat.selected.toggle()
+//      }
+//  }

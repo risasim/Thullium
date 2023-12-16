@@ -11,6 +11,8 @@
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
 		790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D62AB39A0A00D1CD3A /* ElementOverview.swift */; };
+		791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A90212B2DB5D000F6510E /* GSetupModel.swift */; };
+		791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A90232B2E1E4700F6510E /* PreferencesModel.swift */; };
 		791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */; };
 		791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 791C59722ABB317F007CCAB8 /* Localizable.strings */; };
 		791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C59742ABB3392007CCAB8 /* SearchTable.swift */; };
@@ -41,6 +43,8 @@
 		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
 		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
 		790070D62AB39A0A00D1CD3A /* ElementOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementOverview.swift; sourceTree = "<group>"; };
+		791A90212B2DB5D000F6510E /* GSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSetupModel.swift; sourceTree = "<group>"; };
+		791A90232B2E1E4700F6510E /* PreferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModel.swift; sourceTree = "<group>"; };
 		791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerodicTest.swift; sourceTree = "<group>"; };
 		791C59712ABB317F007CCAB8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		791C59732ABB3181007CCAB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				795C6E502AB4976400BB077C /* SwiftData */,
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
 				791C59742ABB3392007CCAB8 /* SearchTable.swift */,
+				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				796857702AB885D800A0594C /* GameModel.swift */,
 				79820FD92AE525A400B53520 /* GameData.swift */,
 				79820FDB2AE525D500B53520 /* Category.swift */,
+				791A90212B2DB5D000F6510E /* GSetupModel.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -305,11 +311,13 @@
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
+				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
 				79820FDA2AE525A400B53520 /* GameData.swift in Sources */,
+				791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */,
 				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
