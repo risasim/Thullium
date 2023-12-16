@@ -98,11 +98,10 @@
 		790070D22AB37CC200D1CD3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				799F7E8E2B2E23A3004B0077 /* General */,
 				7968576F2AB885CA00A0594C /* Game */,
 				795C6E502AB4976400BB077C /* SwiftData */,
-				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
 				791C59742ABB3392007CCAB8 /* SearchTable.swift */,
-				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +184,15 @@
 				791A90212B2DB5D000F6510E /* GSetupModel.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		799F7E8E2B2E23A3004B0077 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
+				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		79F93DCB2AB21F3F0075DC69 = {

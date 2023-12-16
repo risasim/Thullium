@@ -21,6 +21,7 @@ struct GamePSetupView: View {
                     Section(header:
                     GSetupLabel(text: "selectCategories", isPresented: $showCategories)
                         .padding(.top, 30)
+                        .listRowInsets(.init(top: 20, leading: 0, bottom: 5, trailing: 0))
                     ){
                         if showCategories{
                             GSetupViewList(model: $gameModel.setupModel)
@@ -38,8 +39,9 @@ struct GamePSetupView: View {
                         }
                         .listRowBackground(Color.clear)
                         .font(.title3)
-                        .buttonStyle(.bordered)
-                        .foregroundColor(.primary)
+                        .buttonStyle(.borderedProminent)
+                        //.foregroundColor(.primary)
+                        .listRowInsets(.init(top: 10, leading: 5, bottom: 0, trailing: 5))
                     }
                 }
                 .padding(0)
