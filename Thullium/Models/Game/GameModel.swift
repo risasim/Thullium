@@ -16,6 +16,8 @@ class GameModel{
 // MARK: - Variables
     var gData = GameData()
     var categories:[Category] = []
+    ///Manages game settings through ``GamePSetupView``
+    var setupModel = GSetupModel()
     
 // MARK: - Functions
     /*
@@ -40,6 +42,7 @@ class GameModel{
     ///Initialises the game data and filter them
     func startGame(){
         gData.ready = false
+        categories = setupModel.criteria
         gData.namesReady = []
         gData.resetUserStat()
         gData.namesReady = prepareGameWithFilter().shuffled()

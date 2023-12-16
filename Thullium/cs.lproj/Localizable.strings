@@ -15,7 +15,9 @@
 "playAgain"= "Hrát znova";
 "congratsOnCompleteGame"="Gratuluace k uhádnutí všech prvků!";
 "selectPeriods"="Vyberte periody, které chcete opakovat";
-"categoriesAlert"="Pro hru potřebujete alsepoň jednu kategorii na hádání";
+"categoriesAlert"="Pro hru potřebujete minimálně jednu kategorii na hádání";
+"randCategories" = "Vybrat náhodně";
+"selectAllCategories" = "Vybrat vše";
 
 //Variables of data
 "Phase"="Skupenství";
@@ -181,7 +183,7 @@
 
 "Molybdenum is a chemical element with symbol Mo and atomic number 42. The name is from Neo-Latin molybdaenum, from Ancient Greek Μόλυβδος molybdos, meaning lead, since its ores were confused with lead ores. Molybdenum minerals have been known throughout history, but the element was discovered (in the sense of differentiating it as a new entity from the mineral salts of other metals) in 1778 by Carl Wilhelm Scheele."="Molybden je chemický prvek se symbolem Mo a atomovým číslem 42. Název pochází z novolatinského molybdaenum, ze starořeckého Μόλυβδος molybdos, což znamená olovo, protože jeho rudy byly zaměňovány s olověnými rudami. Minerály molybdenu byly známy po celou historii, ale prvek byl objeven (ve smyslu odlišení jako nové entity od minerálních solí jiných kovů) v roce 1778 Carlem Wilhelmem Scheelem.";
 
-"Technetium (/tɛkˈniːʃiəm/) is a chemical element with symbol Tc and atomic number 43. It is the element with the lowest atomic number in the periodic table that has no stable isotopes:every form of it is radioactive. Nearly all technetium is produced synthetically, and only minute amounts are found in nature."="Technecium (/tɛkˈniːʃiəm/) je chemický prvek se symbolem Tc a atomovým číslem 43. Je to prvek s nejnižším atomovým číslem v periodické tabulce, který nemá žádné stabilní izotopy:každá jeho forma je radioaktivní. Téměř veškeré technecium se vyrábí synteticky a v přírodě se ho vyskytují jen nepatrná množství.";
+"Technetium (/tɛkˈniːʃiəm/) is a chemical element with symbol Tc and atomic number 43. It is the element with the lowest atomic number in the periodic table that has no stable isotopes:every form of it is radioactive. Nearly all technetium is produced synthetically, and only minute amounts are found in nature."="Technecium je chemický prvek se symbolem Tc a atomovým číslem 43. Je to prvek s nejnižším atomovým číslem v periodické tabulce, který nemá žádné stabilní izotopy:každá jeho forma je radioaktivní. Téměř veškeré technecium se vyrábí synteticky a v přírodě se ho vyskytují jen nepatrná množství.";
 
 "Ruthenium is a chemical element with symbol Ru and atomic number 44. It is a rare transition metal belonging to the platinum group of the periodic table. Like the other metals of the platinum group, ruthenium is inert to most other chemicals."="Ruthenium je chemický prvek se symbolem Ru a atomovým číslem 44. Je to vzácný přechodný kov patřící do skupiny platiny v periodické tabulce. Stejně jako ostatní kovy platinové skupiny je ruthenium inertní vůči většině ostatních chemických látek.";
 

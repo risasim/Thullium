@@ -17,6 +17,14 @@ let feedbackGenerator = UINotificationFeedbackGenerator()
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
 ///Global variable containg all categories possible. Used in for inicialization of class ``Category``
 let allCategories = ["noble gas", "diatomic nonmetal", "alkali metal", "alkaline earth metal", "metalloid", "post-transition metal",  "lanthanide", "transition metal", "actinide", "polyatomic nonmetal", "unknown"]
+///Global variable containing all the categories in Category struct
+var allCats:[Category]{
+    var ct:[Category] = []
+    for cat in allCategories{
+        ct.append(Category(name: cat, selected: true))
+    }
+    return ct
+}
 ///Global variable so there are not many variants created during apps lifetime.
 let JSONtoSwiftConverted = JSONtoSwiftDataconverter()
 // var allPeriods:[String]{

@@ -19,11 +19,25 @@ struct InfoImage: View {
             case .success(let image):
                 image
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
+                    .frame(height: 200)
+                    .cornerRadius(12)
             case.empty:
-                ProgressView()
+                Rectangle()
+                    .frame(width: 200, height: 200)
+                    .cornerRadius(12)
+                    .foregroundColor(.white)
+                    .overlay{
+                        ProgressView()
+                    }
             case.failure:
-                Image(systemName: "wifi.slash")
+                Rectangle()
+                    .frame(width: 200, height: 200)
+                    .cornerRadius(12)
+                    .foregroundColor(.white)
+                    .overlay{
+                        Image(systemName: "wifi.slash")
+                    }
             @unknown default:
                 Color.gray
             }
@@ -36,6 +50,6 @@ struct InfoImage: View {
 }
 
 #Preview {
-    InfoImage(image: JSONtoSwiftDataconverter().eData[68].image)
+    InfoImage(image: JSONtoSwiftDataconverter().eData[60].image)
         .padding()
 }
