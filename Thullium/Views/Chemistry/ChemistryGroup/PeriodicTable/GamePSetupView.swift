@@ -10,10 +10,9 @@ import SwiftUI
 /// View that creates the setting for ``GameModel``
 struct GamePSetupView: View {
     
-    var gameModel:GameModel
+    @State var gameModel:GameModel
     @Binding var pop: Bool
     @State var showCategories = true
-    @State var model = GSetupModel()
     
     var body: some View {
         ZStack{
@@ -24,17 +23,17 @@ struct GamePSetupView: View {
                         .padding(.top, 30)
                     ){
                         if showCategories{
-                            GSetupViewList(model: $model)
+                            GSetupViewList(model: $gameModel.setupModel)
                         }
                     }
                     if showCategories{
                         HStack {
                             Button(LocalizedStringKey("randCategories")) {
-                                model.randomSelection()
+                                gameModel.setupModel.randomSelection()
                             }
                             Spacer()
                             Button("selectAllCategories") {
-                                model.selectAll()
+                                gameModel.setupModel.selectAll()
                             }
                         }
                         .listRowBackground(Color.clear)
@@ -47,7 +46,7 @@ struct GamePSetupView: View {
                 .listSectionSpacing(5)
             }
             .background(.gray)
-            .alert("categoriesAlert", isPresented: $model.showMessage) {
+            .alert("categoriesAlert", isPresented: $gameModel.setupModel.showMessage) {
                 Button("OK", role: .cancel) { }
             }
             CloseButtonView(popUp: $pop)
@@ -108,45 +107,3 @@ struct GSetupViewList: View {
 #Preview {
     GSetupViewList(model: .constant(GSetupModel()))
 }
-
-
-
-
-
-// HStack {
-//     Button(LocalizedStringKey("randCategories")) {
-//         //
-//     }
-//     Spacer()
-//     Button("deselect") {
-//         //
-//     }
-// }
-// .padding(.top)
-// //.listRowBackground(Color.clear)
-// .buttonStyle(.bordered)
-
-//   Section {
-//       //
-//   } header: {
-//       GSetupLabel(text: "selectPeriods", isPresented: .constant(false))
-//   }
-
-
-
-///Function that ensures that the game is not started with zero categories to choose from
-//  func checkTheSelection(_ cat: Category){
-//      var select:Category = Category(name: "Random", selected: false)
-//      var counter = 0
-//      for c in criteria{
-//          if c.selected==true{
-//              counter+=1
-//              select = c
-//          }
-//      }
-//      if counter<2 && cat.name==select.name{
-//          showMessage.toggle()
-//      }else{
-//          cat.selected.toggle()
-//      }
-//  }
