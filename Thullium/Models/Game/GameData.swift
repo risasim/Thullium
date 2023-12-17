@@ -20,6 +20,7 @@ class GameData{
         willSet{
             if newValue>5{
                 hinted = currentGuess
+                allHints+=1
             }else if newValue == 0{
                 hinted = ""
             }
@@ -29,6 +30,8 @@ class GameData{
     var hinted = ""
     ///Number of taps on the hint icon once give it a short description and second gives it the postion of the element
     var tapHint = 0
+    ///Number of all hints that have been used
+    var allHints = 0
     /// String showing base info about the element
     var hint = ""
     /// Guessed name of element, that will be shown on top of ``GamePeriodicTableView``
