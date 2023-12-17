@@ -25,6 +25,9 @@
 "gameHintTip"="Potřebujete pomoct?";
 "gameHintTipText"="Klikněte a získejte nápovědu.";
 
+//Settings
+"appDescription"="Aplikace pro objevování a učení periodické tabulky prvků. Aplikace napsaná během seminářů chemie na střední škole.";
+
 //Variables of data
 "Phase"="Skupenství";
 "Category"="Kategorie";

@@ -33,6 +33,10 @@
 "gameHintTip"="Are you cluesless?";
 "gameHintTipText"="Tap to get a hint in form of highlighting the position of element.";
 
+//Settings
+//Settings
+"appDescription"="Application for learning periodic table. App created in 2023 while attending chemistry seminar.";
+
 
 
 

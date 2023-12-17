@@ -26,6 +26,9 @@
 		795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E532AB4E33B00BB077C /* ElementInfoView.swift */; };
 		79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA12B2EEBE900A79653 /* TipKitViews.swift */; };
 		79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA42B2EFBB900A79653 /* AchievementModel.swift */; };
+		79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA82B2F087A00A79653 /* SettingsView.swift */; };
+		79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAA2B2F08D400A79653 /* SettingsRowView.swift */; };
+		79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */; };
 		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
 		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
 		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
@@ -61,6 +64,9 @@
 		795C6E532AB4E33B00BB077C /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
 		79645AA12B2EEBE900A79653 /* TipKitViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipKitViews.swift; sourceTree = "<group>"; };
 		79645AA42B2EFBB900A79653 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		79645AA82B2F087A00A79653 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		79645AAA2B2F08D400A79653 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		790070D32AB399E700D1CD3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79645AA72B2F086600A79653 /* Settings */,
 				79645AA32B2EEBF300A79653 /* General */,
 				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
 				7938C57B2AB62C87001189D2 /* Chemistry */,
@@ -176,6 +183,16 @@
 				79645AA12B2EEBE900A79653 /* TipKitViews.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		79645AA72B2F086600A79653 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				79645AA82B2F087A00A79653 /* SettingsView.swift */,
+				79645AAA2B2F08D400A79653 /* SettingsRowView.swift */,
+				79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
@@ -328,6 +345,7 @@
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
 				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
+				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
@@ -335,11 +353,13 @@
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
+				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
 				79820FDA2AE525A400B53520 /* GameData.swift in Sources */,
+				79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */,
 				791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */,
 				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,

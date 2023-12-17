@@ -34,13 +34,15 @@ class AchievementModel{
         if let encoded = try? encoder.encode(achievements){
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "SavedAchievements")
+            loadAchivements()
         }
     }
-    //Maybe add returning into gameModel, so it knows what achievements have been done
+    //Maybe add returning into gameModel, so it knows what achievements have been done, returning array of strings?
     ///Function called after ending the game with
     func getScore(data: GameData){
         if data.allHints == 0{
             achievements.actualAchivements["noMist"]=true
+            saveAchievements()
         }
     }
     
@@ -50,6 +52,7 @@ class AchievementModel{
         }
         if achievements.exploredElements.count == 119{
             achievements.actualAchivements["allElems"]=true
+            saveAchievements()
         }
     }
 }
