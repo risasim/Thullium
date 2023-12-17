@@ -14,10 +14,20 @@ class AchievementModel{
         self.achievements = achievements
     }
     func loadAchivements(){
-        let decoder = JSONDecoder()
+        let defaults = UserDefaults.standard
+        if let savedAchievements = defaults.object(forKey: "SavedAchievements") as? Data{
+            let decoder = JSONDecoder()
+            if let loadedAchievements = try? decoder.decode(Achievements.self, from: savedAchievements){
+                achievements = loadedAchievements
+            }
+        }
     }
     func saveAchievements(){
-        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(achievements){
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "SavedAchievements")
+        }
     }
 }
 
