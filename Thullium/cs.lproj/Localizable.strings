@@ -19,6 +19,12 @@
 "randCategories" = "Vybrat náhodně";
 "selectAllCategories" = "Vybrat vše";
 
+//Tips
+"exploreTableTip" = "Objevte prvky";
+"exploreTableTipText"="Po zmáčknutí se objeví detaily o prvku.";
+"gameHintTip"="Potřebujete pomoct?";
+"gameHintTipText"="Klikněte a získejte nápovědu.";
+
 //Variables of data
 "Phase"="Skupenství";
 "Category"="Kategorie";

@@ -27,6 +27,12 @@
 "randCategories" = "Random categories";
 "selectAllCategories" = "Select all";
 
+//Tip
+"exploreTableTip" = "Tap to explore";
+"exploreTableTipText"="Tap to see details about element.";
+"gameHintTip"="Are you cluesless?";
+"gameHintTipText"="Tap to get a hint in form of highlighting the position of element.";
+
 
 
 

@@ -18,7 +18,6 @@ struct PeriodicTableView: View {
     @Query private var realElements: [ElementsData]
     @State var gameModel: GameModel?
     var elements = JSONtoSwiftDataconverter().eData
-   // @State var searchText:String = ""
     @State var searchEngine:SearchTable?
     
     var body: some View {
@@ -30,7 +29,7 @@ struct PeriodicTableView: View {
                         .onTapGesture {
                            manageTap(gameModel: gameModel, index: 0)
                         }
-                        .popoverTip(ClickableTip(), arrowEdge: .trailing)
+                        .popoverTip(PeriodicTableExploreTip(), arrowEdge: .trailing)
                     ForEach(0..<16, id: \.self){_ in
                         Color.clear
                             .gridCellUnsizedAxes([.horizontal, .vertical])
@@ -168,7 +167,6 @@ struct PeriodicTableView: View {
             }
         }
         .scrollIndicators(.hidden)
-        
     }
     /// React to tap on element and then either add to alreadyGuessed or increment numAt in ``GameData``
     private func manageTap(gameModel : GameModel?, index i: Int){
@@ -185,12 +183,9 @@ struct PeriodicTableView: View {
                 
             }
         }
-    }   
+    }
 }
 
 #Preview {
     PeriodicTableView(searchEngine: SearchTable())
-        .task {
-            try? await Tips.configure()
-        }
 }

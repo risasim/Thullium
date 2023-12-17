@@ -78,23 +78,6 @@ func determineColorFromPhase(phase: String)-> Color{
     }
 }
 
-// MARK: - Tips
-struct ClickableTip: Tip {
-    var title: Text {
-        Text("Tap to explore")
-    }
-
-
-    var message: Text? {
-        Text("Tap to see details about element.")
-    }
-
-
-    var image: Image? {
-        Image(systemName: "hand.tap")
-    }
-}
-
 func mayuselater(){
     
     let els = ElementsData(elements: [])

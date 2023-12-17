@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 
 /// View of ``PeriodicTableView`` that provides ``GameModel`` as parameter
@@ -28,6 +29,7 @@ struct GamePeriodicTableView: View {
                                 gameModel.gData.numAt=6
                             } label: {
                                 Image(systemName: "lightbulb.max")
+                                    .popoverTip(GameHint())
                             }
                             Spacer()
                         }
@@ -44,6 +46,9 @@ struct GamePeriodicTableView: View {
 #Preview {
     GamePeriodicTableView(gameModel: .constant(GameModel()))
         .environment(\.locale, .init(identifier: "cs"))
+        .task {
+            try? await Tips.configure()
+        }
 }
 
 
