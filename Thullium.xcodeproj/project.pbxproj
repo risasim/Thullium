@@ -122,7 +122,6 @@
 			children = (
 				79645AA72B2F086600A79653 /* Settings */,
 				79645AA32B2EEBF300A79653 /* General */,
-				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
 				7938C57B2AB62C87001189D2 /* Chemistry */,
 			);
 			path = Views;
@@ -181,6 +180,7 @@
 		79645AA32B2EEBF300A79653 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
 				79645AA12B2EEBE900A79653 /* TipKitViews.swift */,
 			);
 			path = General;
