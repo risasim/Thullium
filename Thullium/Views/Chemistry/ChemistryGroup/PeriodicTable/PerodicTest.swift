@@ -20,6 +20,7 @@ struct PeriodicTest:View {
     var number:Int?
     var gData: GameData?
     @State var popUp = false
+    @State var ach = AchievementModel()
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
@@ -49,6 +50,7 @@ struct PeriodicTest:View {
                infoView
             }
             .onTapGesture {
+                ach.elementTapped(num: el.number)
                 popUp.toggle()
             }
             .popover(isPresented: $popUp, content: {

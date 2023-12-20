@@ -25,9 +25,10 @@ class AchievementModel{
             if let loadedAchievements = try? decoder.decode(Achievements.self, from: savedAchievements){
                 achievements = loadedAchievements
                 print(loadedAchievements)
-                print("Achievements setup sucessfulz")
+                print("Achievements setup sucessfully")
             }
         }else{
+            print("Loading failed")
             saveAchievements()
         }
     }
@@ -38,7 +39,8 @@ class AchievementModel{
         if let encoded = try? encoder.encode(achievements){
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "SavedAchievements")
-            loadAchivements()
+            //loadAchivements()
+            print(achievements.exploredElements)
         }
     }
     //Maybe add returning into gameModel, so it knows what achievements have been done, returning array of strings?
@@ -53,17 +55,19 @@ class AchievementModel{
     
     func elementTapped(num: Int){
         print("wtf")
+        loadAchivements()
         if !achievements.exploredElements.contains(num){
             print("Element added")
             achievements.exploredElements.append(num)
+            print(achievements.exploredElements)
             saveAchievements()
         }
-        if achievements.exploredElements.count == 119{
+        else if achievements.exploredElements.count == 119{
             achievements.actualAchivements["allElems"]=true
             achievements.achTimeStamps["allElems"] = Date.now
             saveAchievements()
         }
-        if achievements.exploredElements.count == 5{
+        else if achievements.exploredElements.count == 5{
             achievements.actualAchivements["elems5"]=true
             achievements.achTimeStamps["elems5"] = Date.now
             print("YOYOOYOOOYOYOOYOYO")
