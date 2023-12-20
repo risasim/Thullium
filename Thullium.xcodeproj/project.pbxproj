@@ -67,6 +67,7 @@
 		79645AA82B2F087A00A79653 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		79645AAA2B2F08D400A79653 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		79645AAE2B33226100A79653 /* AchivementModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementModelTests.swift; sourceTree = "<group>"; };
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
@@ -195,6 +196,30 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		79645AAF2B3322AB00A79653 /* ThulliumTests */ = {
+			isa = PBXGroup;
+			children = (
+				79645AB12B3323E700A79653 /* UI tests */,
+				79645AB02B3323DC00A79653 /* Unit Tests */,
+			);
+			path = ThulliumTests;
+			sourceTree = "<group>";
+		};
+		79645AB02B3323DC00A79653 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				79645AAE2B33226100A79653 /* AchivementModelTests.swift */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		79645AB12B3323E700A79653 /* UI tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI tests";
+			sourceTree = "<group>";
+		};
 		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +256,7 @@
 			children = (
 				79820FD82AE5081700B53520 /* README.md */,
 				79F93DD62AB21F400075DC69 /* Thullium */,
+				79645AAF2B3322AB00A79653 /* ThulliumTests */,
 				79F93DD52AB21F400075DC69 /* Products */,
 			);
 			sourceTree = "<group>";
