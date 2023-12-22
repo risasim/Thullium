@@ -36,6 +36,7 @@
 		797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 797ADA932ACD69690039E86C /* element_003_lithium.usdz */; };
 		79820FDA2AE525A400B53520 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FD92AE525A400B53520 /* GameData.swift */; };
 		79820FDC2AE525D500B53520 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FDB2AE525D500B53520 /* Category.swift */; };
+		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
@@ -43,7 +44,6 @@
 		79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA42B35EA5100F4D17F /* HexagonParams.swift */; };
 		79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */; };
 		79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA82B35EF7D00F4D17F /* BadgeView.swift */; };
-		79E56FAB2B360C8900F4D17F /* AchievementNotUnlockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
 		79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DDD2AB21F420075DC69 /* Assets.xcassets */; };
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
@@ -82,6 +82,7 @@
 		79820FD82AE5081700B53520 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79820FD92AE525A400B53520 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		79820FDB2AE525D500B53520 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotUnlockedOverView.swift; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		79E56FA42B35EA5100F4D17F /* HexagonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParams.swift; sourceTree = "<group>"; };
 		79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackgroundView.swift; sourceTree = "<group>"; };
 		79E56FA82B35EF7D00F4D17F /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
-		79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementNotUnlockedView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
 		79F93DDD2AB21F420075DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 				79E56F9E2B35D27000F4D17F /* AchievementsView.swift */,
 				79E56FA02B35D27A00F4D17F /* AchievementViews.swift */,
 				79E56FA32B35EA3800F4D17F /* General */,
-				79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */,
+				7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
 				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
+				7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
@@ -395,7 +396,6 @@
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
 				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
-				79E56FAB2B360C8900F4D17F /* AchievementNotUnlockedView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,

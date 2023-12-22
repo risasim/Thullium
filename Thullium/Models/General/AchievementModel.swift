@@ -24,7 +24,7 @@ class AchievementModel{
             let decoder = JSONDecoder()
             if let loadedAchievements = try? decoder.decode(Achievements.self, from: savedAchievements){
                 achievements = loadedAchievements
-                print(loadedAchievements)
+               // print(loadedAchievements)
                 print("Achievements setup sucessfully")
             }
         }else{
@@ -40,7 +40,7 @@ class AchievementModel{
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "SavedAchievements")
             //loadAchivements()
-            print(achievements.exploredElements)
+            //print(achievements.exploredElements)
         }
     }
     //Maybe add returning into gameModel, so it knows what achievements have been done, returning array of strings?
@@ -54,7 +54,7 @@ class AchievementModel{
     }
     
     func elementTapped(num: Int){
-        print("wtf")
+        print("wtf, count:"+String(achievements.exploredElements.count))
         loadAchivements()
         if !achievements.exploredElements.contains(num){
             print("Element added")
@@ -84,13 +84,15 @@ struct Achievements:Codable{
         "woHint":Achievement(name: "achs.woHint", desc: "achs.woHintDesc", img: ""),
         "und3min":Achievement(name: "achs.und3min", desc: "achs.und3minDesc", img: ""),
         "allElems":Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev"),
-        "mist5":Achievement(name: "achs.mist5", desc: "achs.mist5Desc", img: ""),
+        "mist5":Achievement(name: "achs.mist5", desc: "achs.mist5Desc", img: "",achieved: true),
         "elems5":Achievement(name: "achs.elems5", desc: "achs.elems5Desc", img: "")
     ]
 }
 
 struct Achievement:Codable, Hashable, Comparable{
     static func < (lhs: Achievement, rhs: Achievement) -> Bool {
+        //Not sure if this part does the wanted thing
+        
         return lhs.name.count < rhs.name.count
     }
     

@@ -10,7 +10,8 @@ import SwiftUI
 struct AchievementNotUnlockedView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 30)
-            .background(.ultraThinMaterial)
+            .environment(\.colorScheme, .dark)
+            .foregroundStyle(.ultraThinMaterial)
             .overlay {
                 Image(systemName: "lock.fill")
             }

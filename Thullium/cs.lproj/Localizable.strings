@@ -47,6 +47,7 @@
 "achs.mist5Desc"="You have won the game with only 5 mistakes";
 "achs.elems5"="Explorer";
 "achs.elems5desc"="You have explored 5 elements.";
+"achs.notUnlocked" = "Odznak ještě neodemčen";
 
 //Variables of data
 "Phase"="Skupenství";

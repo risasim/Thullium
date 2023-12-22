@@ -16,10 +16,12 @@ struct PeriodicTest:View {
     
     var el:Element
     var searchQuery : [String]?
+    //@Binding var searchModel:SearchTable?
     var categories: [Category]?
     var number:Int?
     var gData: GameData?
     @State var popUp = false
+    //The reason it does fetch so many times is because i create it a few dozen times
     @State var ach = AchievementModel()
     var colour:Color{
         determineColorFromCategory(category: el.category)

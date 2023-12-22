@@ -12,6 +12,18 @@ struct SettingsView: View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20){
+// MARK: - Achievements
+                    GroupBox {
+                        AchievementViews()
+                    } label: {
+                        SettingsLabelView(label: "achs.name", image: "trophy")
+                    }
+// MARK: - Settings
+                    GroupBox {
+                        Divider().padding(.vertical, 4)
+                    } label: {
+                        SettingsLabelView(label: "set.settings", image: "gear")
+                    }
 // MARK: - General info
                     GroupBox {
                         Divider().padding(.vertical, 4)
@@ -28,18 +40,6 @@ struct SettingsView: View {
                         SettingsLabelView(label: "Thullium", image: "info.circle")
                     }
                     .padding(.top, 10)
-// MARK: - Achievements
-                    GroupBox {
-                        AchievementViews()
-                    } label: {
-                        SettingsLabelView(label: "achs.name", image: "trophy")
-                    }
-// MARK: - Settings
-                    GroupBox {
-                        Divider().padding(.vertical, 4)
-                    } label: {
-                        SettingsLabelView(label: "set.settings", image: "gear")
-                    }
 // MARK: - Application info
                     GroupBox(content: {
                         SettingsRowView(label: "set.version",description: "1.2")
@@ -48,12 +48,13 @@ struct SettingsView: View {
                         SettingsRowView(label: "set.privacyPolicy",linkLabel: "Link", linkDestination: "https://www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
                         SettingsRowView(label: "set.developer", description: "Richie")
                         SettingsRowView(label: "Twitter", linkLabel: "@richiesimonik", linkDestination: "twitter.com/richiesimonik")
-                        SettingsRowView(label: "Buy me a cofee", linkLabel: "set.link", linkDestination:"https://www.buymeacoffee.com/richiesimonik")
+                        SettingsRowView(label: "Buy me a cofee", linkLabel: "Link", linkDestination:"https://www.buymeacoffee.com/richiesimonik")
                     }, label: {
                         SettingsLabelView(label: "set.application", image: "apps.iphone")
                     })
                 }
             }
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("set.settings")
         }
     }

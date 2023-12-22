@@ -16,8 +16,18 @@ struct AchievementViews:View {
         ScrollView(.horizontal){
             HStack{
                 ForEach(achievements.achievements.achieves.values.sorted(by: >), id: \.self) { ach in
-                    AchievementsView(name: ach.name, description: ach.desc, imgName: ach.img)
-                        .frame(maxWidth: 350, maxHeight: 450)
+                    if ach.achieved{
+                        AchievementsView(name: ach.name, description: ach.desc, imgName: ach.img)
+                            .frame(maxWidth: 250, maxHeight: 350)
+                    }else{
+                        AchievementsView(name: ach.name, description: ach.desc, imgName: ach.img)
+                            .frame(maxWidth: 250, maxHeight: 350)
+                            .overlay{
+                                NotUnlockedOverView()
+                                    .padding()
+                                    .frame(maxWidth: 250, maxHeight: 350)
+                            }
+                    }
                 }
             }
         }

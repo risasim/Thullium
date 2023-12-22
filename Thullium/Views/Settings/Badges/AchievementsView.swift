@@ -18,14 +18,14 @@ struct AchievementsView:View {
         ZStack{
             RoundedRectangle(cornerRadius: 30)
                 .environment(\.colorScheme, .dark)
-                .background(.ultraThinMaterial)
+                .foregroundStyle(.ultraThinMaterial)
             VStack{
                 BadgeView(img: imgName)
                 Text(LocalizedStringKey(name))
-                    .font(.title)
+                    .font(.title2)
                     .bold()
                 Text(LocalizedStringKey(description))
-                    .font(.title2)
+                    .font(.title3)
                     .multilineTextAlignment(.center)
                     .padding(10)
             }

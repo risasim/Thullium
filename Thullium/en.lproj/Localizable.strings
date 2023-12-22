@@ -56,6 +56,7 @@
 "achs.elems5desc"="You have explored 5 elements.";
 "achs.woHint"="Smart learner";
 "achs.woHintDesc"="Game ended without hints";
+"achs.notUnlocked" = "Achievement not unlocked yet";
 
 //Game
 "searchElement" = "Search for element..";
