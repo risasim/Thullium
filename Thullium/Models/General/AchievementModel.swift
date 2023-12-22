@@ -54,7 +54,6 @@ class AchievementModel{
     }
     
     func elementTapped(num: Int){
-        print("wtf, count:"+String(achievements.exploredElements.count))
         loadAchivements()
         if !achievements.exploredElements.contains(num){
             print("Element added")
@@ -67,12 +66,13 @@ class AchievementModel{
             achievements.achieves["allElems"]?.date = Date.now
             saveAchievements()
         }
-        else if achievements.exploredElements.count == 5{
+        else if achievements.exploredElements.count > 5 && achievements.achieves["elems5"]?.date==nil{
             achievements.achieves["elems5"]?.achieved = true
             achievements.achieves["elems5"]?.date = Date.now
             print("YOYOOYOOOYOYOOYOYO")
             saveAchievements()
         }
+        print("wtf, count:"+String(achievements.exploredElements.count))
     }
 }
 

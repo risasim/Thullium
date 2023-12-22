@@ -17,10 +17,10 @@ struct AchievementViews:View {
             HStack{
                 ForEach(achievements.achievements.achieves.values.sorted(by: >), id: \.self) { ach in
                     if ach.achieved{
-                        AchievementsView(name: ach.name, description: ach.desc, imgName: ach.img)
+                        AchievementsView(ach: ach)
                             .frame(maxWidth: 250, maxHeight: 350)
                     }else{
-                        AchievementsView(name: ach.name, description: ach.desc, imgName: ach.img)
+                        AchievementsView(ach: ach)
                             .frame(maxWidth: 250, maxHeight: 350)
                             .overlay{
                                 NotUnlockedOverView()

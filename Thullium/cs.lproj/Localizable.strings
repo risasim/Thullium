@@ -48,6 +48,7 @@
 "achs.elems5"="Explorer";
 "achs.elems5desc"="You have explored 5 elements.";
 "achs.notUnlocked" = "Odznak ještě neodemčen";
+"achs.achieved"="Získáno: ";
 
 //Variables of data
 "Phase"="Skupenství";

@@ -25,7 +25,7 @@ struct PeriodicTableView: View {
             Grid{
                 // MARK: - First
                 GridRow {
-                    PeriodicTest(el: elements[0], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                    PeriodicTest(el: elements[0], searchModel: $searchEngine,gData: gameModel?.gData)
                         .onTapGesture {
                            manageTap(gameModel: gameModel, index: 0)
                         }
@@ -34,7 +34,7 @@ struct PeriodicTableView: View {
                         Color.clear
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
-                    PeriodicTest(el: elements[1],searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                    PeriodicTest(el: elements[1],searchModel: $searchEngine,gData: gameModel?.gData)
                         .onTapGesture {
                             manageTap(gameModel: gameModel, index: 1)
                         }
@@ -42,7 +42,7 @@ struct PeriodicTableView: View {
                 // MARK: - Second
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+2], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+2], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+2)
                             }
@@ -52,7 +52,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<6, id: \.self){i in
-                        PeriodicTest(el: elements[i+4], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+4], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+4)
                             }
@@ -61,7 +61,7 @@ struct PeriodicTableView: View {
                 // MARK: - Third
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+10],searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+10],searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+10)
                             }
@@ -71,7 +71,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<6, id: \.self){i in
-                        PeriodicTest(el: elements[i+12], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+12], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+12)
                             }
@@ -80,7 +80,7 @@ struct PeriodicTableView: View {
                 // MARK: - Fourth
                 GridRow {
                     ForEach(0..<18, id: \.self){i in
-                        PeriodicTest(el: elements[i+18], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+18], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                               manageTap(gameModel: gameModel, index: i+18)
                             }
@@ -89,7 +89,7 @@ struct PeriodicTableView: View {
                 // MARK: - Fifth
                 GridRow {
                     ForEach(0..<18, id: \.self){i in
-                        PeriodicTest(el:elements[i+36], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el:elements[i+36], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+36)
                             }
@@ -98,7 +98,7 @@ struct PeriodicTableView: View {
                 // MARK: - Sixth
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+54], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+54], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+54)
                             }
@@ -106,7 +106,7 @@ struct PeriodicTableView: View {
                     Color.clear
                         .gridCellUnsizedAxes([.horizontal, .vertical])
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+71], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+71], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+71)
                             }
@@ -115,7 +115,7 @@ struct PeriodicTableView: View {
                 // MARK: - Seventh
                 GridRow {
                     ForEach(0..<2, id: \.self){i in
-                        PeriodicTest(el: elements[i+86], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+86], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+86)
                             }
@@ -123,7 +123,7 @@ struct PeriodicTableView: View {
                     Color.clear
                         .gridCellUnsizedAxes([.horizontal, .vertical])
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+103], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+103], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+103)
                             }
@@ -131,7 +131,7 @@ struct PeriodicTableView: View {
                 }
                 // MARK: - Eight
                 GridRow {
-                    PeriodicTest(el: elements[118], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                    PeriodicTest(el: elements[118], searchModel: $searchEngine,gData: gameModel?.gData)
                         .onTapGesture {
                             manageTap(gameModel: gameModel, index: 118)
                         }
@@ -145,7 +145,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+56], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+56], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                 manageTap(gameModel: gameModel, index: i+56)
                             }
@@ -158,7 +158,7 @@ struct PeriodicTableView: View {
                             .gridCellUnsizedAxes([.horizontal, .vertical])
                     }
                     ForEach(0..<15, id: \.self){i in
-                        PeriodicTest(el: elements[i+88], searchQuery: searchEngine?.showThese,gData: gameModel?.gData)
+                        PeriodicTest(el: elements[i+88], searchModel: $searchEngine,gData: gameModel?.gData)
                             .onTapGesture {
                                manageTap(gameModel: gameModel, index: i+88)
                             }

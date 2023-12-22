@@ -57,6 +57,7 @@
 "achs.woHint"="Smart learner";
 "achs.woHintDesc"="Game ended without hints";
 "achs.notUnlocked" = "Achievement not unlocked yet";
+"achs.achieved"="Achieved: ";
 
 //Game
 "searchElement" = "Search for element..";

@@ -10,9 +10,7 @@ import SwiftUI
 
 struct AchievementsView:View {
     
-    var name: String
-    var description:String
-    var imgName:String
+    var ach:Achievement
     
     var body: some View {
         ZStack{
@@ -20,12 +18,17 @@ struct AchievementsView:View {
                 .environment(\.colorScheme, .dark)
                 .foregroundStyle(.ultraThinMaterial)
             VStack{
-                BadgeView(img: imgName)
-                Text(LocalizedStringKey(name))
-                    .font(.title2)
-                    .bold()
-                Text(LocalizedStringKey(description))
+                BadgeView(img: ach.img)
+                Text(LocalizedStringKey(ach.name))
                     .font(.title3)
+                    .bold()
+                if(ach.date != nil){
+                    Text(LocalizedStringKey("achs.achieved"))+Text(ach.date!, format: .dateTime.day().month().year())
+                        .font(.title3)
+                        .bold()
+                }
+                Text(LocalizedStringKey(ach.desc))
+                    .font(.caption)
                     .multilineTextAlignment(.center)
                     .padding(10)
             }
@@ -36,5 +39,5 @@ struct AchievementsView:View {
 }
 
 #Preview {
-    AchievementsView(name: "achs.MendeleevAch", description: "achs.MendeleevAchDesc", imgName: "Mendeleev")
+    AchievementsView(ach: Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev", date: Date.now))
 }
