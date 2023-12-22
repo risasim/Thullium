@@ -14,7 +14,8 @@ struct SettingsLabelView: View {
     
     var body: some View {
         HStack{
-            Text(label.uppercased())
+            Text(LocalizedStringKey(label))
+                .textCase(.uppercase)
             Spacer()
             Image(systemName: image)
         }

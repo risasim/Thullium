@@ -20,13 +20,33 @@
 "selectAllCategories" = "Vybrat vše";
 
 //Tips
-"exploreTableTip" = "Objevte prvky";
-"exploreTableTipText"="Po zmáčknutí se objeví detaily o prvku.";
-"gameHintTip"="Potřebujete pomoct?";
-"gameHintTipText"="Klikněte a získejte nápovědu.";
+"tip.exploreTable" = "Objevte prvky";
+"tip.exploreTableText"="Po zmáčknutí se objeví detaily o prvku.";
+"tip.gameHint"="Potřebujete pomoct?";
+"tip.gameHintText"="Klikněte a získejte nápovědu.";
 
 //Settings
-"appDescription"="Aplikace pro objevování a učení periodické tabulky prvků. Aplikace napsaná během seminářů chemie na střední škole.";
+"set.appDescription"="Aplikace pro objevování a učení periodické tabulky prvků. Aplikace napsaná během seminářů chemie na střední škole.";
+"set.settings" = "Nastavení";
+"set.application"="Aplikace";
+"set.version"="Verze";
+"set.privacyPolicy"="Ochrana soukromí";
+"set.developer"="Vyvojář";
+"set.compatibility"="Kompabilita";
+"set.link"="Odkaz";
+
+//Achievements
+"achs.name"="Odznaky";
+"achs.MendeleevAch"="Malý Mendělejev";
+"achs.MendeleevAchDesc"="Objevili jste všecny prvky v periodické tabulce.";
+"achs.noMist"="Genius";
+"achs.noMistDesc"="Hra vyhrána bez jediné chyby.";
+"achs.und3min"="Sprinter";
+"achs.und3minDesc"="Hra vyhrána za čas pod 3 minuty.";
+"achs.mist5"="";
+"achs.mist5Desc"="You have won the game with only 5 mistakes";
+"achs.elems5"="Explorer";
+"achs.elems5desc"="You have explored 5 elements.";
 
 //Variables of data
 "Phase"="Skupenství";

@@ -21,38 +21,49 @@ struct SettingsView: View {
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
                                 .cornerRadius(9)
-                            Text(LocalizedStringKey("appDescription"))
+                            Text(LocalizedStringKey("set.appDescription"))
                                 .font(.footnote)
                         }
                     } label: {
                         SettingsLabelView(label: "Thullium", image: "info.circle")
                     }
                     .padding(.top, 10)
+// MARK: - Achievements
+                    GroupBox {
+                        AchievementViews()
+                    } label: {
+                        SettingsLabelView(label: "achs.name", image: "trophy")
+                    }
 // MARK: - Settings
                     GroupBox {
                         Divider().padding(.vertical, 4)
                     } label: {
-                        SettingsLabelView(label: "Settings", image: "gear")
+                        SettingsLabelView(label: "set.settings", image: "gear")
                     }
 // MARK: - Application info
                     GroupBox(content: {
-                        SettingsRowView(label: "Version",description: "1.2")
-                        SettingsRowView(label: "Compatibility", description: "iOS 17")
+                        SettingsRowView(label: "set.version",description: "1.2")
+                        SettingsRowView(label: "set.compatibility", description: "iOS 17")
                         SettingsRowView(label: "SwiftUI", description: "6.0")
-                        SettingsRowView(label: "Privacy policy",linkLabel: "Link", linkDestination: "https://www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
-                        SettingsRowView(label: "Developer", description: "Richie")
+                        SettingsRowView(label: "set.privacyPolicy",linkLabel: "Link", linkDestination: "https://www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
+                        SettingsRowView(label: "set.developer", description: "Richie")
                         SettingsRowView(label: "Twitter", linkLabel: "@richiesimonik", linkDestination: "twitter.com/richiesimonik")
-                        SettingsRowView(label: "Buy me a cofee", linkLabel: "Link", linkDestination:"https://www.buymeacoffee.com/richiesimonik")
+                        SettingsRowView(label: "Buy me a cofee", linkLabel: "set.link", linkDestination:"https://www.buymeacoffee.com/richiesimonik")
                     }, label: {
-                        SettingsLabelView(label: "Application", image: "apps.iphone")
+                        SettingsLabelView(label: "set.application", image: "apps.iphone")
                     })
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle("set.settings")
         }
     }
 }
 
 #Preview {
     SettingsView()
+}
+
+#Preview{
+    SettingsView()
+        .environment(\.locale, .init(identifier: "cs"))
 }

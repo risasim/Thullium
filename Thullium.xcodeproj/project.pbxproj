@@ -29,6 +29,7 @@
 		79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA82B2F087A00A79653 /* SettingsView.swift */; };
 		79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAA2B2F08D400A79653 /* SettingsRowView.swift */; };
 		79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */; };
+		79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AB22B33470700A79653 /* NotificationsModel.swift */; };
 		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
 		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
 		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
@@ -37,6 +38,12 @@
 		79820FDC2AE525D500B53520 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FDB2AE525D500B53520 /* Category.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
+		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
+		79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA02B35D27A00F4D17F /* AchievementViews.swift */; };
+		79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA42B35EA5100F4D17F /* HexagonParams.swift */; };
+		79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */; };
+		79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA82B35EF7D00F4D17F /* BadgeView.swift */; };
+		79E56FAB2B360C8900F4D17F /* AchievementNotUnlockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
 		79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DDD2AB21F420075DC69 /* Assets.xcassets */; };
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
@@ -67,6 +74,7 @@
 		79645AA82B2F087A00A79653 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		79645AAA2B2F08D400A79653 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		79645AB22B33470700A79653 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
@@ -76,6 +84,12 @@
 		79820FDB2AE525D500B53520 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
+		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		79E56FA02B35D27A00F4D17F /* AchievementViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViews.swift; sourceTree = "<group>"; };
+		79E56FA42B35EA5100F4D17F /* HexagonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParams.swift; sourceTree = "<group>"; };
+		79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackgroundView.swift; sourceTree = "<group>"; };
+		79E56FA82B35EF7D00F4D17F /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementNotUnlockedView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
 		79F93DDD2AB21F420075DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +202,7 @@
 		79645AA72B2F086600A79653 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				79E56FA22B35D7DD00F4D17F /* Badges */,
 				79645AA82B2F087A00A79653 /* SettingsView.swift */,
 				79645AAA2B2F08D400A79653 /* SettingsRowView.swift */,
 				79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */,
@@ -222,6 +237,28 @@
 				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
 				79645AA42B2EFBB900A79653 /* AchievementModel.swift */,
+				79645AB22B33470700A79653 /* NotificationsModel.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		79E56FA22B35D7DD00F4D17F /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				79E56F9E2B35D27000F4D17F /* AchievementsView.swift */,
+				79E56FA02B35D27A00F4D17F /* AchievementViews.swift */,
+				79E56FA32B35EA3800F4D17F /* General */,
+				79E56FAA2B360C8900F4D17F /* AchievementNotUnlockedView.swift */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+		79E56FA32B35EA3800F4D17F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				79E56FA42B35EA5100F4D17F /* HexagonParams.swift */,
+				79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */,
+				79E56FA82B35EF7D00F4D17F /* BadgeView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -342,8 +379,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
 				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
+				79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */,
+				79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */,
+				79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */,
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
 				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
@@ -354,9 +395,11 @@
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
 				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
+				79E56FAB2B360C8900F4D17F /* AchievementNotUnlockedView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
+				79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
 				79820FDA2AE525A400B53520 /* GameData.swift in Sources */,
 				79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */,
@@ -364,6 +407,7 @@
 				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
+				79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */,
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,

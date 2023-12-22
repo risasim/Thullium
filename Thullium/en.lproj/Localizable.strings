@@ -6,8 +6,6 @@
   
 */
 
-
-
 //Categories
 "noble gas"="Noble Gas";
 "diatomic nonmetal"="Diatomic Nonmetal";
@@ -28,18 +26,38 @@
 "selectAllCategories" = "Select all";
 
 //Tip
-"exploreTableTip" = "Tap to explore";
-"exploreTableTipText"="Tap to see details about element.";
-"gameHintTip"="Are you cluesless?";
-"gameHintTipText"="Tap to get a hint in form of highlighting the position of element.";
+"tip.exploreTable" = "Tap to explore";
+"tip.exploreTableText"="Tap to see details about element.";
+"tip.gameHint"="Are you cluesless?";
+"tip.gameHintText"="Tap to get a hint in form of highlighting the position of element.";
+
 
 //Settings
-//Settings
-"appDescription"="Application for learning periodic table. App created in 2023 while attending chemistry seminar.";
+"set.appDescription"="Application for learning periodic table. App created in 2023 while attending chemistry seminar.";
+"set.settings" = "Settings";
+"set.application"="Application";
+"set.version"="Version";
+"set.privacyPolicy"="Privacy policy";
+"set.developer"="Developer";
+"set.compatibility"="Compability";
+"set.link"="Link";
 
+//Achievements
+"achs.name"="Achievements";
+"achs.MendeleevAch"="Little Mendeleev";
+"achs.MendeleevAchDesc"="You have explored all the elements in periodic table.";
+"achs.noMist"="Genius";
+"achs.noMistDesc"="Game won without any mistake.";
+"achs.und3min"="Sprinter";
+"achs.und3minDesc"="You have won the game under 3 minutes.";
+"achs.mist5"="";
+"achs.mist5Desc"="You have won the game with only 5 mistakes";
+"achs.elems5"="Explorer";
+"achs.elems5desc"="You have explored 5 elements.";
+"achs.woHint"="Smart learner";
+"achs.woHintDesc"="Game ended without hints";
 
-
-
+//Game
 "searchElement" = "Search for element..";
 "Hydrogen" = "Hydrogen";
 "Lead" = "Lead";

@@ -47,8 +47,8 @@ class AchievementModel{
     ///Function called after ending the game with
     func getScore(data: GameData){
         if data.allHints == 0{
-            achievements.actualAchivements["noMist"]=true
-            achievements.achTimeStamps["noMist"] = Date.now
+            achievements.achieves["noMist"]?.achieved=true
+            achievements.achieves["noMist"]?.date = Date.now
             saveAchievements()
         }
     }
@@ -63,13 +63,13 @@ class AchievementModel{
             saveAchievements()
         }
         else if achievements.exploredElements.count == 119{
-            achievements.actualAchivements["allElems"]=true
-            achievements.achTimeStamps["allElems"] = Date.now
+            achievements.achieves["allElems"]?.achieved = true
+            achievements.achieves["allElems"]?.date = Date.now
             saveAchievements()
         }
         else if achievements.exploredElements.count == 5{
-            achievements.actualAchivements["elems5"]=true
-            achievements.achTimeStamps["elems5"] = Date.now
+            achievements.achieves["elems5"]?.achieved = true
+            achievements.achieves["elems5"]?.date = Date.now
             print("YOYOOYOOOYOYOOYOYO")
             saveAchievements()
         }
@@ -79,6 +79,24 @@ class AchievementModel{
 
 struct Achievements:Codable{
     var exploredElements:[Int]=[]
-    var actualAchivements:[String:Bool] = ["noMist":false, "woHint":false,"und3min":false, "allElems":false, "mist5":false, "elems5":false]
-    var achTimeStamps:[String:Date?] = ["noMist":nil, "woHint":nil,"und3min":nil, "allElems":nil, "mist5":nil, "elems5":nil]
+    var achieves:[String:Achievement] = [
+        "noMist":Achievement(name: "achs.noMist", desc: "achs.noMistDesc", img: ""),
+        "woHint":Achievement(name: "achs.woHint", desc: "achs.woHintDesc", img: ""),
+        "und3min":Achievement(name: "achs.und3min", desc: "achs.und3minDesc", img: ""),
+        "allElems":Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev"),
+        "mist5":Achievement(name: "achs.mist5", desc: "achs.mist5Desc", img: ""),
+        "elems5":Achievement(name: "achs.elems5", desc: "achs.elems5Desc", img: "")
+    ]
+}
+
+struct Achievement:Codable, Hashable, Comparable{
+    static func < (lhs: Achievement, rhs: Achievement) -> Bool {
+        return lhs.name.count < rhs.name.count
+    }
+    
+    var name:String
+    var desc:String
+    var img:String
+    var achieved:Bool = false
+    var date:Date? = nil
 }

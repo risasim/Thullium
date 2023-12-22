@@ -18,11 +18,11 @@ struct SettingsRowView: View {
         VStack {
             Divider().padding(.vertical, 4)
             HStack{
-                Text(label)
+                Text(LocalizedStringKey(label))
                     .foregroundColor(.gray)
                 Spacer()
                 if description != nil {
-                    Text(description!)
+                    Text(LocalizedStringKey(description!))
                 } else if linkLabel != nil && linkDestination != nil{
                     Link( linkLabel! ,destination: URL(string: "http://\(linkDestination!)")!)
                     Image(systemName: "arrow.up.right.square")
