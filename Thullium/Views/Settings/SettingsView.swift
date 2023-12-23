@@ -24,8 +24,8 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(label: "set.settings", image: "gear")
                     }
-// MARK: - General info
-                    GroupBox {
+// MARK: - Application info
+                    GroupBox(content: {
                         Divider().padding(.vertical, 4)
                         HStack(alignment: .center, spacing: 10){
                             Image(.logo)
@@ -36,12 +36,6 @@ struct SettingsView: View {
                             Text(LocalizedStringKey("set.appDescription"))
                                 .font(.footnote)
                         }
-                    } label: {
-                        SettingsLabelView(label: "Thullium", image: "info.circle")
-                    }
-                    .padding(.top, 10)
-// MARK: - Application info
-                    GroupBox(content: {
                         SettingsRowView(label: "set.version",description: "1.2")
                         SettingsRowView(label: "set.compatibility", description: "iOS 17")
                         SettingsRowView(label: "SwiftUI", description: "6.0")

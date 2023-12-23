@@ -10,6 +10,7 @@ import SwiftUI
 struct BadgeView: View {
     
     var img:String
+    var grad:Gradient
     
     var body: some View {
         Image(img)
@@ -17,11 +18,11 @@ struct BadgeView: View {
             .scaledToFit()
             .scaleEffect(0.6)
             .background {
-                BadgeBackgroundView()
+                BadgeBackgroundView(gradient: grad)
             }
     }
 }
 
 #Preview {
-    BadgeView(img: "Mendeleev")
+    BadgeView(img: "Mendeleev",grad: Achievement(name: "achs.mist5", desc: "", img: "").grad)
 }

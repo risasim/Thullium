@@ -18,7 +18,7 @@ struct AchievementsView:View {
                 .environment(\.colorScheme, .dark)
                 .foregroundStyle(.ultraThinMaterial)
             VStack{
-                BadgeView(img: ach.img)
+                BadgeView(img: ach.img,grad: ach.grad)
                 Text(LocalizedStringKey(ach.name))
                     .font(.title3)
                     .bold()
@@ -39,5 +39,5 @@ struct AchievementsView:View {
 }
 
 #Preview {
-    AchievementsView(ach: Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev", date: Date.now))
+    AchievementsView(ach: Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Genius", date: Date.now))
 }

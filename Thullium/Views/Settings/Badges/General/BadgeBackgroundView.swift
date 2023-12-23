@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BadgeBackgroundView: View {
+    
+    var gradient:Gradient
+    
     var body: some View {
         GeometryReader { geometry in
             Path { path in
@@ -46,7 +49,7 @@ struct BadgeBackgroundView: View {
                 }
             }
             .fill(.linearGradient(
-                Gradient(colors: [Self.gradientStart, Self.gradientEnd]),
+                gradient,
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 0.6)
             ))
@@ -58,13 +61,13 @@ struct BadgeBackgroundView: View {
 }
 
 #Preview {
-    BadgeBackgroundView()
+    BadgeBackgroundView(gradient: Achievement(name: "achs.elems5", desc: "", img: "").grad)
 }
 
 
 struct BadgeTest:View {
     var body: some View {
-        BadgeBackgroundView()
+        BadgeBackgroundView(gradient: Achievement(name: "achs.elems5", desc: "", img: "").grad)
             .overlay {
                 Image(.logo)
                     .resizable()

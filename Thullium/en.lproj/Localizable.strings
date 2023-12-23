@@ -33,7 +33,7 @@
 
 
 //Settings
-"set.appDescription"="Application for learning periodic table. App created in 2023 while attending chemistry seminar.";
+"set.appDescription"="Thullium is an app for learning periodic table. App created in 2023 while attending chemistry seminar. If you have any problems or ideas for improvement, please conatct me.";
 "set.settings" = "Settings";
 "set.application"="Application";
 "set.version"="Version";

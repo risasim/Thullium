@@ -294,8 +294,8 @@
             filePath = "Thullium/Models/General/AchievementModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "AchievementModel"
             landmarkType = "3">
             <Locations>
@@ -330,6 +330,22 @@
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0935CE99-8969-44AB-B554-4B418690253E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium33_BED1DF66D5E047F582BA2EF8AAEF61E8Ll7PreviewfMf0_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "$s8Thullium33_BED1DF66D5E047F582BA2EF8AAEF61E8Ll7PreviewfMf0_15PreviewRegistryfMu_"
+            landmarkType = "37">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
