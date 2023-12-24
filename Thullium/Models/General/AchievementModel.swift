@@ -75,6 +75,20 @@ class AchievementModel{
         }
         print("wtf, count:"+String(achievements.exploredElements.count))
     }
+    
+    func exportAchievements()->[Achievement]{
+        let ar = Array(achievements.achieves.values.map{ $0 })
+        var arDone:[Achievement] = []
+        var arNotDone:[Achievement] = []
+        for a in ar{
+            if a.achieved==true{
+                arDone.append(a)
+            }else{
+                arNotDone.append(a)
+            }
+        }
+        return arDone + arNotDone
+    }
 }
 
 
@@ -86,14 +100,22 @@ struct Achievements:Codable{
         "und3min":Achievement(name: "achs.und3min", desc: "achs.und3minDesc", img: "Sprinter"),
         "allElems":Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev"),
         "mist5":Achievement(name: "achs.mist5", desc: "achs.mist5Desc", img: "Mistake5"),
-        "elems5":Achievement(name: "achs.elems5", desc: "achs.elems5Desc", img: "Explorer")
+        "elems5":Achievement(name: "achs.elems5", desc: "achs.elems5desc", img: "Explorer")
     ]
 }
 
 struct Achievement:Codable, Hashable, Comparable{
     static func < (lhs: Achievement, rhs: Achievement) -> Bool {
         //Not sure if this part does the wanted thing
-        
+      //  if lhs.achieved==true && rhs.achieved==true{
+      //      return lhs==rhs
+      //  }else if lhs.achieved==true && rhs.achieved==false{
+      //      return lhs>rhs
+      //  }else if rhs.achieved==true{
+      //      return rhs>lhs
+      //  }else{
+      //      return rhs==lhs
+      //  }
         return lhs.name.count < rhs.name.count
     }
     

@@ -15,7 +15,7 @@ struct AchievementViews:View {
     var body: some View {
         ScrollView(.horizontal){
             HStack{
-                ForEach(achievements.achievements.achieves.values.sorted(by: >), id: \.self) { ach in
+                ForEach(achievements.exportAchievements(), id: \.self) { ach in
                     if ach.achieved{
                         AchievementsView(ach: ach)
                             .frame(maxWidth: 250, maxHeight: 350)
