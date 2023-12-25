@@ -37,6 +37,8 @@
 		79820FDA2AE525A400B53520 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FD92AE525A400B53520 /* GameData.swift */; };
 		79820FDC2AE525D500B53520 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FDB2AE525D500B53520 /* Category.swift */; };
 		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
+		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
+		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
@@ -49,6 +51,16 @@
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
 		79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7982CD5C2B3813730095A9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F93DCC2AB21F3F0075DC69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F93DD32AB21F400075DC69;
+			remoteInfo = Thullium;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
@@ -83,6 +95,9 @@
 		79820FD92AE525A400B53520 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		79820FDB2AE525D500B53520 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotUnlockedOverView.swift; sourceTree = "<group>"; };
+		7982CD582B3813730095A9FC /* ThulliumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThulliumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7982CD5A2B3813730095A9FC /* ThulliumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThulliumTests.swift; sourceTree = "<group>"; };
+		7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementModelTest.swift; path = "Unit Tests/AchievementModelTest.swift"; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
@@ -99,6 +114,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7982CD552B3813730095A9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD12AB21F400075DC69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +253,15 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		7982CD592B3813730095A9FC /* ThulliumTests */ = {
+			isa = PBXGroup;
+			children = (
+				7982CD5A2B3813730095A9FC /* ThulliumTests.swift */,
+				7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */,
+			);
+			path = ThulliumTests;
+			sourceTree = "<group>";
+		};
 		799F7E8E2B2E23A3004B0077 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +299,7 @@
 			children = (
 				79820FD82AE5081700B53520 /* README.md */,
 				79F93DD62AB21F400075DC69 /* Thullium */,
+				7982CD592B3813730095A9FC /* ThulliumTests */,
 				79F93DD52AB21F400075DC69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -276,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				79F93DD42AB21F400075DC69 /* Thullium.app */,
+				7982CD582B3813730095A9FC /* ThulliumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,6 +339,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7982CD572B3813730095A9FC /* ThulliumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7982CD5E2B3813730095A9FC /* Build configuration list for PBXNativeTarget "ThulliumTests" */;
+			buildPhases = (
+				7982CD542B3813730095A9FC /* Sources */,
+				7982CD552B3813730095A9FC /* Frameworks */,
+				7982CD562B3813730095A9FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7982CD5D2B3813730095A9FC /* PBXTargetDependency */,
+			);
+			name = ThulliumTests;
+			productName = ThulliumTests;
+			productReference = 7982CD582B3813730095A9FC /* ThulliumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		79F93DD32AB21F400075DC69 /* Thullium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "Thullium" */;
@@ -333,6 +384,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					7982CD572B3813730095A9FC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 79F93DD32AB21F400075DC69;
+					};
 					79F93DD32AB21F400075DC69 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -353,11 +408,19 @@
 			projectRoot = "";
 			targets = (
 				79F93DD32AB21F400075DC69 /* Thullium */,
+				7982CD572B3813730095A9FC /* ThulliumTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7982CD562B3813730095A9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD22AB21F400075DC69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +438,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7982CD542B3813730095A9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */,
+				7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD02AB21F400075DC69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +490,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7982CD5D2B3813730095A9FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F93DD32AB21F400075DC69 /* Thullium */;
+			targetProxy = 7982CD5C2B3813730095A9FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		791C59722ABB317F007CCAB8 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -431,6 +511,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7982CD5F2B3813730095A9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Q38DY93CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.ThulliumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thullium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thullium";
+			};
+			name = Debug;
+		};
+		7982CD602B3813730095A9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Q38DY93CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.ThulliumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thullium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thullium";
+			};
+			name = Release;
+		};
 		79F93DE22AB21F420075DC69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,6 +733,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7982CD5E2B3813730095A9FC /* Build configuration list for PBXNativeTarget "ThulliumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7982CD5F2B3813730095A9FC /* Debug */,
+				7982CD602B3813730095A9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

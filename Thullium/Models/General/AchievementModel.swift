@@ -12,6 +12,7 @@ import SwiftUI
 @Observable
 class AchievementModel{
     var achievements = Achievements()
+
     
     init() {
         loadAchivements()
@@ -48,8 +49,8 @@ class AchievementModel{
     ///Function called after ending the game with
     func getScore(data: GameData){
         if data.allHints == 0{
-            achievements.achieves["noMist"]?.achieved=true
-            achievements.achieves["noMist"]?.date = Date.now
+            achievements.achieves["woHint"]?.achieved=true
+            achievements.achieves["woHint"]?.date = Date.now
             saveAchievements()
         }
     }
@@ -62,21 +63,22 @@ class AchievementModel{
             print(achievements.exploredElements)
             saveAchievements()
         }
-        else if achievements.exploredElements.count == 119{
+        if achievements.exploredElements.count == 119 && achievements.achieves["allElems"]?.date==nil{
             achievements.achieves["allElems"]?.achieved = true
             achievements.achieves["allElems"]?.date = Date.now
             saveAchievements()
         }
-        else if achievements.exploredElements.count > 5 && achievements.achieves["elems5"]?.date==nil{
+        if achievements.exploredElements.count == 5 && achievements.achieves["elems5"]?.date==nil{
             achievements.achieves["elems5"]?.achieved = true
             achievements.achieves["elems5"]?.date = Date.now
-            print("YOYOOYOOOYOYOOYOYO")
+            //print("YOYOOYOOOYOYOOYOYO")
             saveAchievements()
         }
-        print("wtf, count:"+String(achievements.exploredElements.count))
+        //print("wtf, count:"+String(achievements.exploredElements.count))
     }
     
     func exportAchievements()->[Achievement]{
+        loadAchivements()
         let ar = Array(achievements.achieves.values.map{ $0 })
         var arDone:[Achievement] = []
         var arNotDone:[Achievement] = []
@@ -93,6 +95,7 @@ class AchievementModel{
 
 
 struct Achievements:Codable{
+    var version = 1.0
     var exploredElements:[Int]=[]
     var achieves:[String:Achievement] = [
         "noMist":Achievement(name: "achs.noMist", desc: "achs.noMistDesc", img: "NoMistake"),
