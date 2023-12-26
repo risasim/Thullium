@@ -67,7 +67,7 @@ struct PeriodicTest:View {
                 }
                 .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
             })
-        #elseif os(iOS)
+        #else
             .popover(isPresented: $popUp, content: {
                 ZStack{
                     ElementInfoView(element: el)
