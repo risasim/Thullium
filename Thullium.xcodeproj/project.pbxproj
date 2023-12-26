@@ -100,6 +100,7 @@
 		7982CD582B3813730095A9FC /* ThulliumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThulliumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7982CD5A2B3813730095A9FC /* ThulliumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThulliumTests.swift; sourceTree = "<group>"; };
 		7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementModelTest.swift; path = "Unit Tests/AchievementModelTest.swift"; sourceTree = "<group>"; };
+		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
@@ -319,6 +320,7 @@
 		79F93DD62AB21F400075DC69 /* Thullium */ = {
 			isa = PBXGroup;
 			children = (
+				79A11D302B3B66F80038FDCF /* Thullium.entitlements */,
 				79FBF7AF2AC1C81400C4286B /* Info.plist */,
 				790070D32AB399E700D1CD3A /* Views */,
 				790070D22AB37CC200D1CD3A /* Models */,
@@ -675,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thullium/Preview Content\"";
@@ -696,6 +699,9 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -707,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thullium/Preview Content\"";
@@ -728,6 +735,9 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

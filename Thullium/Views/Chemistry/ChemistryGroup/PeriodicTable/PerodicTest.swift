@@ -57,6 +57,17 @@ struct PeriodicTest:View {
                 }
                 popUp.toggle()
             }
+        #if targetEnvironment(macCatalyst)
+            .sheet(isPresented: $popUp, content: {
+                ZStack{
+                    ElementInfoView(element: el)
+                        .padding(.top)
+                    CloseButtonView(popUp: $popUp)
+                    
+                }
+                .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
+            })
+        #elseif os(iOS)
             .popover(isPresented: $popUp, content: {
                 ZStack{
                     ElementInfoView(element: el)
@@ -66,6 +77,7 @@ struct PeriodicTest:View {
                 }
                 .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
             })
+        #endif
     }
     /// Color square background shown in background
     private var baseView: some View{
