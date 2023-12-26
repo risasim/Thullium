@@ -25,6 +25,7 @@ struct AchievementsView:View {
                 if(ach.date != nil){
                     Text(LocalizedStringKey("achs.achieved"))+Text(ach.date!, format: .dateTime.day().month().year())
                         .bold()
+                        .font(.callout)
                 }
                 Text(LocalizedStringKey(ach.desc))
                     .font(.caption)

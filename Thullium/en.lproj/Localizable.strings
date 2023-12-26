@@ -49,7 +49,7 @@
 "achs.noMist"="Genius";
 "achs.noMistDesc"="Game won without any mistake.";
 "achs.und3min"="Sprinter";
-"achs.und3minDesc"="You have won the game under 3 minutes.";
+"achs.und3minDesc"="You have won the game under 5 minutes. Way to go!";
 "achs.mist5"="Student";
 "achs.mist5Desc"="You have won the game with only 5 mistakes";
 "achs.elems5"="Explorer";

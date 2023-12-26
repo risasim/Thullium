@@ -42,7 +42,7 @@
 "achs.noMist"="Genius";
 "achs.noMistDesc"="Hra vyhrána bez jediné chyby. Gratulujeme!";
 "achs.und3min"="Sprinter";
-"achs.und3minDesc"="Hra vyhrána za čas pod 3 minuty. Jste opravdu rychlík.";
+"achs.und3minDesc"="Hra vyhrána za čas pod 5 minut. Jste opravdu rychlík.";
 "achs.mist5"="Student";
 "achs.mist5Desc"="Dokončil jste hru s pouze 5 chybami.";
 "achs.elems5"="Objevitel";

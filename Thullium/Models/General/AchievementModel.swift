@@ -49,32 +49,39 @@ class AchievementModel{
     ///Function called after ending the game with
     func getScore(data: GameData){
         if data.allHints == 0{
-            achievements.achieves["woHint"]?.achieved=true
-            achievements.achieves["woHint"]?.date = Date.now
-            saveAchievements()
+            markAsAchieved("woHint")
+        }
+        if data.timeDiff<300.0{
+            markAsAchieved("und3min")
+        }
+        if data.mistakes == 0{
+            markAsAchieved("noMist")
+        }
+        if data.mistakes < 5{
+            markAsAchieved("mist5")
         }
     }
     
     func elementTapped(num: Int){
         loadAchivements()
         if !achievements.exploredElements.contains(num){
-            print("Element added")
             achievements.exploredElements.append(num)
-            print(achievements.exploredElements)
             saveAchievements()
         }
         if achievements.exploredElements.count == 119 && achievements.achieves["allElems"]?.date==nil{
-            achievements.achieves["allElems"]?.achieved = true
-            achievements.achieves["allElems"]?.date = Date.now
-            saveAchievements()
+            markAsAchieved("allElems")
         }
         if achievements.exploredElements.count == 5 && achievements.achieves["elems5"]?.date==nil{
-            achievements.achieves["elems5"]?.achieved = true
-            achievements.achieves["elems5"]?.date = Date.now
-            //print("YOYOOYOOOYOYOOYOYO")
+            markAsAchieved("elems5")
+        }
+    }
+    
+    func markAsAchieved(_ name: String){
+        if achievements.achieves[name]?.date == nil {
+            achievements.achieves[name]?.achieved = true
+            achievements.achieves[name]?.date = Date.now
             saveAchievements()
         }
-        //print("wtf, count:"+String(achievements.exploredElements.count))
     }
     
     func exportAchievements()->[Achievement]{
@@ -109,16 +116,6 @@ struct Achievements:Codable{
 
 struct Achievement:Codable, Hashable, Comparable{
     static func < (lhs: Achievement, rhs: Achievement) -> Bool {
-        //Not sure if this part does the wanted thing
-      //  if lhs.achieved==true && rhs.achieved==true{
-      //      return lhs==rhs
-      //  }else if lhs.achieved==true && rhs.achieved==false{
-      //      return lhs>rhs
-      //  }else if rhs.achieved==true{
-      //      return rhs>lhs
-      //  }else{
-      //      return rhs==lhs
-      //  }
         return lhs.name.count < rhs.name.count
     }
     

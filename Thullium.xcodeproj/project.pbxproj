@@ -16,6 +16,7 @@
 		791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */; };
 		791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 791C59722ABB317F007CCAB8 /* Localizable.strings */; };
 		791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C59742ABB3392007CCAB8 /* SearchTable.swift */; };
+		7920F4EC2B39F8A100ED06E3 /* GameModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */; };
 		793464742AB572EA00407F15 /* InfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464732AB572EA00407F15 /* InfoImage.swift */; };
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
@@ -73,6 +74,7 @@
 		791C59712ABB317F007CCAB8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		791C59732ABB3181007CCAB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		791C59742ABB3392007CCAB8 /* SearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
+		7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTest.swift; sourceTree = "<group>"; };
 		793464732AB572EA00407F15 /* InfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImage.swift; sourceTree = "<group>"; };
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				7982CD5A2B3813730095A9FC /* ThulliumTests.swift */,
 				7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */,
+				7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */,
 			);
 			path = ThulliumTests;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */,
 				7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */,
+				7920F4EC2B39F8A100ED06E3 /* GameModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

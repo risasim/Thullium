@@ -22,9 +22,8 @@ final class AchievementModelTest: XCTestCase {
             achievementModel.elementTapped(num: i)
         }
         //Test
-        let expression = Achievement(name: "achs.elems5", desc: "achs.elems5desc", img: "Explorer",achieved: true)
         XCTAssertTrue(achievementModel.achievements.exploredElements.count==5)
-        XCTAssertEqual(achievementModel.achievements.achieves["elems5"]?.achieved, expression.achieved)
+        XCTAssertTrue(achievementModel.achievements.achieves["elems5"]!.achieved)
     }
 
     func testAllExploredElementsAchieved(){
@@ -38,24 +37,8 @@ final class AchievementModelTest: XCTestCase {
             achievementModel.elementTapped(num: i)
         }
         //Test
-        let expression = Achievement(name: "achs.MendeleevAch", desc: "achs.MendeleevAchDesc", img: "Mendeleev",achieved: true)
         XCTAssertTrue(achievementModel.achievements.exploredElements.count==119)
-        XCTAssertEqual(achievementModel.achievements.achieves["allElems"]?.achieved, expression.achieved)
-    }
-    
-    //Functionality not yet developed
-    func testNoMistakesAchieved(){
-        //Arrange
-        let achievementModel = AchievementModel()
-        achievementModel.achievements = Achievements()
-        achievementModel.saveAchievements()
-        let gData = GameData()
-        
-        //Act
-        achievementModel.getScore(data: gData)
-        //Test
-        let expression = Achievement(name: "achs.noMist", desc: "achs.noMistDesc", img: "NoMistake",achieved: true)
-        //XCTAssertEqual(achievementModel.achievements.achieves["noMist"]?.achieved, expression.achieved)
+        XCTAssertTrue(achievementModel.achievements.achieves["allElems"]!.achieved)
     }
     
     func testNoHintsAchieved(){
@@ -68,8 +51,58 @@ final class AchievementModelTest: XCTestCase {
         //Act
         achievementModel.getScore(data: gData)
         //Test
-        let expression = Achievement(name: "achs.woHint", desc: "achs.woHintDesc", img: "Genius",achieved: true)
-        XCTAssertEqual(achievementModel.achievements.achieves["woHint"]?.achieved, expression.achieved)
+        XCTAssertTrue(achievementModel.achievements.achieves["woHint"]!.achieved)
+    }
+    
+    func testUnd3MinAchieved(){
+        //Arrange
+        let achievementModel = AchievementModel()
+        achievementModel.achievements = Achievements()
+        achievementModel.saveAchievements()
+        let gModel = GameModel()
+        //Act
+        gModel.startGame()
+        for n in gModel.gData.namesReady{
+            gModel.addToGuessed(name: n)
+        }
+        achievementModel.getScore(data: gModel.gData)
+        //Test
+        XCTAssertTrue(achievementModel.achievements.achieves["und3min"]!.achieved)
+    }
+    
+    func testMist5Achieved(){
+        //Arrange
+        let achievementModel = AchievementModel()
+        achievementModel.achievements = Achievements()
+        achievementModel.saveAchievements()
+        let gModel = GameModel()
+        gModel.gData.resetUserStat()
+        //Act
+        gModel.startGame()
+        for _ in 1...4{
+            gModel.gData.numAt = 6
+        }
+        print(gModel.gData.mistakes)
+        achievementModel.getScore(data: gModel.gData)
+        //Test
+        XCTAssertTrue(achievementModel.achievements.achieves["mist5"]!.achieved)
+    }
+    
+    func testNoMistAchieved(){
+        //Arrange
+        let achievementModel = AchievementModel()
+        achievementModel.achievements = Achievements()
+        achievementModel.saveAchievements()
+        let gModel = GameModel()
+        gModel.gData.resetUserStat()
+        //Act
+        gModel.startGame()
+        gModel.gData.numAt = 1
+        print(gModel.gData.mistakes)
+        achievementModel.getScore(data: gModel.gData)
+        //Test
+        //Because we changed the numAt the mistakes are not 1
+        XCTAssertFalse(achievementModel.achievements.achieves["noMist"]!.achieved)
     }
     
     

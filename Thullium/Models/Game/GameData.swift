@@ -21,11 +21,16 @@ class GameData{
             if newValue>5{
                 hinted = currentGuess
                 allHints+=1
+                mistakes+=1
             }else if newValue == 0{
                 hinted = ""
+            }else{
+                mistakes+=1
             }
         }
     }
+    /// Int used to determine ``Achievement`` called "noMist" and "mist5"
+    var mistakes = 0
     /// String that is filled with name of elment if needed. Used in ``PeriodicTest``
     var hinted = ""
     ///Number of taps on the hint icon once give it a short description and second gives it the postion of the element
@@ -40,6 +45,10 @@ class GameData{
     private var arIndex = 0
     /// Array of strings containg the names of elements.
     var namesReady:[String] = []
+    /// TimeStamp at the start of the Game
+    var startTimeStamp = Date.now
+    /// TimeStamp at the end of the Game
+    var finishTimeStamp = Date.now
     /// Array of elements in form of string. By this array is in PeriodicTest.swift determined, if it's shown.
     var alreadyGuessed:[String] = []{
         didSet{
@@ -48,6 +57,8 @@ class GameData{
                     arIndex += 1
                     currentGuess = namesReady[arIndex]
                 }else{
+                    finishTimeStamp = Date.now
+                    getTimeDiff()
                     showAlert = true
                 }
             }
@@ -55,6 +66,8 @@ class GameData{
     }
     ///  Array of element in their normal order.
     var namesPreset:[String] = []
+    /// Timestamps diference
+    var timeDiff:Double = 0.0
     
     init() {
         for el in JSONtoSwiftConverted.eData{
@@ -63,9 +76,10 @@ class GameData{
         namesReady = namesPreset.shuffled()
     }
     
-  //  func getGuess() -> String{
-  //      return namesReady[arIndex]
-  //  }
+    func getTimeDiff(){
+        timeDiff = finishTimeStamp.timeIntervalSince(startTimeStamp)
+    }
+
     func getGuess(){
         self.tapHint = 0
         self.currentGuess = namesReady[arIndex]
@@ -75,6 +89,7 @@ class GameData{
         self.alreadyGuessed = []
         self.numAt = 0
         self.arIndex = 0
+        self.mistakes = 0
     }
    
 }
