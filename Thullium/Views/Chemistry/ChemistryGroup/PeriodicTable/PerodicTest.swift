@@ -15,11 +15,14 @@ import SwiftUI
 struct PeriodicTest:View {
     
     var el:Element
-    var searchQuery : [String]?
+    //var searchQuery : [String]?
+    @Binding var searchModel:SearchTable?
     var categories: [Category]?
     var number:Int?
     var gData: GameData?
     @State var popUp = false
+    //The reason it does fetch so many times is because i create it a few dozen times
+   // @State var ach = AchievementModel()
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
@@ -33,8 +36,8 @@ struct PeriodicTest:View {
                 baseView
                     .opacity(data.hinted==el.name ? 0.85 : 0.6)
             }
-        }else if (searchQuery != nil){
-            if (searchQuery!.contains(el.name)){
+        }else if (searchModel != nil){
+            if (searchModel!.showThese.contains(el.name)){
                 normalView
             }else{
                 baseView.opacity(0.6)
@@ -49,6 +52,9 @@ struct PeriodicTest:View {
                infoView
             }
             .onTapGesture {
+                if(searchModel != nil){
+                    searchModel!.achieveModel.elementTapped(num: el.number)
+                }
                 popUp.toggle()
             }
             .popover(isPresented: $popUp, content: {

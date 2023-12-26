@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "image-from-rawpixel-id-6482083-png.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

@@ -12,10 +12,10 @@ import TipKit
 // MARK: - Periodic table
 struct PeriodicTableExploreTip: Tip {
     var title: Text {
-        Text("exploreTableTip")
+        Text("tip.exploreTable")
     }
     var message: Text? {
-        Text("exploreTableTipText")
+        Text("tip.exploreTableText")
     }
     var image: Image? {
         Image(systemName: "hand.tap")
@@ -24,10 +24,10 @@ struct PeriodicTableExploreTip: Tip {
 
 struct GameHint:Tip{
     var title: Text{
-        Text("gameHintTip")
+        Text("tip.gameHint")
     }
     var message: Text? {
-        Text("gameHintTipText")
+        Text("tip.gameHintText")
     }
     var image: Image? {
         Image(systemName: "lightbulb.max.fill")

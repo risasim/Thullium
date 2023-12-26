@@ -20,10 +20,37 @@
 "selectAllCategories" = "Vybrat vše";
 
 //Tips
-"exploreTableTip" = "Objevte prvky";
-"exploreTableTipText"="Po zmáčknutí se objeví detaily o prvku.";
-"gameHintTip"="Potřebujete pomoct?";
-"gameHintTipText"="Klikněte a získejte nápovědu.";
+"tip.exploreTable" = "Objevte prvky";
+"tip.exploreTableText"="Po zmáčknutí se objeví detaily o prvku.";
+"tip.gameHint"="Potřebujete pomoct?";
+"tip.gameHintText"="Klikněte a získejte nápovědu.";
+
+//Settings
+"set.appDescription"="Thullium je aplikace pro objevování a učení periodické tabulky prvků. Aplikace napsaná během seminářů chemie na střední škole. Pokud máte nějaké problémy nebo nápady na zlepšení nebojte se mě kontaktovat.";
+"set.settings" = "Nastavení";
+"set.application"="Aplikace";
+"set.version"="Verze";
+"set.privacyPolicy"="Ochrana soukromí";
+"set.developer"="Vyvojář";
+"set.compatibility"="Kompabilita";
+"set.link"="Odkaz";
+
+//Achievements
+"achs.name"="Odznaky";
+"achs.MendeleevAch"="Malý Mendělejev";
+"achs.MendeleevAchDesc"="Objevili jste všechny prvky v periodické tabulce.";
+"achs.noMist"="Genius";
+"achs.noMistDesc"="Hra vyhrána bez jediné chyby. Gratulujeme!";
+"achs.und3min"="Sprinter";
+"achs.und3minDesc"="Hra vyhrána za čas pod 5 minut. Jste opravdu rychlík.";
+"achs.mist5"="Student";
+"achs.mist5Desc"="Dokončil jste hru s pouze 5 chybami.";
+"achs.elems5"="Objevitel";
+"achs.elems5desc"="Objevil jste 5 prvků.";
+"achs.notUnlocked" = "Odznak ještě neodemčen";
+"achs.achieved"="Získáno: ";
+"achs.woHint"="Bedna";
+"achs.woHintDesc"="Hra dokončena bez jediné nápovědy.";
 
 //Variables of data
 "Phase"="Skupenství";

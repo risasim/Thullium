@@ -16,10 +16,11 @@ struct ChemistryView: View {
     @Query private var items: [ElementsData]
     @State var gameModel = GameModel()
     @State var popUp = false
+    @State var settingsUp = false
     
     var body: some View {
-        VStack{
-            NavigationStack{
+        NavigationStack{
+            VStack{
                 NavigationLink {
                     ActualPeriodicTable()
                 } label: {
@@ -56,6 +57,14 @@ struct ChemistryView: View {
                 }
             }
             .tint(Color.primary)
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {settingsUp.toggle()}, label: {
+                        Image(systemName: "gear")
+                            .font(.title)
+                    })
+                }
+            })
         }
         .sheet(isPresented: $popUp, content: {
             GamePSetupView(gameModel: gameModel, pop: $popUp)
@@ -63,6 +72,13 @@ struct ChemistryView: View {
                     gameModel.startGame()
                 })
         })
+        .sheet(isPresented: $settingsUp, content: {
+            ZStack{
+                SettingsView()
+                CloseButtonView(popUp: $settingsUp)
+            }
+        })
+            
     }
 }
 

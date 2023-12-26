@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "atom-1674878_1280-removebg-preview.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
