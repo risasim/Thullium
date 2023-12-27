@@ -21,6 +21,7 @@ struct NotUnlockedOverView: View {
                     .padding(.top)
                     .multilineTextAlignment(.center)
             }
+            .foregroundColor(.white)
         }
     }
 }
