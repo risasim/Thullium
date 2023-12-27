@@ -26,15 +26,24 @@ struct PeriodicTest:View {
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
+    @State private var start: Bool = false
     /// Handles logic of making sure that either ``GameModel`` or  ``SearchTable`` exists and based on that creates the right view in three variants
     var body: some View {
         if let data = gData{
             if data.alreadyGuessed.contains(el.name){
                 normalView
-                    .animation(.bouncy, value: 0.6)
             }else{
                 baseView
                     .opacity(data.hinted==el.name ? 0.85 : 0.6)
+                    .animation(.bouncy, value: 0.6)
+                    .rotationEffect(.degrees(start ? 30 : 0))
+                    .offset(x: start ? 5:0)
+                  //  .onTapGesture {
+                  //      start = true
+                  //      withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
+                  //          start = false
+                  //      }
+                  //  }
             }
         }else if (searchModel != nil){
             if (searchModel!.showThese.contains(el.name)){
@@ -94,4 +103,9 @@ struct PeriodicTest:View {
         }
         .foregroundStyle(determineColorFromPhase(phase: el.phase))
     }
+}
+
+
+#Preview(traits: .sizeThatFitsLayout){
+    PeriodicTest(el: JSONtoSwiftDataconverter().eData[68], searchModel: .constant(nil), gData: GameData())
 }
