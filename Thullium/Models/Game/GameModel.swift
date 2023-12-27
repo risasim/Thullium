@@ -101,4 +101,19 @@ class GameModel{
             }
         }
     }
+    
+    func manageTap(index i: Int,name:String)->Bool{
+        if gData.currentGuess == name{
+            addToGuessed(name:name)
+            feedbackGenerator.notificationOccurred(.success)
+            return true
+        }else{
+            feedbackGenerator.notificationOccurred(.error)
+            print("This happened")
+            print(gData.numAt)
+            gData.numAt += 1
+            print("Got here")
+            return false
+        }
+    }
 }

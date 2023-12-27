@@ -13,37 +13,56 @@ import SwiftUI
 ///
 /// - Note This view carries a lot of logic, that is based on data from ``GameModel`` or ``SearchTable``
 struct PeriodicTest:View {
-    
+// MARK: - Variables
     var el:Element
     //var searchQuery : [String]?
     @Binding var searchModel:SearchTable?
+    @Binding var gameModel:GameModel?
     var categories: [Category]?
     var number:Int?
-    var gData: GameData?
-    @State var popUp = false
     //The reason it does fetch so many times is because i create it a few dozen times
-   // @State var ach = AchievementModel()
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
+    @State var popUp = false
     @State private var start: Bool = false
+    @State private var hintAnimated = false
+    
+// MARK: - Views
     /// Handles logic of making sure that either ``GameModel`` or  ``SearchTable`` exists and based on that creates the right view in three variants
     var body: some View {
-        if let data = gData{
-            if data.alreadyGuessed.contains(el.name){
+        if let model = gameModel{
+            if model.gData.alreadyGuessed.contains(el.name){
                 normalView
+                    .scaleEffect(CGSize(width: start ? 1.1 : 1.0, height: start ? 1.2 : 1.0), anchor: .center)
+                    .onAppear{
+                            start = true
+                        withAnimation(Animation.easeOut) {
+                                start = false
+                        }
+                    }
             }else{
                 baseView
-                    .opacity(data.hinted==el.name ? 0.85 : 0.6)
-                    .animation(.bouncy, value: 0.6)
+                    .opacity(model.gData.hinted==el.name ? 0.85 : 0.6)
                     .rotationEffect(.degrees(start ? 30 : 0))
                     .offset(x: start ? 5:0)
-                  //  .onTapGesture {
-                  //      start = true
-                  //      withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
-                  //          start = false
-                  //      }
-                  //  }
+                    .offset(x:  hintAnimated ? 5:0)
+                    .onTapGesture {
+                        if !model.manageTap(index: el.number-1, name: el.name){
+                            start = true
+                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
+                                start = false
+                            }
+                        }
+                    }
+                    .onChange(of: model.gData.hinted) { oldValue, newValue in
+                        if newValue == el.name{
+                            hintAnimated = true
+                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
+                                hintAnimated = false
+                            }
+                        }
+                    }
             }
         }else if (searchModel != nil){
             if (searchModel!.showThese.contains(el.name)){
@@ -107,5 +126,5 @@ struct PeriodicTest:View {
 
 
 #Preview(traits: .sizeThatFitsLayout){
-    PeriodicTest(el: JSONtoSwiftDataconverter().eData[68], searchModel: .constant(nil), gData: GameData())
+    PeriodicTest(el: JSONtoSwiftDataconverter().eData[68], searchModel: .constant(nil), gameModel:.constant( GameModel()))
 }
