@@ -58,7 +58,7 @@ struct PeriodicTest:View {
                     .onChange(of: model.gData.hinted) { oldValue, newValue in
                         if newValue == el.name{
                             hintAnimated = true
-                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
+                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2).repeatForever(autoreverses: false)) {
                                 hintAnimated = false
                             }
                         }
