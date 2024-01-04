@@ -16,6 +16,7 @@
 		791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */; };
 		791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 791C59722ABB317F007CCAB8 /* Localizable.strings */; };
 		791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C59742ABB3392007CCAB8 /* SearchTable.swift */; };
+		7920F4EC2B39F8A100ED06E3 /* GameModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */; };
 		793464742AB572EA00407F15 /* InfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464732AB572EA00407F15 /* InfoImage.swift */; };
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
@@ -24,19 +25,44 @@
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
 		795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E532AB4E33B00BB077C /* ElementInfoView.swift */; };
+		79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA12B2EEBE900A79653 /* TipKitViews.swift */; };
+		79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA42B2EFBB900A79653 /* AchievementModel.swift */; };
+		79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AA82B2F087A00A79653 /* SettingsView.swift */; };
+		79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAA2B2F08D400A79653 /* SettingsRowView.swift */; };
+		79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */; };
+		79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79645AB22B33470700A79653 /* NotificationsModel.swift */; };
 		7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968576D2AB72E9000A0594C /* ReusableFunc.swift */; };
 		796857712AB885D800A0594C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857702AB885D800A0594C /* GameModel.swift */; };
 		796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796857722AB8906500A0594C /* GamePeriodicTableView.swift */; };
 		797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 797ADA932ACD69690039E86C /* element_003_lithium.usdz */; };
 		79820FDA2AE525A400B53520 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FD92AE525A400B53520 /* GameData.swift */; };
 		79820FDC2AE525D500B53520 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79820FDB2AE525D500B53520 /* Category.swift */; };
+		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
+		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
+		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
+		79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
+		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
+		79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA02B35D27A00F4D17F /* AchievementViews.swift */; };
+		79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA42B35EA5100F4D17F /* HexagonParams.swift */; };
+		79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */; };
+		79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA82B35EF7D00F4D17F /* BadgeView.swift */; };
 		79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */; };
 		79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DDD2AB21F420075DC69 /* Assets.xcassets */; };
 		79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F93DE02AB21F420075DC69 /* Preview Assets.xcassets */; };
 		79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7982CD5C2B3813730095A9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F93DCC2AB21F3F0075DC69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F93DD32AB21F400075DC69;
+			remoteInfo = Thullium;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
@@ -49,6 +75,7 @@
 		791C59712ABB317F007CCAB8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		791C59732ABB3181007CCAB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		791C59742ABB3392007CCAB8 /* SearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
+		7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTest.swift; sourceTree = "<group>"; };
 		793464732AB572EA00407F15 /* InfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImage.swift; sourceTree = "<group>"; };
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
@@ -57,6 +84,12 @@
 		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
 		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		795C6E532AB4E33B00BB077C /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
+		79645AA12B2EEBE900A79653 /* TipKitViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipKitViews.swift; sourceTree = "<group>"; };
+		79645AA42B2EFBB900A79653 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		79645AA82B2F087A00A79653 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		79645AAA2B2F08D400A79653 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		79645AB22B33470700A79653 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		7968576D2AB72E9000A0594C /* ReusableFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunc.swift; sourceTree = "<group>"; };
 		796857702AB885D800A0594C /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		796857722AB8906500A0594C /* GamePeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePeriodicTableView.swift; sourceTree = "<group>"; };
@@ -64,8 +97,18 @@
 		79820FD82AE5081700B53520 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79820FD92AE525A400B53520 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		79820FDB2AE525D500B53520 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotUnlockedOverView.swift; sourceTree = "<group>"; };
+		7982CD582B3813730095A9FC /* ThulliumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThulliumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7982CD5A2B3813730095A9FC /* ThulliumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThulliumTests.swift; sourceTree = "<group>"; };
+		7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementModelTest.swift; path = "Unit Tests/AchievementModelTest.swift"; sourceTree = "<group>"; };
+		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
+		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		79E56FA02B35D27A00F4D17F /* AchievementViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViews.swift; sourceTree = "<group>"; };
+		79E56FA42B35EA5100F4D17F /* HexagonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParams.swift; sourceTree = "<group>"; };
+		79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackgroundView.swift; sourceTree = "<group>"; };
+		79E56FA82B35EF7D00F4D17F /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		79F93DD42AB21F400075DC69 /* Thullium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thullium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F93DD72AB21F400075DC69 /* FlashCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsApp.swift; sourceTree = "<group>"; };
 		79F93DDD2AB21F420075DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,10 +118,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7982CD552B3813730095A9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD12AB21F400075DC69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +160,8 @@
 		790070D32AB399E700D1CD3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
+				79645AA72B2F086600A79653 /* Settings */,
+				79645AA32B2EEBF300A79653 /* General */,
 				7938C57B2AB62C87001189D2 /* Chemistry */,
 			);
 			path = Views;
@@ -165,6 +217,26 @@
 			path = SwiftData;
 			sourceTree = "<group>";
 		};
+		79645AA32B2EEBF300A79653 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				79FBF7B22AC1CA8900C4286B /* Launch Screen.storyboard */,
+				79645AA12B2EEBE900A79653 /* TipKitViews.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		79645AA72B2F086600A79653 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				79E56FA22B35D7DD00F4D17F /* Badges */,
+				79645AA82B2F087A00A79653 /* SettingsView.swift */,
+				79645AAA2B2F08D400A79653 /* SettingsRowView.swift */,
+				79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		7968576C2AB72E5B00A0594C /* ChemistryGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,11 +258,44 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		7982CD592B3813730095A9FC /* ThulliumTests */ = {
+			isa = PBXGroup;
+			children = (
+				7982CD5A2B3813730095A9FC /* ThulliumTests.swift */,
+				7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */,
+				7920F4EB2B39F8A100ED06E3 /* GameModelTest.swift */,
+			);
+			path = ThulliumTests;
+			sourceTree = "<group>";
+		};
 		799F7E8E2B2E23A3004B0077 /* General */ = {
 			isa = PBXGroup;
 			children = (
 				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
+				79645AA42B2EFBB900A79653 /* AchievementModel.swift */,
+				79645AB22B33470700A79653 /* NotificationsModel.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		79E56FA22B35D7DD00F4D17F /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				79E56F9E2B35D27000F4D17F /* AchievementsView.swift */,
+				79E56FA02B35D27A00F4D17F /* AchievementViews.swift */,
+				79E56FA32B35EA3800F4D17F /* General */,
+				7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+		79E56FA32B35EA3800F4D17F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				79E56FA42B35EA5100F4D17F /* HexagonParams.swift */,
+				79E56FA62B35EB4A00F4D17F /* BadgeBackgroundView.swift */,
+				79E56FA82B35EF7D00F4D17F /* BadgeView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -200,6 +305,7 @@
 			children = (
 				79820FD82AE5081700B53520 /* README.md */,
 				79F93DD62AB21F400075DC69 /* Thullium */,
+				7982CD592B3813730095A9FC /* ThulliumTests */,
 				79F93DD52AB21F400075DC69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				79F93DD42AB21F400075DC69 /* Thullium.app */,
+				7982CD582B3813730095A9FC /* ThulliumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +322,7 @@
 		79F93DD62AB21F400075DC69 /* Thullium */ = {
 			isa = PBXGroup;
 			children = (
+				79A11D302B3B66F80038FDCF /* Thullium.entitlements */,
 				79FBF7AF2AC1C81400C4286B /* Info.plist */,
 				790070D32AB399E700D1CD3A /* Views */,
 				790070D22AB37CC200D1CD3A /* Models */,
@@ -238,6 +346,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7982CD572B3813730095A9FC /* ThulliumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7982CD5E2B3813730095A9FC /* Build configuration list for PBXNativeTarget "ThulliumTests" */;
+			buildPhases = (
+				7982CD542B3813730095A9FC /* Sources */,
+				7982CD552B3813730095A9FC /* Frameworks */,
+				7982CD562B3813730095A9FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7982CD5D2B3813730095A9FC /* PBXTargetDependency */,
+			);
+			name = ThulliumTests;
+			productName = ThulliumTests;
+			productReference = 7982CD582B3813730095A9FC /* ThulliumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		79F93DD32AB21F400075DC69 /* Thullium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79F93DE42AB21F420075DC69 /* Build configuration list for PBXNativeTarget "Thullium" */;
@@ -251,6 +377,9 @@
 			dependencies = (
 			);
 			name = Thullium;
+			packageProductDependencies = (
+				79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */,
+			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
 			productType = "com.apple.product-type.application";
@@ -265,6 +394,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					7982CD572B3813730095A9FC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 79F93DD32AB21F400075DC69;
+					};
 					79F93DD32AB21F400075DC69 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -280,16 +413,27 @@
 				cs,
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
+			packageReferences = (
+				79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79F93DD32AB21F400075DC69 /* Thullium */,
+				7982CD572B3813730095A9FC /* ThulliumTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7982CD562B3813730095A9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD22AB21F400075DC69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,28 +451,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7982CD542B3813730095A9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */,
+				7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */,
+				7920F4EC2B39F8A100ED06E3 /* GameModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79F93DD02AB21F400075DC69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
 				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
+				79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */,
+				79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */,
+				79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */,
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
+				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
+				7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
+				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
+				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
+				79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
 				79820FDA2AE525A400B53520 /* GameData.swift in Sources */,
+				79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */,
 				791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */,
 				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
+				79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */,
+				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
 				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
@@ -337,6 +503,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7982CD5D2B3813730095A9FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F93DD32AB21F400075DC69 /* Thullium */;
+			targetProxy = 7982CD5C2B3813730095A9FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		791C59722ABB317F007CCAB8 /* Localizable.strings */ = {
@@ -351,6 +525,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7982CD5F2B3813730095A9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Q38DY93CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.ThulliumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thullium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thullium";
+			};
+			name = Debug;
+		};
+		7982CD602B3813730095A9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Q38DY93CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richie.ThulliumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thullium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thullium";
+			};
+			name = Release;
+		};
 		79F93DE22AB21F420075DC69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thullium/Preview Content\"";
@@ -493,9 +704,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Thullium/Preview Content\"";
@@ -525,9 +740,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richie.Thullium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,6 +755,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7982CD5E2B3813730095A9FC /* Build configuration list for PBXNativeTarget "ThulliumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7982CD5F2B3813730095A9FC /* Debug */,
+				7982CD602B3813730095A9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79F93DCF2AB21F3F0075DC69 /* Build configuration list for PBXProject "Thullium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -556,6 +783,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79F93DCC2AB21F3F0075DC69 /* Project object */;
 }

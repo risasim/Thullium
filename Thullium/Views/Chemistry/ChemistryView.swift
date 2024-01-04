@@ -11,15 +11,15 @@ import SwiftData
 
 /// Main View for chemistry themed content
 struct ChemistryView: View {
-    
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [ElementsData]
     @State var gameModel = GameModel()
     @State var popUp = false
+    @State var settingsUp = false
     
     var body: some View {
-        VStack{
-            NavigationStack{
+        NavigationStack{
+            VStack{
                 NavigationLink {
                     ActualPeriodicTable()
                 } label: {
@@ -30,6 +30,9 @@ struct ChemistryView: View {
                     HStack(spacing: 0){
                         NavigationLink {
                             GamePeriodicTableView(gameModel: $gameModel)
+                                .onAppear(perform: {
+                                    gameModel.startGame()
+                                })
                         } label: {
                             Label(LocalizedStringKey("game"), systemImage: "arcade.stick")
                                 .font(.largeTitle)
@@ -44,7 +47,7 @@ struct ChemistryView: View {
                         Button(action: {
                             popUp.toggle()
                         }, label: {
-                            Label(LocalizedStringKey("gameSettings"), systemImage: "gear")
+                            Label(LocalizedStringKey("gameConfiguration"), systemImage: "checklist")
                                 .font(.headline)
                                 .frame(maxWidth: .infinity,maxHeight:.infinity)
                                 .background(.ultraThickMaterial)
@@ -56,6 +59,14 @@ struct ChemistryView: View {
                 }
             }
             .tint(Color.primary)
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {settingsUp.toggle()}, label: {
+                        Image(systemName: "gear")
+                            .font(.title)
+                    })
+                }
+            })
         }
         .sheet(isPresented: $popUp, content: {
             GamePSetupView(gameModel: gameModel, pop: $popUp)
@@ -63,6 +74,13 @@ struct ChemistryView: View {
                     gameModel.startGame()
                 })
         })
+        .sheet(isPresented: $settingsUp, content: {
+            ZStack{
+                SettingsView()
+                CloseButtonView(popUp: $settingsUp)
+            }
+        })
+            
     }
 }
 

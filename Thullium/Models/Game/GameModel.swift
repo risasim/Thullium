@@ -43,11 +43,13 @@ class GameModel{
     func startGame(){
         gData.ready = false
         categories = setupModel.criteria
+        gData.hintCeling = UserDefaults.standard.integer(forKey: "numberOfAttemps")
         gData.namesReady = []
         gData.resetUserStat()
         gData.namesReady = prepareGameWithFilter().shuffled()
         gData.ready = true
         gData.getGuess()
+        gData.startTimeStamp = Date.now
     }
     
     ///Resets data and call ``startGame()`` to prepare for new game
@@ -69,7 +71,7 @@ class GameModel{
             var determined = false
             for cat in categories{
                 if el.category == cat.name && cat.selected == true{
-                    print("\(el.name) in \(cat.name) and gonna be displayed")
+                    //print("\(el.name) in \(cat.name) and gonna be displayed")
                     determined=true
                     prepareNames.append(el.name)
                     break
@@ -81,7 +83,7 @@ class GameModel{
                 }
             }
             if !determined{
-                print("\(el.name) not gonna be displayed")
+                //print("\(el.name) not gonna be displayed")
                 gData.alreadyGuessed.append(el.name)
             }
         }
@@ -98,6 +100,21 @@ class GameModel{
                     gData.alreadyGuessed.append(e.name)
                 }
             }
+        }
+    }
+    
+    func manageTap(index i: Int,name:String)->Bool{
+        if gData.currentGuess == name{
+            addToGuessed(name:name)
+            feedbackGenerator.notificationOccurred(.success)
+            return true
+        }else{
+            feedbackGenerator.notificationOccurred(.error)
+            print("This happened")
+            print(gData.numAt)
+            gData.numAt += 1
+            print("Got here")
+            return false
         }
     }
 }

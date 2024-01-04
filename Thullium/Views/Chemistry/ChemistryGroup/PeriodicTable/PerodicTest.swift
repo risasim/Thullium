@@ -13,28 +13,60 @@ import SwiftUI
 ///
 /// - Note This view carries a lot of logic, that is based on data from ``GameModel`` or ``SearchTable``
 struct PeriodicTest:View {
-    
+// MARK: - Variables
+    @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
     var el:Element
-    var searchQuery : [String]?
+    //var searchQuery : [String]?
+    @Binding var searchModel:SearchTable?
+    @Binding var gameModel:GameModel?
     var categories: [Category]?
     var number:Int?
-    var gData: GameData?
-    @State var popUp = false
+    //The reason it does fetch so many times is because i create it a few dozen times
     var colour:Color{
         determineColorFromCategory(category: el.category)
     }
+    @State var popUp = false
+    @State private var start: Bool = false
+    @State private var hintAnimated = false
+    
+// MARK: - Views
     /// Handles logic of making sure that either ``GameModel`` or  ``SearchTable`` exists and based on that creates the right view in three variants
     var body: some View {
-        if let data = gData{
-            if data.alreadyGuessed.contains(el.name){
+        if let model = gameModel{
+            if model.gData.alreadyGuessed.contains(el.name){
                 normalView
-                    .animation(.bouncy, value: 0.6)
+                    .scaleEffect(CGSize(width: start ? 1.1 : 1.0, height: start ? 1.2 : 1.0), anchor: .center)
+                    .onAppear{
+                            start = true
+                        withAnimation(Animation.easeOut) {
+                                start = false
+                        }
+                    }
             }else{
                 baseView
-                    .opacity(data.hinted==el.name ? 0.85 : 0.6)
+                    .opacity(model.gData.hinted==el.name ? 0.85 : 0.6)
+                    .rotationEffect(.degrees(start ? 30 : 0))
+                    .offset(x: start ? 5:0)
+                    .offset(x:  hintAnimated ? 5:0)
+                    .onTapGesture {
+                        if !model.manageTap(index: el.number-1, name: el.name){
+                            start = true
+                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2)) {
+                                start = false
+                            }
+                        }
+                    }
+                    .onChange(of: model.gData.hinted) { oldValue, newValue in
+                        if newValue == el.name{
+                            hintAnimated = true
+                            withAnimation(Animation.spring(response: 0.2, dampingFraction: 0.2,blendDuration: 0.2).repeatForever(autoreverses: false)) {
+                                hintAnimated = false
+                            }
+                        }
+                    }
             }
-        }else if (searchQuery != nil){
-            if (searchQuery!.contains(el.name)){
+        }else if (searchModel != nil){
+            if (searchModel!.showThese.contains(el.name)){
                 normalView
             }else{
                 baseView.opacity(0.6)
@@ -49,8 +81,28 @@ struct PeriodicTest:View {
                infoView
             }
             .onTapGesture {
-                popUp.toggle()
+                if(searchModel != nil){
+                    searchModel!.achieveModel.elementTapped(num: el.number)
+                }
+                if let gModel = gameModel{
+                    if (showDetails==true){
+                        popUp.toggle()
+                    }
+                }else{
+                    popUp.toggle()
+                }
             }
+        #if targetEnvironment(macCatalyst)
+            .sheet(isPresented: $popUp, content: {
+                ZStack{
+                    ElementInfoView(element: el)
+                        .padding(.top)
+                    CloseButtonView(popUp: $popUp)
+                    
+                }
+                .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
+            })
+        #else
             .popover(isPresented: $popUp, content: {
                 ZStack{
                     ElementInfoView(element: el)
@@ -60,6 +112,7 @@ struct PeriodicTest:View {
                 }
                 .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
             })
+        #endif
     }
     /// Color square background shown in background
     private var baseView: some View{
@@ -76,4 +129,9 @@ struct PeriodicTest:View {
         }
         .foregroundStyle(determineColorFromPhase(phase: el.phase))
     }
+}
+
+
+#Preview(traits: .sizeThatFitsLayout){
+    PeriodicTest(el: JSONtoSwiftDataconverter().eData[68], searchModel: .constant(nil), gameModel:.constant( GameModel()))
 }

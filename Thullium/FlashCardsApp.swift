@@ -7,12 +7,12 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 // data https://github.com/Bowserinator/Periodic-Table-JSON/blob/master/PeriodicTableJSON.json
 
 @main
 struct FlashCardsApp: App {
-    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             ElementsData.self,
@@ -30,8 +30,10 @@ struct FlashCardsApp: App {
         WindowGroup {
            // ContentView()
             ChemistryView()
-              
+                .task {
+                    try? await Tips.configure()
+                }
         }
-        .modelContainer(sharedModelContainer)
+         .modelContainer(sharedModelContainer)
     }
 }

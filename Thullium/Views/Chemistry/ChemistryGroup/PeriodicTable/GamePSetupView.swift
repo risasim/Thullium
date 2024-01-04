@@ -41,7 +41,7 @@ struct GamePSetupView: View {
                         .font(.title3)
                         .buttonStyle(.borderedProminent)
                         //.foregroundColor(.primary)
-                        .listRowInsets(.init(top: 10, leading: 5, bottom: 0, trailing: 5))
+                        .listRowInsets(.init(top: 10, leading: 5, bottom: 10, trailing: 5))
                     }
                 }
                 .padding(0)

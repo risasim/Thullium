@@ -13,6 +13,8 @@ import SwiftUI
 class SearchTable{
     var showThese:[String] = []
     var allElements:[String] = []
+    var achieveModel = AchievementModel()
+    
     var search:String = ""{
         willSet{
             print("this happened")
