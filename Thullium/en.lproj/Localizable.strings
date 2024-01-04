@@ -41,7 +41,7 @@
 "set.developer"="Developer";
 "set.compatibility"="Compability";
 "set.link"="Link";
-"set.numOfAttemps"="Number of attemps in game";
+"set.numOfAttemps %lld"="Number of attemps in game **%lld**";
 "set.gameShowDetails"="Show details during game";
 "set.gameConfetti"="Winning confetti";
 
@@ -71,3 +71,4 @@
 "playAgain" = "Play again";
 "selectPeriods"="Select periods you want to learn";
 "categoriesAlert"="You need at least one category for the game to work";
+"gameConfiguration"="Configuration";

@@ -43,6 +43,7 @@ class GameModel{
     func startGame(){
         gData.ready = false
         categories = setupModel.criteria
+        gData.hintCeling = UserDefaults.standard.integer(forKey: "numberOfAttemps")
         gData.namesReady = []
         gData.resetUserStat()
         gData.namesReady = prepareGameWithFilter().shuffled()

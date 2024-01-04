@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
+    @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
     @State var achs = AchievementModel()
     
@@ -29,6 +30,11 @@ struct SettingsView: View {
                         HStack{
                             Toggle("set.gameConfetti", isOn: $gameConfetti)
                                 .foregroundColor(.gray)
+                        }
+                        Divider().padding(.vertical, 4)
+                        HStack{
+                            Stepper(LocalizedStringKey("set.numOfAttemps \(numberOfAttemps)"), value: $numberOfAttemps,in:3...20)
+                                .foregroundStyle(.gray)
                         }
                         Divider().padding(.vertical, 4)
                         HStack{

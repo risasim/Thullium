@@ -10,7 +10,7 @@
 "periodicTable" =  "Periodická tabulka";
 "game"  =  "Hra";
 "Wikipedia"="Wikipedie";
-"gameSettings"= "Nastavení";
+"gameConfiguration"="Konfigurace";
 "selectCategories"="Vyberte kategorie, které chcete opakovat";
 "playAgain"= "Hrát znova";
 "congratsOnCompleteGame"="Gratuluace k uhádnutí všech prvků!";
@@ -34,7 +34,7 @@
 "set.developer"="Vyvojář";
 "set.compatibility"="Kompabilita";
 "set.link"="Odkaz";
-"set.numOfAttemps"="Počet pokusů  před nápovědou";
+"set.numOfAttemps %lld"="Počet pokusů  před nápovědou **%lld**";
 "set.gameShowDetails"="Po uhádnutí rozkliknutelné prvky";
 "set.gameConfetti"="Konfety při výhře";
 

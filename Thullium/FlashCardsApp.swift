@@ -13,7 +13,6 @@ import TipKit
 
 @main
 struct FlashCardsApp: App {
-    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             ElementsData.self,

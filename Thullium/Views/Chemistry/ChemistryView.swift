@@ -11,7 +11,6 @@ import SwiftData
 
 /// Main View for chemistry themed content
 struct ChemistryView: View {
-    
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [ElementsData]
     @State var gameModel = GameModel()
@@ -31,6 +30,9 @@ struct ChemistryView: View {
                     HStack(spacing: 0){
                         NavigationLink {
                             GamePeriodicTableView(gameModel: $gameModel)
+                                .onAppear(perform: {
+                                    gameModel.startGame()
+                                })
                         } label: {
                             Label(LocalizedStringKey("game"), systemImage: "arcade.stick")
                                 .font(.largeTitle)
@@ -45,7 +47,7 @@ struct ChemistryView: View {
                         Button(action: {
                             popUp.toggle()
                         }, label: {
-                            Label(LocalizedStringKey("gameSettings"), systemImage: "gear")
+                            Label(LocalizedStringKey("gameConfiguration"), systemImage: "checklist")
                                 .font(.headline)
                                 .frame(maxWidth: .infinity,maxHeight:.infinity)
                                 .background(.ultraThickMaterial)

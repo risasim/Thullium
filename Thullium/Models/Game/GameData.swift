@@ -18,7 +18,7 @@ class GameData{
     /// Number of attempts of user, whilst guessing. When 5 is reached the ``hint`` is showed.
     var numAt = 0{
         willSet{
-            if newValue>5{
+            if newValue>=hintCeling{
                 hinted = currentGuess
                 allHints+=1
                 mistakes+=1;
@@ -31,6 +31,8 @@ class GameData{
     }
     /// Int used to determine ``Achievement`` called "noMist" and "mist5"
     var mistakes = 0
+    /// Number of mistakes
+    var hintCeling = 5
     /// String that is filled with name of elment if needed. Used in ``PeriodicTest``
     var hinted = ""
     ///Number of taps on the hint icon once give it a short description and second gives it the postion of the element

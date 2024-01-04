@@ -14,6 +14,7 @@ import SwiftUI
 /// - Note This view carries a lot of logic, that is based on data from ``GameModel`` or ``SearchTable``
 struct PeriodicTest:View {
 // MARK: - Variables
+    @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
     var el:Element
     //var searchQuery : [String]?
     @Binding var searchModel:SearchTable?
@@ -83,7 +84,13 @@ struct PeriodicTest:View {
                 if(searchModel != nil){
                     searchModel!.achieveModel.elementTapped(num: el.number)
                 }
-                popUp.toggle()
+                if let gModel = gameModel{
+                    if (showDetails==true){
+                        popUp.toggle()
+                    }
+                }else{
+                    popUp.toggle()
+                }
             }
         #if targetEnvironment(macCatalyst)
             .sheet(isPresented: $popUp, content: {
