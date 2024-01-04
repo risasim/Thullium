@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
+    @AppStorage("gameConfetti") private var gameConfetti:Bool = true
+    @State var achs = AchievementModel()
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20){
 // MARK: - Achievements
                     GroupBox {
-                        AchievementViews()
+                        AchievementViews(achievements: $achs)
                     } label: {
                         SettingsLabelView(label: "achs.name", image: "trophy")
                     }
 // MARK: - Settings
+                    // numOfAttemps+=1
                     GroupBox {
+                        HStack{
+                            Toggle("set.gameConfetti", isOn: $gameConfetti)
+                                .foregroundColor(.gray)
+                        }
                         Divider().padding(.vertical, 4)
+                        HStack{
+                            Toggle("set.gameShowDetails", isOn: $showDetails)
+                                .foregroundColor(.gray)
+                        }
                     } label: {
                         SettingsLabelView(label: "set.settings", image: "gear")
                     }

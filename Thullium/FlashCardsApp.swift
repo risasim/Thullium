@@ -35,6 +35,6 @@ struct FlashCardsApp: App {
                     try? await Tips.configure()
                 }
         }
-        .modelContainer(sharedModelContainer)
+         .modelContainer(sharedModelContainer)
     }
 }

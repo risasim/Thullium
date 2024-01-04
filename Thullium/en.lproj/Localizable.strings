@@ -41,6 +41,9 @@
 "set.developer"="Developer";
 "set.compatibility"="Compability";
 "set.link"="Link";
+"set.numOfAttemps"="Number of attemps in game";
+"set.gameShowDetails"="Show details during game";
+"set.gameConfetti"="Winning confetti";
 
 //Achievements
 "achs.name"="Achievements";

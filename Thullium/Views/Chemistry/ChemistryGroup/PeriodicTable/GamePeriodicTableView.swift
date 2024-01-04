@@ -7,6 +7,7 @@
 
 import SwiftUI
 import TipKit
+import ConfettiSwiftUI
 
 
 /// View of ``PeriodicTableView`` that provides ``GameModel`` as parameter
@@ -54,8 +55,9 @@ struct GamePeriodicTableView: View {
 
 /// View that shows up after the game has ended
 struct CustomAlertView:View {
-    
+    @AppStorage("gameConfetti") var gameConfetti:Bool = true
     @Binding var model:GameModel
+    @State var counter = 0
     
     var body: some View {
         VStack{
@@ -65,6 +67,8 @@ struct CustomAlertView:View {
                 VStack{
                     Image(systemName: "trophy")
                         .font(.system(size: 100))
+                        .confettiCannon(counter: $counter, repetitions: 4, repetitionInterval: 1.2)
+                        .padding(5)
                     Text("congratsOnCompleteGame")
                         .bold()
                         .font(.title)
@@ -90,6 +94,11 @@ struct CustomAlertView:View {
             }
             Spacer()
         }
+        .onAppear(perform: {
+            if gameConfetti{
+                counter+=1
+            }
+        })
         .background(.ultraThinMaterial)
     }
 }

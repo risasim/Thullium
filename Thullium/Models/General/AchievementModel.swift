@@ -12,7 +12,6 @@ import SwiftUI
 @Observable
 class AchievementModel{
     var achievements = Achievements()
-
     
     init() {
         loadAchivements()

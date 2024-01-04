@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AchievementViews:View {
     
-    @State var achievements = AchievementModel()
+    @Binding var achievements: AchievementModel
     
     var body: some View {
         ScrollView(.horizontal){
@@ -35,5 +35,5 @@ struct AchievementViews:View {
 }
 
 #Preview {
-    AchievementViews()
+    AchievementViews(achievements: .constant(AchievementModel()))
 }

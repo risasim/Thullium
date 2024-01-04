@@ -21,7 +21,7 @@ class GameData{
             if newValue>5{
                 hinted = currentGuess
                 allHints+=1
-                mistakes+=1
+                mistakes+=1;
             }else if newValue == 0{
                 hinted = ""
             }else{

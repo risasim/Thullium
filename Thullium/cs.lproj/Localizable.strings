@@ -34,6 +34,9 @@
 "set.developer"="Vyvojář";
 "set.compatibility"="Kompabilita";
 "set.link"="Odkaz";
+"set.numOfAttemps"="Počet pokusů  před nápovědou";
+"set.gameShowDetails"="Po uhádnutí rozkliknutelné prvky";
+"set.gameConfetti"="Konfety při výhře";
 
 //Achievements
 "achs.name"="Odznaky";

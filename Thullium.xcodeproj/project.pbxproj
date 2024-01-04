@@ -40,6 +40,7 @@
 		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
 		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
+		79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
@@ -128,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +377,9 @@
 			dependencies = (
 			);
 			name = Thullium;
+			packageProductDependencies = (
+				79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */,
+			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
 			productType = "com.apple.product-type.application";
@@ -408,6 +413,9 @@
 				cs,
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
+			packageReferences = (
+				79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -775,6 +783,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79F93DCC2AB21F3F0075DC69 /* Project object */;
 }
