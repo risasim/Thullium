@@ -44,6 +44,10 @@
 "set.numOfAttemps %lld"="Number of attemps in game **%lld**";
 "set.gameShowDetails"="Show details during game";
 "set.gameConfetti"="Winning confetti";
+"set.showNotifications"="Notifications";
+
+//Notifications
+"not.generalAchievemetTitle"="You now have new achievement";
 
 //Achievements
 "achs.name"="Achievements";

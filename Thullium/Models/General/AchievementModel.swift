@@ -34,6 +34,11 @@ class AchievementModel{
         }
     }
     
+    func resetAchievements(){
+        achievements = Achievements()
+        saveAchievements()
+    }
+    
     ///Encode ``Achievements`` into JSON and saves them into UserDefaults
     func saveAchievements(){
         let encoder = JSONEncoder()
@@ -80,6 +85,7 @@ class AchievementModel{
             achievements.achieves[name]?.achieved = true
             achievements.achieves[name]?.date = Date.now
             saveAchievements()
+            not_addNotification(title: "not.generalAchievemetTitle", subtitle: achievements.achieves[name]!.desc)
         }
     }
     

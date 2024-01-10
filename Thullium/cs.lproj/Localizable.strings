@@ -37,6 +37,10 @@
 "set.numOfAttemps %lld"="Počet pokusů  před nápovědou **%lld**";
 "set.gameShowDetails"="Po uhádnutí rozkliknutelné prvky";
 "set.gameConfetti"="Konfety při výhře";
+"set.showNotifications"="Notifikace";
+
+//Notifikace
+"not.generalAchievemetTitle"="You now have new achievement";
 
 //Achievements
 "achs.name"="Odznaky";
