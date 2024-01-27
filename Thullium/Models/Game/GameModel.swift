@@ -110,10 +110,14 @@ class GameModel{
     func manageTap(index i: Int,name:String)->Bool{
         if gData.currentGuess == name{
             addToGuessed(name:name)
+            #if os(iOS)
             feedbackGenerator.notificationOccurred(.success)
+            #endif
             return true
         }else{
+            #if os(iOS)
             feedbackGenerator.notificationOccurred(.error)
+            #endif
             print("This happened")
             print(gData.numAt)
             gData.numAt += 1

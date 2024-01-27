@@ -12,7 +12,9 @@ import TipKit
 
 // MARK: - Global constants
 ///Global variable for creating Feedback
+#if os(iOS)
 let feedbackGenerator = UINotificationFeedbackGenerator()
+#endif
 ///Global variable used to determine if the app was ever opened and thus if Onboarding Views are needed.
 var openedFirstTime = UserDefaults.standard.bool(forKey: "sound")
 ///Global variable containg all categories possible. Used in for inicialization of class ``Category``

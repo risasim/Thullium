@@ -26,37 +26,37 @@ struct ChemistryView: View {
                     ChemistryMenuItemView(text: "periodicTable", sysIm: "flask")
                 }
                 .padding()
-                ZStack{
-                    HStack(spacing: 0){
-                        NavigationLink {
-                            GamePeriodicTableView(gameModel: $gameModel)
-                                .onAppear(perform: {
-                                    gameModel.startGame()
-                                })
-                        } label: {
-                            Label(LocalizedStringKey("game"), systemImage: "arcade.stick")
-                                .font(.largeTitle)
-                                .frame(maxWidth: .infinity,maxHeight:.infinity)
-                                .padding(0)
-                                .background(.ultraThickMaterial)
-                                .cornerRadius(20, corners: [.topLeft, .bottomLeft])
-                        }
-                        Divider()
-                            .frame(width: 2)
-                            .overlay(.primary)
-                        Button(action: {
-                            popUp.toggle()
-                        }, label: {
-                            Label(LocalizedStringKey("gameConfiguration"), systemImage: "checklist")
-                                .font(.headline)
-                                .frame(maxWidth: .infinity,maxHeight:.infinity)
-                                .background(.ultraThickMaterial)
-                                .cornerRadius(20, corners: [.topRight, .bottomRight])
-                        })
+                
+                HStack(spacing: 0){
+                    NavigationLink {
+                        GamePeriodicTableView(gameModel: $gameModel)
+                            .onAppear(perform: {
+                                gameModel.startGame()
+                            })
+                    } label: {
+                        Label(LocalizedStringKey("game"), systemImage: "arcade.stick")
+                            .font(.largeTitle)
+                            .frame(maxWidth: .infinity,maxHeight:.infinity)
+                            .padding(0)
+                            .background(.ultraThickMaterial)
+                            .cornerRadius(20, corners: [.topLeft, .bottomLeft])
                     }
-                    .padding()
-                    
+                    Divider()
+                        .frame(width: 2)
+                        .overlay(.primary)
+                    Button(action: {
+                        popUp.toggle()
+                    }, label: {
+                        Label(LocalizedStringKey("gameConfiguration"), systemImage: "checklist")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity,maxHeight:.infinity)
+                            .background(.ultraThickMaterial)
+                            .cornerRadius(20, corners: [.topRight, .bottomRight])
+                    })
                 }
+                .padding()
+                
+                
             }
             .tint(Color.primary)
             .toolbar(content: {
@@ -80,7 +80,7 @@ struct ChemistryView: View {
                 CloseButtonView(popUp: $settingsUp)
             }
         })
-            
+        
     }
 }
 

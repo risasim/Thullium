@@ -129,9 +129,13 @@ struct PeriodicTableView: View {
         if gameModel != nil{
             if gameModel!.gData.currentGuess == elements[i].name{
                 gameModel!.addToGuessed(name: elements[i].name)
+                #if os(iOS)
                 feedbackGenerator.notificationOccurred(.success)
+                #endif
             }else{
+                #if os(iOS)
                 feedbackGenerator.notificationOccurred(.error)
+                #endif
                 print("This happened")
                 print(gameModel!.gData.numAt)
                 gameModel!.gData.numAt += 1
