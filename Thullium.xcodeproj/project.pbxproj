@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E07D2082B65276A00D85FD8 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3E07D2072B65276A00D85FD8 /* ConfettiSwiftUI */; };
 		790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */; };
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
@@ -40,7 +41,6 @@
 		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
 		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
-		79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
@@ -129,13 +129,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79B9691E2B473BF500BA42A9 /* ConfettiSwiftUI in Frameworks */,
+				3E07D2082B65276A00D85FD8 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E07D2062B65276A00D85FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		790070CD2AB37C5900D1CD3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +314,7 @@
 				79F93DD62AB21F400075DC69 /* Thullium */,
 				7982CD592B3813730095A9FC /* ThulliumTests */,
 				79F93DD52AB21F400075DC69 /* Products */,
+				3E07D2062B65276A00D85FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -378,7 +386,7 @@
 			);
 			name = Thullium;
 			packageProductDependencies = (
-				79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */,
+				3E07D2072B65276A00D85FD8 /* ConfettiSwiftUI */,
 			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
@@ -800,7 +808,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		79B9691D2B473BF500BA42A9 /* ConfettiSwiftUI */ = {
+		3E07D2072B65276A00D85FD8 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
