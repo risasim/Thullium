@@ -24,22 +24,34 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(label: "achs.name", image: "trophy")
                     }
-// MARK: - Settings
+                    // MARK: - Settings
                     // numOfAttemps+=1
                     GroupBox {
                         HStack{
                             Toggle("set.gameConfetti", isOn: $gameConfetti)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
                                 .foregroundColor(.gray)
+#endif
                         }
                         Divider().padding(.vertical, 4)
                         HStack{
                             Stepper(LocalizedStringKey("set.numOfAttemps \(numberOfAttemps)"), value: $numberOfAttemps,in:3...20)
-                                .foregroundStyle(.gray)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
+                                .foregroundColor(.gray)
+#endif
                         }
                         Divider().padding(.vertical, 4)
                         HStack{
                             Toggle("set.gameShowDetails", isOn: $showDetails)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
                                 .foregroundColor(.gray)
+#endif
                         }
                     } label: {
                         SettingsLabelView(label: "set.settings", image: "gear")

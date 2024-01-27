@@ -117,8 +117,13 @@ struct PeriodicTest:View {
     /// Color square background shown in background
     private var baseView: some View{
         colour
+        #if os(visionOS)
+            .frame(width: 50,height: 50)
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 4, height: 4)))
+        #else
             .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 32, height: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 32)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 4, height: 4)))
+        #endif
     }
     /// Actual information contained in the ``PeriodicTest`` being the name and symbol of element
     private var infoView: some View{

@@ -85,7 +85,7 @@ class AchievementModel{
             achievements.achieves[name]?.achieved = true
             achievements.achieves[name]?.date = Date.now
             saveAchievements()
-            not_addNotification(title: "not.generalAchievemetTitle", subtitle: achievements.achieves[name]!.desc)
+            //not_addNotification(title: "not.generalAchievemetTitle", subtitle: achievements.achieves[name]!.desc)
         }
     }
     
