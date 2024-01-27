@@ -25,6 +25,7 @@ struct ChemistryView: View {
                 } label: {
                     ChemistryMenuItemView(text: "periodicTable", sysIm: "flask")
                 }
+                .buttonStyle(.plain)
                 .padding()
                 
                 HStack(spacing: 0){
@@ -40,7 +41,9 @@ struct ChemistryView: View {
                             .padding(0)
                             .background(.ultraThickMaterial)
                             .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+                        
                     }
+                    .buttonStyle(.plain)
                     Divider()
                         .frame(width: 2)
                         .overlay(.primary)
@@ -53,6 +56,7 @@ struct ChemistryView: View {
                             .background(.ultraThickMaterial)
                             .cornerRadius(20, corners: [.topRight, .bottomRight])
                     })
+                    .buttonStyle(.plain)
                 }
                 .padding()
                 
@@ -75,10 +79,16 @@ struct ChemistryView: View {
                 })
         })
         .sheet(isPresented: $settingsUp, content: {
+            #if os(visionOS)
+            VStack{
+                SettingsView()
+            }
+            #else
             ZStack{
                 SettingsView()
                 CloseButtonView(popUp: $settingsUp)
             }
+            #endif
         })
         
     }

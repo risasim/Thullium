@@ -19,7 +19,10 @@ struct SettingsRowView: View {
             Divider().padding(.vertical, 4)
             HStack{
                 Text(LocalizedStringKey(label))
+                #if os(visonOS)
                     .foregroundColor(.gray)
+                #else
+                #endif
                 Spacer()
                 if description != nil {
                     Text(LocalizedStringKey(description!))
