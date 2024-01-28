@@ -12,7 +12,7 @@ import ConfettiSwiftUI
 
 /// View of ``PeriodicTableView`` that provides ``GameModel`` as parameter
 struct GamePeriodicTableView: View {
-    
+    @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @Binding var gameModel:GameModel
     
     var body: some View {

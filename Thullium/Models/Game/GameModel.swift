@@ -54,6 +54,10 @@ class GameModel{
         gData.ready = true
         gData.getGuess()
         gData.startTimeStamp = Date.now
+        if gData.hintCeling==0{
+            gData.hintCeling=5
+        }
+        print(gData.hintCeling)
     }
     
     ///Resets data and call ``startGame()`` to prepare for new game
