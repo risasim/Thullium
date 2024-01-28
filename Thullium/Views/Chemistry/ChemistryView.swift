@@ -73,19 +73,24 @@ struct ChemistryView: View {
             })
         }
         .sheet(isPresented: $popUp, content: {
+            #if os(visionOS)
             GamePSetupView(gameModel: gameModel, pop: $popUp)
                 .onDisappear(perform: {
                     gameModel.startGame()
                 })
+            #else
+            GamePSetupView(gameModel: gameModel, pop: $popUp)
+                .onDisappear(perform: {
+                    gameModel.startGame()
+                })
+            #endif
         })
         .sheet(isPresented: $settingsUp, content: {
             #if os(visionOS)
-            VStack{
-                SettingsView()
-            }
+                SettingsView(closeButton: $settingsUp)
             #else
             ZStack{
-                SettingsView()
+                SettingsView(closeButton: $settingsUp)
                 CloseButtonView(popUp: $settingsUp)
             }
             #endif

@@ -29,6 +29,9 @@ struct SettingsRowView: View {
                     Text(LocalizedStringKey(description!))
                 } else if linkLabel != nil && linkDestination != nil{
                     Link( linkLabel! ,destination: URL(string: "http://\(linkDestination!)")!)
+                    #if os(visionOS)
+                        .foregroundColor(.primary)
+                    #endif
                     Image(systemName: "arrow.up.right.square")
                         .foregroundColor(.blue)
                 }else {

@@ -13,6 +13,7 @@ struct SettingsView: View {
     @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
     @State var achs = AchievementModel()
+    @Binding var closeButton:Bool
     
     var body: some View {
         NavigationStack {
@@ -82,15 +83,20 @@ struct SettingsView: View {
             }
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle("set.settings")
+            #if os(visionOS)
+            .toolbar{
+                CloseButtonView(popUp: $closeButton)
+            }
+            #endif
         }
     }
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(closeButton: .constant(false))
 }
 
 #Preview{
-    SettingsView()
+    SettingsView(closeButton: .constant(true))
         .environment(\.locale, .init(identifier: "cs"))
 }

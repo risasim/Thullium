@@ -106,7 +106,7 @@ struct CloseButtonView:View {
         VStack {
             HStack{
                 Spacer()
-                Button(action: {popUp = false}, label: {
+                Button(action: {popUp.toggle()}, label: {
                     Image(systemName: "multiply")
                         .font(.largeTitle)
                         .padding()

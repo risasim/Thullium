@@ -15,11 +15,11 @@ struct GamePSetupView: View {
     @State var showCategories = true
     
     var body: some View {
-        ZStack{
+        NavigationStack{
             VStack{
                 List{
                     Section(header:
-                    GSetupLabel(text: "selectCategories", isPresented: $showCategories)
+                                GSetupLabel(text: "selectCategories", isPresented: $showCategories)
                         .padding(.top, 30)
                         .listRowInsets(.init(top: 20, leading: 0, bottom: 5, trailing: 0))
                     ){
@@ -51,13 +51,23 @@ struct GamePSetupView: View {
             .alert("categoriesAlert", isPresented: $gameModel.setupModel.showMessage) {
                 Button("OK", role: .cancel) { }
             }
-            CloseButtonView(popUp: $pop)
+            #if os(visionOS)
+            .navigationTitle("Configure your game")
+            .toolbar(.visible, for: .navigationBar)
+            .toolbar{
+                CloseButtonView(popUp: $pop)
+            }
+#endif
         }
     }
 }
 
 #Preview {
     GamePSetupView(gameModel: GameModel(),pop: .constant(true))
+}
+
+#Preview{
+    ChemistryView()
 }
 
 #Preview{
