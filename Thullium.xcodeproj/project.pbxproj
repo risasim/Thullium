@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E07D2082B65276A00D85FD8 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3E07D2072B65276A00D85FD8 /* ConfettiSwiftUI */; };
 		3E48E08D2B667BAC00B9FEEA /* xrOSElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48E08C2B667BAC00B9FEEA /* xrOSElementInfoView.swift */; };
+		3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */; };
 		790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */; };
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		3E48E08C2B667BAC00B9FEEA /* xrOSElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xrOSElementInfoView.swift; sourceTree = "<group>"; };
+		3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoleculeView.swift; sourceTree = "<group>"; };
 		790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
 		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
 		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				793464732AB572EA00407F15 /* InfoImage.swift */,
 				793464752AB573FA00407F15 /* InfoSign.swift */,
 				793464772AB57F7A00407F15 /* InfoBasic.swift */,
+				3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */,
 			);
 			path = ElementInfoGroup;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
 				7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */,
+				3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,

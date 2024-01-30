@@ -35,6 +35,7 @@ struct PeriodicTest:View {
         if let model = gameModel{
             if model.gData.alreadyGuessed.contains(el.name){
                 normalView
+                    .hoverEffect()
                     .scaleEffect(CGSize(width: start ? 1.1 : 1.0, height: start ? 1.2 : 1.0), anchor: .center)
                     .onAppear{
                             start = true
@@ -44,6 +45,7 @@ struct PeriodicTest:View {
                     }
             }else{
                 baseView
+                    .hoverEffect()
                     .opacity(model.gData.hinted==el.name ? 0.85 : 0.6)
                     .rotationEffect(.degrees(start ? 30 : 0))
                     .offset(x: start ? 5:0)
@@ -68,8 +70,10 @@ struct PeriodicTest:View {
         }else if (searchModel != nil){
             if (searchModel!.showThese.contains(el.name)){
                 normalView
+                    .hoverEffect()
             }else{
                 baseView.opacity(0.6)
+                    .hoverEffect()
             }
         }
     }

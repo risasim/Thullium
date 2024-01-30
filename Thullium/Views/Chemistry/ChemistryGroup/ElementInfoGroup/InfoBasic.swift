@@ -83,6 +83,9 @@ struct InfoBasic: View {
             }
             .padding([.leading, .trailing])
         }
+        #if os(visionOS)
+       // .background(.regularMaterial,in: .rect(cornerSize: 4))
+        #endif
     }
 }
 

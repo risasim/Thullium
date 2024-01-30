@@ -35,9 +35,12 @@ struct FlashCardsApp: App {
                 }
         }
          .modelContainer(sharedModelContainer)
-      //  WindowGroup(id: "molecule") {
-      //      xrOSElementInfoView()
-      //  }
-      //  .windowStyle(.volumetric)
+        #if os(visionOS)
+        WindowGroup(id: "molecule") {
+            MoleculeView()
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
+        #endif
     }
 }

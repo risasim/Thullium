@@ -59,8 +59,6 @@ struct ChemistryView: View {
                     .buttonStyle(.plain)
                 }
                 .padding()
-                
-                
             }
             .tint(Color.primary)
             .toolbar(content: {
@@ -101,5 +99,5 @@ struct ChemistryView: View {
 
 #Preview {
     ChemistryView()
-        .environment(\.locale, .init(identifier: "cs"))
+        //.environment(\.locale, .init(identifier: "cs"))
 }
