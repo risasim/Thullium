@@ -28,7 +28,6 @@ struct FlashCardsApp: App {
 
     var body: some Scene {
         WindowGroup {
-           // ContentView()
             ChemistryView()
                 .task {
                     try? await Tips.configure()
