@@ -12,6 +12,7 @@ import ARKit
 struct MoleculeView: View {
     var body: some View {
        Model3D(named: "element_003_lithium")
+            //.resizable()
     }
 }
 

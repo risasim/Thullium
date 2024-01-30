@@ -10,6 +10,8 @@ import SwiftUI
 
 /// View presenting data about element
 struct ElementInfoView: View {
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
     var element:Element
     var body: some View {
         ZStack {
@@ -33,6 +35,14 @@ struct ElementInfoView: View {
                         }
                     }
                     Divider()
+                    #if os(visionOS)
+                    Button {
+                        openWindow(id:"molecule")
+                    } label: {
+                        Text("Show the molecule")
+                    }
+                    #endif
+
                 }
                 .background{
                     RoundedRectangle(cornerRadius: 20.0, style: .circular)
