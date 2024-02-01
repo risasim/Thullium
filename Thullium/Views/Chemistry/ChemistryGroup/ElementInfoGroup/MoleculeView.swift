@@ -9,6 +9,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+#if os(visionOS)
 struct MoleculeView: View {
     var body: some View {
        Model3D(named: "element_003_lithium")
@@ -20,3 +21,5 @@ struct MoleculeView: View {
 #Preview {
     MoleculeView()
 }
+
+#endif

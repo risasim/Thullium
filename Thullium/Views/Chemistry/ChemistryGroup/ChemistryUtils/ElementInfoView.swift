@@ -35,13 +35,13 @@ struct ElementInfoView: View {
                         }
                     }
                     Divider()
-                    #if os(visionOS)
-                    Button {
-                        openWindow(id:"molecule")
-                    } label: {
-                        Text("Show the molecule")
-                    }
-                    #endif
+             //       #if os(visionOS)
+             //       Button {
+             //           openWindow(id:"molecule")
+             //       } label: {
+             //           Text("Show the molecule")
+             //       }
+             //       #endif
 
                 }
                 .background{

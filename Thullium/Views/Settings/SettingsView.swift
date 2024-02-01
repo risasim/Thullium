@@ -72,7 +72,7 @@ struct SettingsView: View {
                         SettingsRowView(label: "set.version",description: "1.2")
                         SettingsRowView(label: "set.compatibility", description: "iOS 17")
                         SettingsRowView(label: "SwiftUI", description: "6.0")
-                        SettingsRowView(label: "set.privacyPolicy",linkLabel: "Link", linkDestination: "https://www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
+                        SettingsRowView(label: "set.privacyPolicy",linkLabel: "Link", linkDestination: "www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
                         SettingsRowView(label: "set.developer", description: "Richie")
                         SettingsRowView(label: "Twitter", linkLabel: "@richiesimonik", linkDestination: "twitter.com/richiesimonik")
                         SettingsRowView(label: "If you like this app", linkLabel: "Buy me a coffee", linkDestination:"www.buymeacoffee.com/richiesimonik")
