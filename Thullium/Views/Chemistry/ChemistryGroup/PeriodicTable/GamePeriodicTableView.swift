@@ -7,7 +7,7 @@
 
 import SwiftUI
 import TipKit
-import ConfettiSwiftUI
+//import ConfettiSwiftUI
 
 
 /// View of ``PeriodicTableView`` that provides ``GameModel`` as parameter
@@ -67,7 +67,7 @@ struct CustomAlertView:View {
                 VStack{
                     Image(systemName: "trophy")
                         .font(.system(size: 100))
-                        .confettiCannon(counter: $counter, repetitions: 4, repetitionInterval: 1.2)
+                       // .confettiCannon(counter: $counter, repetitions: 4, repetitionInterval: 1.2)
                         .padding(5)
                     Text("congratsOnCompleteGame")
                         .bold()

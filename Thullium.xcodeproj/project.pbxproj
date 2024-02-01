@@ -23,7 +23,6 @@
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
-		793A194C2B6C070800DE2432 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 793A194B2B6C070800DE2432 /* ConfettiSwiftUI */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
@@ -133,7 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				793A194C2B6C070800DE2432 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +390,6 @@
 			);
 			name = Thullium;
 			packageProductDependencies = (
-				793A194B2B6C070800DE2432 /* ConfettiSwiftUI */,
 			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
@@ -428,7 +425,6 @@
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
 			packageReferences = (
-				79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
@@ -809,25 +805,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		793A194B2B6C070800DE2432 /* ConfettiSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 79B9691C2B473BF500BA42A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
-			productName = ConfettiSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79F93DCC2AB21F3F0075DC69 /* Project object */;
 }
