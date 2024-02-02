@@ -75,7 +75,7 @@ struct SettingsView: View {
                         SettingsRowView(label: "set.privacyPolicy",linkLabel: "Link", linkDestination: "www.termsfeed.com/live/5fd31393-40dc-45b7-965d-97601764ffd9")
                         SettingsRowView(label: "set.developer", description: "Richie")
                         SettingsRowView(label: "Twitter", linkLabel: "@richiesimonik", linkDestination: "twitter.com/richiesimonik")
-                  //      SettingsRowView(label: "If you like this app", linkLabel: "Buy me a coffee", linkDestination:"www.buymeacoffee.com/richiesimonik")
+                        SettingsRowView(label: "If you like this app", linkLabel: "Buy me a coffee", linkDestination:"www.buymeacoffee.com/richiesimonik")
                     }, label: {
                         SettingsLabelView(label: "set.application", image: "apps.iphone")
                     })
