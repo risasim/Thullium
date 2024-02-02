@@ -39,8 +39,8 @@ struct FlashCardsApp: App {
             MoleculeView()
         }
         .windowStyle(.volumetric)
-        .defaultSize(width: 1.0, height: 1.0, depth: 1.0, in: .meters)
-        .windowResizability(.automatic)
+        .defaultSize(width: 0.4, height: 0.4, depth: 0.4, in: .meters)
+        .windowResizability(.contentSize)
         #endif
     }
 }

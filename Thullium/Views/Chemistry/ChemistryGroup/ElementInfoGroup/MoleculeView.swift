@@ -12,14 +12,18 @@ import ARKit
 #if os(visionOS)
 struct MoleculeView: View {
     var body: some View {
-       Model3D(named: "element_003_lithium")
-            .aspectRatio(contentMode: .fit)
-            //.resizable()
+        Model3D(named: "element_003_lithium"){model in
+            model
+                .resizable()
+                
+        }placeholder: {
+            ProgressView()
+        }
+          
     }
 }
 
 #Preview {
     MoleculeView()
 }
-
 #endif
