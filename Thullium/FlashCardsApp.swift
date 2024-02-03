@@ -35,11 +35,13 @@ struct FlashCardsApp: App {
         }
          .modelContainer(sharedModelContainer)
         #if os(visionOS)
-        WindowGroup(id: "molecule") {
-            MoleculeView()
+        WindowGroup(id: "molecule", for: String.self) { $link in
+            if let usdz = link{
+                MoleculeView(usdzLink: usdz)
+            }
         }
         .windowStyle(.volumetric)
-        .defaultSize(width: 0.4, height: 0.4, depth: 0.4, in: .meters)
+        .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
         .windowResizability(.contentSize)
         #endif
     }
