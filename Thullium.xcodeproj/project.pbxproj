@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */; };
 		3E48E0912B69147300B9FEEA /* element_003_lithium.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3E48E0902B69147300B9FEEA /* element_003_lithium.scn */; };
+		3EF47D562B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EF47D552B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json */; };
+		3EF47D572B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EF47D552B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json */; };
 		790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */; };
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
@@ -23,8 +25,6 @@
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
-		793A19562B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 793A19552B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json */; };
-		793A19572B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 793A19552B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
@@ -70,6 +70,7 @@
 /* Begin PBXFileReference section */
 		3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoleculeView.swift; sourceTree = "<group>"; };
 		3E48E0902B69147300B9FEEA /* element_003_lithium.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = element_003_lithium.scn; sourceTree = "<group>"; };
+		3EF47D552B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UpdatedPeriodicTableJSON.json; sourceTree = "<group>"; };
 		790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
 		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
 		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
 		7938C57C2AB70018001189D2 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
-		793A19552B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = UpdatedPeriodicTableJSON.json; path = ../../../../../KSI/getMolecules/UpdatedPeriodicTableJSON.json; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
 		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				797ADA932ACD69690039E86C /* element_003_lithium.usdz */,
+				3EF47D552B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json */,
 				3E48E0902B69147300B9FEEA /* element_003_lithium.scn */,
-				793A19552B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json */,
 				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
 				795C6E512AB4DBC600BB077C /* testdata.json */,
 			);
@@ -445,7 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				793A19572B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json in Resources */,
+				3EF47D572B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +461,7 @@
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
 				790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */,
 				795C6E522AB4DBC600BB077C /* testdata.json in Resources */,
-				793A19562B6E86B000DE2432 /* UpdatedPeriodicTableJSON.json in Resources */,
+				3EF47D562B6E8F68008FF4AE /* UpdatedPeriodicTableJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,12 +36,14 @@ struct ElementInfoView: View {
                     }
                     Divider()
                     #if os(visionOS)
-                    Button {
-                        openWindow(id:"molecule")
-                    } label: {
-                        Text("Show the molecule")
+                    if let usdz = element.bohr_model_3D_usdz{
+                        Button {
+                            openWindow(id:"molecule")
+                        } label: {
+                            Text("Show the molecule")
+                        }
+                        .padding()
                     }
-                    .padding()
                     #endif
                 }
                 .background{
@@ -57,6 +59,6 @@ struct ElementInfoView: View {
 }
 
 #Preview {
-    ElementInfoView(element: JSONtoSwiftDataconverter().eData[50])
+    ElementInfoView(element: JSONtoSwiftDataconverter().eData[34])
         .environment(\.locale, .init(identifier: "cs"))
 }
