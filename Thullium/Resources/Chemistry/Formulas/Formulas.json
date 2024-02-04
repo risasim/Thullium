@@ -14,6 +14,11 @@
             "title":"Planck's constant",
             "equation":"PlancksConst",
             "info":"formula.PlancksConst.info"
+        },
+        {
+            "title":"Faraday's constant",
+            "equation":"FaradayConst",
+            "info":"formula.FaradayConst.info"
         }
     ]
 }

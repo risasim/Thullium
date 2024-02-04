@@ -11,6 +11,7 @@ import SwiftMath
 struct FormulaView: View {
     var data = JSONtoSwiftDataconverter()
     var formula:Formula
+    @Binding var desc:Bool
     var body: some View {
         if formula != nil{
             VStack{
@@ -38,5 +39,5 @@ struct FormulaView: View {
 }
 
 #Preview {
-    FormulaView(formula: JSONtoSwiftDataconverter().formulas[0])
+    FormulaView(formula: JSONtoSwiftDataconverter().formulas[0],desc: .constant(false))
 }

@@ -143,6 +143,8 @@
 "formula.AtomMassConst.info"="Atomová hmotnostní konstanta je rovna ¹⁄₁₂  klidové hmotnosti atomu  12/6 C (uhlíku-12, tj. izotopu s 6 protony a 6 neutrony v jádře) v základním stavu a nevázaného chemickými vazbami.";
 "formula.PlancksConst.info"="Planckova konstanta je jedna ze základních fyzikálních konstant. Jako fyzikální veličina má rozměr momentu hybnosti nebo akce. Planckova konstanta byla poprvé zavedena Maxem Planckem, po němž nese jméno, jako konstanta vyzařovacího zákona černého tělesa.";
 "Planck's constant"="Plankova konstanta";
+"Faraday's constant"="Faradayova konstanta";
+"formula.FaradayConst.info"="Faradayova konstanta, značená jakoF F, je základní fyzikální konstanta, která reprezentuje množství elektrického náboje neseného jedním molem elektronů nebo iontů. Je pojmenována po britském vědci Michaelu Faradayovi, který měl významné příspěvky v oblastech elektromagnetismu a elektrochemie Při elektrochemických výpočtech se Faradayova konstanta běžně používá k vztahu množství elektřiny projité elektrolytickou článkem k množství látky, která prochází chemickou změnou.";
 
 //Translations of summary
 

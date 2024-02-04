@@ -9,12 +9,13 @@ import SwiftUI
 
 struct FormulasView: View {
     
+    @State var descHidden = false
     var data = JSONtoSwiftDataconverter()
     
     var body: some View {
         List{
             ForEach(data.formulas, id: \.title) { form in
-                FormulaView(formula: form)
+                FormulaView(formula: form,desc: $descHidden)
                     .padding()
                     .listRowSeparator(.hidden)
                     .overlay(content: {
