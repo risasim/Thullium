@@ -1,0 +1,20 @@
+{
+    "formulas":[
+        {
+            "title":"Avogadro constant",
+            "equation":"AvogConst",
+            "info":"formula.avogardoConstant.info"
+        },
+        {
+            "title":"Atomic Mass constant",
+            "equation":"AtomMassConst",
+            "info":"formula.AtomMassConst.info"
+        },
+        {
+            "title":"Planck's constant",
+            "equation":"PlancksConst",
+            "info":"formula.PlancksConst.info"
+        }
+    ]
+}
+

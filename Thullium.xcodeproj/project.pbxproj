@@ -27,9 +27,9 @@
 		793E1A552B6F9AB10008667C /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A542B6F9AB10008667C /* MathView.swift */; };
 		793E1A572B6F9C8C0008667C /* ChemistryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */; };
 		793E1A592B6F9DEF0008667C /* FormulasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A582B6F9DEF0008667C /* FormulasView.swift */; };
+		793E1A5B2B6FCA200008667C /* Formulas.json in Resources */ = {isa = PBXBuildFile; fileRef = 793E1A5A2B6FCA200008667C /* Formulas.json */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
-		795703432B6F8B080054DC53 /* Formulas.json in Resources */ = {isa = PBXBuildFile; fileRef = 795703422B6F8B080054DC53 /* Formulas.json */; };
 		795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795703442B6F94DE0054DC53 /* FormulaView.swift */; };
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
@@ -93,9 +93,9 @@
 		793E1A542B6F9AB10008667C /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
 		793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenu.swift; sourceTree = "<group>"; };
 		793E1A582B6F9DEF0008667C /* FormulasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulasView.swift; sourceTree = "<group>"; };
+		793E1A5A2B6FCA200008667C /* Formulas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Formulas.json; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
-		795703422B6F8B080054DC53 /* Formulas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Formulas.json; path = ../../../../../../../../Downloads/Formulas.json; sourceTree = "<group>"; };
 		795703442B6F94DE0054DC53 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
 		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
 		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		795703412B6F8A820054DC53 /* Formulas */ = {
 			isa = PBXGroup;
 			children = (
-				795703422B6F8B080054DC53 /* Formulas.json */,
+				793E1A5A2B6FCA200008667C /* Formulas.json */,
 			);
 			path = Formulas;
 			sourceTree = "<group>";
@@ -518,12 +518,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793E1A5B2B6FCA200008667C /* Formulas.json in Resources */,
 				3E48E0912B69147300B9FEEA /* element_003_lithium.scn in Resources */,
 				79FBF7B32AC1CA8900C4286B /* Launch Screen.storyboard in Resources */,
 				797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */,
 				791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */,
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
-				795703432B6F8B080054DC53 /* Formulas.json in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
 				790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */,
 				795C6E522AB4DBC600BB077C /* testdata.json in Resources */,
