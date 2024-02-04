@@ -56,4 +56,10 @@ struct JSONtoSwiftDataconverter{
         self.formulas = generallyLoadJSON(from: "Formulas", ofType: Formulas.self)!.formulas
         
     }
+    ///Dictionary with the equations
+    var formulaDir = [
+        "AvogConst":#"N_{A}=6.022 140 76 \times 10^{-23}  mol^{-1}"#,
+        "AtomMassConst":#"m_u = 1.660539040 \times 10^{-27} \, \text{kg}"#,
+        "PlancksConst":#"h = 6.62607015 \times 10^{-34} \, \text{J}\cdot\text{s}"#
+    ]
 }

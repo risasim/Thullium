@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SwiftMath
 
 struct FormulaView: View {
+    var data = JSONtoSwiftDataconverter()
     var formula:Formula
     var body: some View {
         if formula != nil{
@@ -16,12 +18,21 @@ struct FormulaView: View {
                     .font(.title)
                     .bold()
                     .fontDesign(.monospaced)
-                Text(LocalizedStringKey(formula.equation))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.01)
+                MathView(equation: data.formulaDir[formula.equation]!, fontSize: 40)
+                    .fixedSize()
+                    .padding()
+                    .background{
+                        RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                            .foregroundStyle(.ultraThinMaterial)
+                    }
                 if let text = formula.info{
                     Text(LocalizedStringKey(text))
+                        .multilineTextAlignment(.leading)
+                        .fontDesign(.serif)
                 }
             }
-            .padding()
         }
     }
 }

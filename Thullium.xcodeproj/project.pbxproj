@@ -23,6 +23,10 @@
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
+		793E1A522B6F9A790008667C /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 793E1A512B6F9A790008667C /* SwiftMath */; };
+		793E1A552B6F9AB10008667C /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A542B6F9AB10008667C /* MathView.swift */; };
+		793E1A572B6F9C8C0008667C /* ChemistryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */; };
+		793E1A592B6F9DEF0008667C /* FormulasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A582B6F9DEF0008667C /* FormulasView.swift */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
 		795703432B6F8B080054DC53 /* Formulas.json in Resources */ = {isa = PBXBuildFile; fileRef = 795703422B6F8B080054DC53 /* Formulas.json */; };
@@ -86,6 +90,9 @@
 		793464752AB573FA00407F15 /* InfoSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSign.swift; sourceTree = "<group>"; };
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
 		7938C57C2AB70018001189D2 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
+		793E1A542B6F9AB10008667C /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
+		793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenu.swift; sourceTree = "<group>"; };
+		793E1A582B6F9DEF0008667C /* FormulasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulasView.swift; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		795703422B6F8B080054DC53 /* Formulas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Formulas.json; path = ../../../../../../../../Downloads/Formulas.json; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793E1A522B6F9A790008667C /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +232,20 @@
 			path = Chemistry;
 			sourceTree = "<group>";
 		};
+		793E1A532B6F9AA10008667C /* SmallViews */ = {
+			isa = PBXGroup;
+			children = (
+				793E1A542B6F9AB10008667C /* MathView.swift */,
+			);
+			path = SmallViews;
+			sourceTree = "<group>";
+		};
 		7957033A2B6F87C80054DC53 /* Formulas */ = {
 			isa = PBXGroup;
 			children = (
+				793E1A532B6F9AA10008667C /* SmallViews */,
 				795703442B6F94DE0054DC53 /* FormulaView.swift */,
+				793E1A582B6F9DEF0008667C /* FormulasView.swift */,
 			);
 			path = Formulas;
 			sourceTree = "<group>";
@@ -303,6 +321,7 @@
 				7919495F2ACF0CB20077ED38 /* ChemistryUtils */,
 				791C596D2ABB307D007CCAB8 /* PeriodicTable */,
 				793464722AB572AD00407F15 /* ElementInfoGroup */,
+				793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */,
 			);
 			path = ChemistryGroup;
 			sourceTree = "<group>";
@@ -439,6 +458,7 @@
 			);
 			name = Thullium;
 			packageProductDependencies = (
+				793E1A512B6F9A790008667C /* SwiftMath */,
 			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
@@ -474,6 +494,7 @@
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
 			packageReferences = (
+				793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
@@ -526,6 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793E1A552B6F9AB10008667C /* MathView.swift in Sources */,
+				793E1A592B6F9DEF0008667C /* FormulasView.swift in Sources */,
 				7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */,
 				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
@@ -547,6 +570,7 @@
 				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,
+				793E1A572B6F9C8C0008667C /* ChemistryMenu.swift in Sources */,
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
 				79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
@@ -857,6 +881,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		793E1A512B6F9A790008667C /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79F93DCC2AB21F3F0075DC69 /* Project object */;
 }
