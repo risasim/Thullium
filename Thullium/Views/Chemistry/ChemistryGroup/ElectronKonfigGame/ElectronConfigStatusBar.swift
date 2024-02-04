@@ -10,6 +10,7 @@ import SwiftUI
 struct ElectronConfigStatusBar: View {
     
     @Binding var stat:Bool?
+    @AppStorage("playNames") var playNames  = true
     
     var body: some View {
         if stat != nil{

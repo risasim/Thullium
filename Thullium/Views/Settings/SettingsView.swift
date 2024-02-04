@@ -12,6 +12,9 @@ struct SettingsView: View {
     @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
     @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
+    @AppStorage("firstOpen") private var firstOpen = false
+    @AppStorage("showNobleGases") var showNobleGases = true
+    @AppStorage("playNames") var playNames  = true
     @State var achs = AchievementModel()
     @Binding var closeButton:Bool
     
@@ -28,6 +31,12 @@ struct SettingsView: View {
                     // MARK: - Settings
                     // numOfAttemps+=1
                     GroupBox {
+                        #if DEBUG
+                        HStack{
+                            Toggle("reset first open", isOn: $firstOpen)
+                                .foregroundColor(.primary)
+                        }
+                        #endif
                         HStack{
                             Toggle("set.gameConfetti", isOn: $gameConfetti)
 #if os(visionOS)

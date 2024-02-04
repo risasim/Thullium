@@ -31,6 +31,8 @@
 		793E1A5E2B6FDC940008667C /* ElectronConfigGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A5D2B6FDC940008667C /* ElectronConfigGameModel.swift */; };
 		793E1A602B6FE4380008667C /* ElectronConfigGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A5F2B6FE4380008667C /* ElectronConfigGameView.swift */; };
 		793E1A622B6FFB530008667C /* ElectronConfigStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A612B6FFB530008667C /* ElectronConfigStatusBar.swift */; };
+		793E1A642B701B130008667C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A632B701B130008667C /* AppEnvironment.swift */; };
+		793E1A682B701C820008667C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A672B701C820008667C /* AppSettings.swift */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
 		795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795703442B6F94DE0054DC53 /* FormulaView.swift */; };
@@ -100,6 +102,8 @@
 		793E1A5D2B6FDC940008667C /* ElectronConfigGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronConfigGameModel.swift; sourceTree = "<group>"; };
 		793E1A5F2B6FE4380008667C /* ElectronConfigGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronConfigGameView.swift; sourceTree = "<group>"; };
 		793E1A612B6FFB530008667C /* ElectronConfigStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronConfigStatusBar.swift; sourceTree = "<group>"; };
+		793E1A632B701B130008667C /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		793E1A672B701C820008667C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		795703442B6F94DE0054DC53 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
 				79645AA42B2EFBB900A79653 /* AchievementModel.swift */,
 				79645AB22B33470700A79653 /* NotificationsModel.swift */,
+				793E1A632B701B130008667C /* AppEnvironment.swift */,
+				793E1A672B701C820008667C /* AppSettings.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -585,7 +591,9 @@
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
+				793E1A642B701B130008667C /* AppEnvironment.swift in Sources */,
 				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
+				793E1A682B701C820008667C /* AppSettings.swift in Sources */,
 				791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */,
 				793E1A602B6FE4380008667C /* ElectronConfigGameView.swift in Sources */,
 				79F93DD82AB21F400075DC69 /* FlashCardsApp.swift in Sources */,

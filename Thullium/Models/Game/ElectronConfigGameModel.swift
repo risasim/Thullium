@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 class ElectronConfigGameModel{
@@ -25,11 +26,20 @@ class ElectronConfigGameModel{
     
     func checkCurrentGuess(text:String) -> Bool{
         //here will be the change if we play name or config
-        if gameArr[currentGuess].config==text || gameArr[currentGuess].configSemantic==text{
-            newGuess()
-            return true
+        if UserDefaults.standard.bool(forKey: "playNames")==true{
+            if currentItem.name.lowercased()==text.lowercased(){
+                newGuess()
+                return true
+            }else{
+                return false
+            }
         }else{
-            return false
+            if gameArr[currentGuess].config==text || gameArr[currentGuess].configSemantic==text{
+                newGuess()
+                return true
+            }else{
+                return false
+            }
         }
     }
     

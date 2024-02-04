@@ -25,12 +25,17 @@ struct FlashCardsApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    @AppStorage("firstOpen") private var firstOpen = false
 
     var body: some Scene {
         WindowGroup {
             ChemistryView()
                 .task {
                     try? await Tips.configure()
+                    if !firstOpen{
+                        let settings = AppSettings().initalizeData()
+                        firstOpen = true
+                    }
                 }
         }
          .modelContainer(sharedModelContainer)

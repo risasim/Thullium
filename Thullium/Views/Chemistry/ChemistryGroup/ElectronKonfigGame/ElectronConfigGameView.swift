@@ -15,9 +15,9 @@ struct ElectronConfigGameView: View {
     @State var status:Bool? = nil
     var body: some View {
         VStack{
-            Text(LocalizedStringKey(model.currentItem.name))
+            Text(LocalizedStringKey(playNames ? model.currentItem.configSemantic : model.currentItem.name))
             ElectronConfigStatusBar(stat: $status)
-            TextField(LocalizedStringKey("Electron config"), text: $text, prompt: Text("electronConfigGame.textField"))
+            TextField(LocalizedStringKey("Text Field"), text: $text, prompt: Text(playNames ? "electronConfigGame.textFieldName": "electronConfigGame.textField"))
                 .onSubmit {
                     status = model.checkCurrentGuess(text: text)
                     if status!{
