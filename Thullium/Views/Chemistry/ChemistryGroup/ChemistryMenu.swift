@@ -25,10 +25,10 @@ struct ChemistryMenu: View {
                 }
                 .buttonStyle(.plain)
                 .padding()
-                
                 HStack(spacing: 0){
                     NavigationLink {
                         GamePeriodicTableView(gameModel: $gameModel)
+                            .toolbar(.hidden,for: .tabBar)
                             .onAppear(perform: {
                                 gameModel.startGame()
                             })
@@ -56,6 +56,13 @@ struct ChemistryMenu: View {
                     })
                     .buttonStyle(.plain)
                 }
+                .padding()
+                NavigationLink {
+                    ElectronConfigGameView()
+                } label: {
+                    ChemistryMenuItemView(text: "gameConfiGame", sysIm: "atom")
+                }
+                .buttonStyle(.plain)
                 .padding()
             }
             .tint(Color.primary)

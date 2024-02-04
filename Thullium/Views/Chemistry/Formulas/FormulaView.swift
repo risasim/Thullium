@@ -12,6 +12,7 @@ struct FormulaView: View {
     var data = JSONtoSwiftDataconverter()
     var formula:Formula
     @Binding var desc:Bool
+    @State var hiddenText = false
     var body: some View {
         if formula != nil{
             VStack{
@@ -29,10 +30,31 @@ struct FormulaView: View {
                             .foregroundStyle(.ultraThinMaterial)
                     }
                 if let text = formula.info{
-                    Text(LocalizedStringKey(text))
-                        .multilineTextAlignment(.leading)
-                        .fontDesign(.serif)
+                    if hiddenText{
+                        HStack{
+                            Spacer()
+                            VStack{
+                                Image(systemName:"ellipsis")
+                                    .font(.title)
+                                    .padding(.bottom,2)
+                                Text("formulaHiddenTextButton")
+                                    .font(.callout)
+                            }
+                            Spacer()
+                        }
+                        .padding(3)
+                        .onTapGesture {
+                            hiddenText.toggle()
+                        }
+                    }else{
+                        Text(LocalizedStringKey(text))
+                            .multilineTextAlignment(.leading)
+                            .fontDesign(.serif)
+                    }
                 }
+            }
+            .onChange(of: desc) { oldValue, newValue in
+                hiddenText = newValue
             }
         }
     }

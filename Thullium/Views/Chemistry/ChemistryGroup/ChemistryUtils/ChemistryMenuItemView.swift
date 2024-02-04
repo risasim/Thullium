@@ -20,6 +20,8 @@ struct ChemistryMenuItemView: View {
                 .fill(.ultraThickMaterial)
             Label(LocalizedStringKey(text), systemImage: sysIm)
                 .font(.largeTitle)
+                .lineLimit(1)
+                .minimumScaleFactor(0.01)
         }
         
     }

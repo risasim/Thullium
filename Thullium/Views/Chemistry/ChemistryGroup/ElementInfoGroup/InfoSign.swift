@@ -12,12 +12,15 @@ import SwiftUI
 struct InfoSign: View {
     
     var info:Element
+    var showNumbers = true
     
     var body: some View {
         VStack{
             HStack {
-                Text(String(info.number))
-                    .font(.system(size: 20))
+                if showNumbers{
+                    Text(String(info.number))
+                        .font(.system(size: 20))
+                }
             }
             Text(info.symbol)
                 .font(.system(size: 80))
