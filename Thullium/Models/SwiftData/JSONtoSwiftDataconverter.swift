@@ -6,10 +6,11 @@
 //
 
 import Foundation
-import SwiftData
+//import SwiftData
 
 struct JSONtoSwiftDataconverter{
     var eData:[Element] = []
+    var formulas:[Formula]=[]
     
     func loadJson(filename fileName: String) -> [Element]? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
@@ -19,6 +20,20 @@ struct JSONtoSwiftDataconverter{
                 let jsonData = try decoder.decode(Elements.self, from: data)
                 return jsonData.elements
             } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
+    func generallyLoadJSON<T:Codable>(from:String, ofType type: T.Type)->T?{
+        if let url = Bundle.main.url(forResource: from, withExtension: "json") {
+            do{
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(T.self, from: data)
+                return jsonData
+            }catch{
                 print("error:\(error)")
             }
         }
@@ -38,6 +53,7 @@ struct JSONtoSwiftDataconverter{
     
     init(){
         self.eData = loadJson(filename: "PeriodicTableJSON")!
+        self.formulas = generallyLoadJSON(from: "Formulas", ofType: Formulas.self)!.formulas
         
     }
 }

@@ -131,6 +131,11 @@
 "Potassium"="Draslík";
 "Zirconium"="Zirkonium";
 
+//Formulas
+"formula.avogardoConstant"="Avogardova konstanta";
+"formula.avogardoConstant.info"="Avogadrova konstanta vyjadřuje počet částic v jednotkovém látkovém množství (v 1 molu). Je pojmenována po italském fyzikovi Avogadrovi, její hodnotu však poprvé zjistil Johann Josef Loschmidt roku 1865.";
+"formula.einstein"="Teorie relativity";
+
 //Translations of summary
 
 "Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass." = "Vodík je chemický prvek s chemickou značkou H a atomovým číslem 1. S atomovou hmotností 1,00794 u je vodík nejlehčím prvkem v periodické tabulce prvků. Jeho monatomická forma (H) je nejrozšířenější chemickou látkou ve vesmíru, tvoří zhruba 75 % veškeré baryonové hmoty.";

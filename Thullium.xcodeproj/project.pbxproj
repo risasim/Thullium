@@ -24,6 +24,9 @@
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
+		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
+		795703432B6F8B080054DC53 /* Formulas.json in Resources */ = {isa = PBXBuildFile; fileRef = 795703422B6F8B080054DC53 /* Formulas.json */; };
+		795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795703442B6F94DE0054DC53 /* FormulaView.swift */; };
 		795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */; };
 		795C6E522AB4DBC600BB077C /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 795C6E512AB4DBC600BB077C /* testdata.json */; };
 		795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C6E532AB4E33B00BB077C /* ElementInfoView.swift */; };
@@ -84,6 +87,9 @@
 		793464772AB57F7A00407F15 /* InfoBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBasic.swift; sourceTree = "<group>"; };
 		7938C57C2AB70018001189D2 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
+		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
+		795703422B6F8B080054DC53 /* Formulas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Formulas.json; path = ../../../../../../../../Downloads/Formulas.json; sourceTree = "<group>"; };
+		795703442B6F94DE0054DC53 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
 		795C6E4E2AB4976000BB077C /* JSONtoSwiftDataconverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONtoSwiftDataconverter.swift; sourceTree = "<group>"; };
 		795C6E512AB4DBC600BB077C /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		795C6E532AB4E33B00BB077C /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
@@ -148,10 +154,7 @@
 		790070CD2AB37C5900D1CD3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				797ADA932ACD69690039E86C /* element_003_lithium.usdz */,
-				3E48E0902B69147300B9FEEA /* element_003_lithium.scn */,
-				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
-				795C6E512AB4DBC600BB077C /* testdata.json */,
+				7957033F2B6F8A640054DC53 /* Chemistry */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 		790070D22AB37CC200D1CD3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7957033C2B6F880F0054DC53 /* Formulas */,
 				799F7E8E2B2E23A3004B0077 /* General */,
 				7968576F2AB885CA00A0594C /* Game */,
 				795C6E502AB4976400BB077C /* SwiftData */,
@@ -213,10 +217,55 @@
 		7938C57B2AB62C87001189D2 /* Chemistry */ = {
 			isa = PBXGroup;
 			children = (
+				7957033A2B6F87C80054DC53 /* Formulas */,
 				790070D42AB399FA00D1CD3A /* ChemistryView.swift */,
 				7968576C2AB72E5B00A0594C /* ChemistryGroup */,
 			);
 			path = Chemistry;
+			sourceTree = "<group>";
+		};
+		7957033A2B6F87C80054DC53 /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				795703442B6F94DE0054DC53 /* FormulaView.swift */,
+			);
+			path = Formulas;
+			sourceTree = "<group>";
+		};
+		7957033C2B6F880F0054DC53 /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				7957033D2B6F88220054DC53 /* FormulaModel.swift */,
+			);
+			path = Formulas;
+			sourceTree = "<group>";
+		};
+		7957033F2B6F8A640054DC53 /* Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				795703412B6F8A820054DC53 /* Formulas */,
+				795703402B6F8A790054DC53 /* Periodic table */,
+			);
+			path = Chemistry;
+			sourceTree = "<group>";
+		};
+		795703402B6F8A790054DC53 /* Periodic table */ = {
+			isa = PBXGroup;
+			children = (
+				790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */,
+				3E48E0902B69147300B9FEEA /* element_003_lithium.scn */,
+				797ADA932ACD69690039E86C /* element_003_lithium.usdz */,
+				795C6E512AB4DBC600BB077C /* testdata.json */,
+			);
+			path = "Periodic table";
+			sourceTree = "<group>";
+		};
+		795703412B6F8A820054DC53 /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				795703422B6F8B080054DC53 /* Formulas.json */,
+			);
+			path = Formulas;
 			sourceTree = "<group>";
 		};
 		795C6E502AB4976400BB077C /* SwiftData */ = {
@@ -453,6 +502,7 @@
 				797ADA942ACD69690039E86C /* element_003_lithium.usdz in Resources */,
 				791C59702ABB317F007CCAB8 /* Localizable.strings in Resources */,
 				79F93DE12AB21F420075DC69 /* Preview Assets.xcassets in Resources */,
+				795703432B6F8B080054DC53 /* Formulas.json in Resources */,
 				79F93DDE2AB21F420075DC69 /* Assets.xcassets in Resources */,
 				790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */,
 				795C6E522AB4DBC600BB077C /* testdata.json in Resources */,
@@ -476,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */,
 				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
 				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
@@ -499,6 +550,7 @@
 				79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */,
 				79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */,
 				79820FDC2AE525D500B53520 /* Category.swift in Sources */,
+				795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */,
 				79820FDA2AE525A400B53520 /* GameData.swift in Sources */,
 				79645AA92B2F087A00A79653 /* SettingsView.swift in Sources */,
 				791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */,
