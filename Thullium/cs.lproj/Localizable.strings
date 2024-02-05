@@ -42,6 +42,7 @@
 "set.gameShowDetails"="Po uhádnutí rozkliknutelné prvky";
 "set.gameConfetti"="Konfety při výhře";
 "set.showNotifications"="Notifikace";
+"set.playNames"="Hra s elektron. konfiguraci se jmeny prvků";
 
 //Notifikace
 "not.generalAchievemetTitle"="You now have new achievement";

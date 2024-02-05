@@ -47,6 +47,15 @@ struct SettingsView: View {
                         }
                         Divider().padding(.vertical, 4)
                         HStack{
+                            Toggle("set.playNames", isOn: $playNames)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
+                                .foregroundColor(.gray)
+#endif
+                        }
+                        Divider().padding(.vertical, 4)
+                        HStack{
                             Stepper(LocalizedStringKey("set.numOfAttemps \(numberOfAttemps)"), value: $numberOfAttemps,in:3...20)
 #if os(visionOS)
                                 .foregroundColor(.primary)

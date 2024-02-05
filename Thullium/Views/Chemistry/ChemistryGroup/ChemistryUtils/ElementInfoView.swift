@@ -18,7 +18,7 @@ struct ElementInfoView: View {
             Color(determineColorFromCategory(category: element.category))
                 .ignoresSafeArea()
             ScrollView{
-                InfoSign(info: element)
+                InfoSign(number: element.number, atom_mass: element.atomic_mass, symbol: element.symbol, name: element.name)
                     .frame(width: 220, height: 220)
                     .padding()
                 VStack{

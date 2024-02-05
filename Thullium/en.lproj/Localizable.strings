@@ -49,6 +49,7 @@
 "set.gameShowDetails"="Show details during game";
 "set.gameConfetti"="Winning confetti";
 "set.showNotifications"="Notifications";
+"set.playNames"="Game with electron config. with names of the elements";
 
 //Notifications
 "not.generalAchievemetTitle"="You now have new achievement";

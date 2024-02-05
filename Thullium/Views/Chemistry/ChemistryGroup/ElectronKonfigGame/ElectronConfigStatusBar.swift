@@ -47,7 +47,7 @@ struct ElectronConfigStatusBar: View {
                         .foregroundStyle(.ultraThinMaterial)
                 }
             }
-        }else{
+        }else if !playNames{
             Text("Please enter the config in this format [Xe] 4f13 6s2")
                 .lineLimit(1)
                 .minimumScaleFactor(0.01)

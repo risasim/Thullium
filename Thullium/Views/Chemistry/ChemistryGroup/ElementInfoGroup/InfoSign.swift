@@ -11,24 +11,29 @@ import SwiftUI
 /// Table like view that represents basic data from ``Element``
 struct InfoSign: View {
     
-    var info:Element
+    var number:Int?
+    var atom_mass: Double?
+    var symbol:String
+    var name:String
     var showNumbers = true
     
     var body: some View {
         VStack{
             HStack {
-                if showNumbers{
-                    Text(String(info.number))
+                if let n = number{
+                    Text(String(n))
                         .font(.system(size: 20))
                 }
             }
-            Text(info.symbol)
+            Text(symbol)
                 .font(.system(size: 80))
                 .fontWeight(.bold)
-            Text(LocalizedStringKey(info.name))
+            Text(LocalizedStringKey(name))
                 .font(.system(size: 30))
-            Text(String(format: "%.2f",info.atomic_mass))
-                .font(.system(size: 20))
+            if let mass = atom_mass{
+                Text(String(format: "%.2f",mass))
+                    .font(.system(size: 20))
+            }
         }
         //.frame(width: 210,height: 220)
         .frame(maxWidth: 210, maxHeight: 220)
@@ -40,6 +45,6 @@ struct InfoSign: View {
 }
 
 #Preview {
-    InfoSign(info: JSONtoSwiftDataconverter().eData[0])
+    InfoSign(number: 1,atom_mass:1.01,symbol: "H", name: "Hydrogen")
         .environment(\.locale, .init(identifier: "en"))
 }
