@@ -146,6 +146,7 @@
 "Planck's constant"="Plankova konstanta";
 "Faraday's constant"="Faradayova konstanta";
 "formula.FaradayConst.info"="Faradayova konstanta, značená jakoF F, je základní fyzikální konstanta, která reprezentuje množství elektrického náboje neseného jedním molem elektronů nebo iontů. Je pojmenována po britském vědci Michaelu Faradayovi, který měl významné příspěvky v oblastech elektromagnetismu a elektrochemie Při elektrochemických výpočtech se Faradayova konstanta běžně používá k vztahu množství elektřiny projité elektrolytickou článkem k množství látky, která prochází chemickou změnou.";
+"formula.equations"="Rovnice";
 
 //ElectronConfigGame
 "electronConfigGame.textField"="Napište elektronovou konfiguraci...";

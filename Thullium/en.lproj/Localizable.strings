@@ -99,6 +99,7 @@
 "formula.AtomMassConst.info"="The dalton or unified atomic mass unit (symbols: Da or u) is a non-SI unit of mass defined as  ¹⁄₁₂ of the mass of an unbound neutral atom of carbon-12 in its nuclear and electronic ground state and at rest";
 "formula.PlancksConst.info"="The Planck constant, or Planck's constant, denoted by h{\textstyle h}, is a fundamental physical constant of foundational importance in quantum mechanics: a photon's energy is equal to its frequency multiplied by the Planck constant, and the wavelength of a matter wave equals the Planck constant divided by the associated particle momentum.";
 "formula.FaradayConst.info"="The Faraday constant, denoted as F, is a fundamental physical constant representing the amount of electric charge carried by one mole of electrons or ions. It is named after the British scientist Michael Faraday, who made significant contributions to the fields of electromagnetism and electrochemistry. In electrochemical calculations, the Faraday constant is commonly used to relate the quantity of electricity passed through an electrolytic cell to the amount of substance undergoing chemical change.";
+"formula.equations"="Equations";
 
 //Formula actions
 "formulaHiddenTextButton"="Show info";

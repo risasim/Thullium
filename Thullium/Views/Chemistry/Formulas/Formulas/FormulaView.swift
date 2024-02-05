@@ -22,13 +22,15 @@ struct FormulaView: View {
                     .fontDesign(.monospaced)
                     .lineLimit(1)
                     .minimumScaleFactor(0.01)
-                MathView(equation: data.formulaDir[formula.equation]!, fontSize: 40)
-                    .fixedSize()
-                    .padding()
-                    .background{
-                        RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                            .foregroundStyle(.ultraThinMaterial)
-                    }
+                if let f = data.formulaDir[formula.equation]{
+                    MathView(equation: f, fontSize: 40)
+                        .fixedSize()
+                        .padding()
+                        .background{
+                            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                                .foregroundStyle(.ultraThinMaterial)
+                        }
+                }
                 if let text = formula.info{
                     if hiddenText{
                         HStack{

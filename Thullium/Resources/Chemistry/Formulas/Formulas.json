@@ -19,7 +19,26 @@
             "title":"Faraday's constant",
             "equation":"FaradayConst",
             "info":"formula.FaradayConst.info"
+        },
+        {
+            "title": "Ideal Gas Law",
+            "equation": "IdealGasLaw",
+            "info": "The Ideal Gas Law, succinctly expressed as is a fundamental concept in thermodynamics encapsulating the relationship between pressure P, volume V, number of moles n, and temperature T of an ideal gas. It serves as a cornerstone in scientific calculations, enabling the determination of gas properties and behaviors under diverse conditions. Despite its simplicity, this law provides valuable insights into gas dynamics and finds extensive applications across disciplines, from chemistry and physics to engineering, facilitating the analysis of gases in various practical scenarios."
+        },
+        {
+            "title": "Henderson-Hasselbalch Equation",
+            "equation": "HendersonHasselbalchEq",
+            "info": "The Henderson-Hasselbalch Equation is a vital tool in biochemistry and analytical chemistry. It calculates the pH of a buffer solution based on the pKa of the acid and the concentrations of the acid and its conjugate base."
+        },
+        {
+            "title": "Beer-Lambert Law",
+            "equation": "BeerLambertLaw",
+            "info": "The Beer-Lambert Law is a principle in spectroscopy that quantifies the relationship between the absorbance of a sample, the molar absorptivity, the path length, and the concentration c of the absorbing species. It is widely used in analytical chemistry to determine the concentration of a solute in a solution."
+        },
+        {
+            "title": "Rate Law",
+            "equation": "RateLaw",
+            "info": "The Rate Law describes the rate of a chemical reaction as a function of the concentrations of reactants A and B and a rate constant k. The exponents m and n represent the reaction orders with respect to reactants A and B, respectively."
         }
     ]
 }
-
