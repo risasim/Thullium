@@ -35,6 +35,8 @@ struct InfoSign: View {
                     .font(.system(size: 20))
             }
         }
+        .lineLimit(1)
+        .minimumScaleFactor(0.01)
         //.frame(width: 210,height: 220)
         .frame(maxWidth: 210, maxHeight: 220)
         .overlay(content: {

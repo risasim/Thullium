@@ -35,6 +35,7 @@
 		793E1A682B701C820008667C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A672B701C820008667C /* AppSettings.swift */; };
 		793E1A6B2B70D4B00008667C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A6A2B70D4B00008667C /* Protocols.swift */; };
 		793E1A6E2B70D94D0008667C /* ElectronConfigGameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */; };
+		793E1A722B70E8BC0008667C /* PickElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A712B70E8BC0008667C /* PickElement.swift */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
 		795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795703442B6F94DE0054DC53 /* FormulaView.swift */; };
@@ -108,6 +109,7 @@
 		793E1A672B701C820008667C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		793E1A6A2B70D4B00008667C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronConfigGameTextField.swift; sourceTree = "<group>"; };
+		793E1A712B70E8BC0008667C /* PickElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickElement.swift; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		795703442B6F94DE0054DC53 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				793E1A612B6FFB530008667C /* ElectronConfigStatusBar.swift */,
 				793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */,
+				793E1A712B70E8BC0008667C /* PickElement.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */,
 				796857732AB8906500A0594C /* GamePeriodicTableView.swift in Sources */,
 				79645AAD2B2F08FF00A79653 /* SettingsLabelView.swift in Sources */,
+				793E1A722B70E8BC0008667C /* PickElement.swift in Sources */,
 				790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */,
 				7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */,
 				3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */,

@@ -76,7 +76,7 @@ class ElectronConfigGameModel:GamingModel{
 }
 
 
-struct ConfigGameItem{
+struct ConfigGameItem:ElementInfoData{
     let name: String
     let config:String
     let configSemantic: String
