@@ -47,16 +47,20 @@ struct ElectronConfigStatusBar: View {
                         .foregroundStyle(.ultraThinMaterial)
                 }
             }
-        }else if !playNames{
-            Text("Please enter the config in this format [Xe] 4f13 6s2")
-                .lineLimit(1)
-                .minimumScaleFactor(0.01)
-                .foregroundStyle(.secondary)
-                .padding()
-                .background{
-                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                        .foregroundStyle(.ultraThinMaterial)
-                }
+        }else{
+            HStack{
+                Spacer()
+                Text(playNames ?"electronConfigGame.playNames":"electronConfigGame.playConfig")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.01)
+                    .foregroundStyle(.secondary)
+                Spacer()
+            }
+            .padding()
+            .background{
+                RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                    .foregroundStyle(.ultraThinMaterial)
+            }
         }
     }
 }

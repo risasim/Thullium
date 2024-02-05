@@ -155,6 +155,8 @@
 "electronConfigGame.wrong"="Ups netrefil jsi to";
 "formula.constants"="Konstanty";
 "formula.equations"="Rovnice";
+"electronConfigGame.playNames"="Vyberte prvek s touto konfigurací";
+"electronConfigGame.playConfig"="Napište konfiguraci ve formátu [Xe] 4f13 6s2";
 
 //Formula actions
 "formulaHiddenTextButton"="Ukázat informace";

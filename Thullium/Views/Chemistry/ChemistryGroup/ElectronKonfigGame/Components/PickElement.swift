@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct PickElement: View {
-    var rand = [ConfigGameItem(name: "Hydrogen", config: "1s1", configSemantic: "1s1", symbol: "H"),ConfigGameItem(name: "Silicon", config: "1s1", configSemantic: "1s1", symbol: "S"),ConfigGameItem(name: "Nitrogen", config: "1s1", configSemantic: "1s1", symbol: "N")]
+    @Binding var rand:[ConfigGameItem]
     @Binding var selected:String
     var body: some View {
         HStack{
-            ForEach(rand.shuffled(), id: \.name) { elem in
-                InfoSign(symbol: elem.symbol, name: elem.name)
+            ForEach(rand, id: \.name) { elem in
+                VStack{
+                    Text(elem.symbol)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text(LocalizedStringKey(elem.name))
+                        .font(.title2)
+                }
+                .lineLimit(1)
+                .minimumScaleFactor(0.01)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .overlay(content: {
+                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                        .stroke(selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
+                        .aspectRatio(1.0,contentMode: .fill)
+                })
+                .onTapGesture {
+                    selected = elem.name
+                }
+               
             }
         }
+        
     }
 }
 
 #Preview {
-    PickElement(selected: .constant("Hydrogen"))
+    PickElement(rand: .constant([ConfigGameItem(name: "Hydrogen", config: "1s1", configSemantic: "1s1", symbol: "H"),ConfigGameItem(name: "Silicon", config: "1s1", configSemantic: "1s1", symbol: "S"),ConfigGameItem(name: "Nitrogen", config: "1s1", configSemantic: "1s1", symbol: "N")]), selected: .constant("Hydrogen"))
 }

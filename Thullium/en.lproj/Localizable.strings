@@ -90,6 +90,8 @@
 "electronConfigGame.sucess"="You got it right";
 "electronConfigGame.wrong"="Oops not right";
 "formula.equations"="Equations";
+"electronConfigGame.playNames"="Select the element with this configuration";
+"electronConfigGame.playConfig"="Please enter the config in this format [Xe] 4f13 6s2";
 
 //Formulas
 "formula.avogardoConstant.info"="The Avogadro constantis an SI defining constant. It is defined as the number of constituent particles (usually molecules, atoms, or ions) per mole (SI unit) and used as a normalization factor in the amount of substance in a sample. The constant is named after the physicist and chemist Amedeo Avogadro (1776–1856).";

@@ -14,6 +14,7 @@ struct ElectronConfigGameView: View {
     @State var model = ElectronConfigGameModel()
     @State var text = ""
     @State var status:Bool? = nil
+    @State var selected = ""
     
     @FocusState var focusFieldText:Bool
     
@@ -30,7 +31,16 @@ struct ElectronConfigGameView: View {
                         .padding(.bottom)
                 }
                 ElectronConfigStatusBar(stat: $status)
-                ElectronConfigGameTextField(model: $model, status: $status, focusFieldText: $focusFieldText)
+                if showNobleGases{
+                    PickElement(rand: $model.elemSet,selected: $selected)
+                        .padding()
+                        .onChange(of: selected) { oldValue, newValue in
+                            status = model.checkCurrentGuess(text: selected,with: true)
+                            print("Called")
+                        }
+                }else{
+                    ElectronConfigGameTextField(model: $model, status: $status, focusFieldText: $focusFieldText)
+                }
                 Spacer()
             }
             .padding()

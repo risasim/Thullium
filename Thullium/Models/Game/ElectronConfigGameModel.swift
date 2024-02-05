@@ -18,18 +18,20 @@ class ElectronConfigGameModel:GamingModel{
     var currentItem:ConfigGameItem
     var gameEnded = false
     var showAlert = false
+    var elemSet:[ConfigGameItem] = []
     
     init(){
         currentItem = ConfigGameItem(name: "", config: "", configSemantic: "", symbol: "")
         prepare()
         currentItem = gameArr[currentGuess]
+        getRandomSelectors()
     }
     
-    func checkCurrentGuess(text:String) -> Bool{
+    func checkCurrentGuess(text:String,with: Bool = false) -> Bool{
         //here will be the change if we play name or config
         if UserDefaults.standard.bool(forKey: "playNames")==true{
             if currentItem.name.lowercased()==text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() || text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()==currentItem.name.localized(forLanguageCode: "cs").lowercased(){
-                newGuess()
+                newGuess(with: with)
                 return true
             }else{
                 return false
@@ -44,10 +46,18 @@ class ElectronConfigGameModel:GamingModel{
         }
     }
     
-    private func newGuess(){
+    private func newGuess(with:Bool = false){
         if currentGuess<gameArr.count-1{
-            currentGuess+=1
-            currentItem = gameArr[currentGuess]
+            if with{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.currentGuess+=1
+                    self.currentItem = self.gameArr[self.currentGuess]
+                    self.getRandomSelectors()
+                }
+            }else{
+                currentGuess+=1
+                currentItem = gameArr[currentGuess]
+            }
         }else{
             gameEnded=true
             showAlert = true
@@ -66,12 +76,25 @@ class ElectronConfigGameModel:GamingModel{
     
     private func prepare(config: Bool = true){
         for element in elements.shuffled(){
-            if JConfig.contains(element.symbol){
+            if RConfig.contains(element.symbol){
                 print("\(element.name) and the symbol \(element.symbol) added")
                 self.gameArr.append(ConfigGameItem(name: element.name, config: element.electron_configuration, configSemantic: element.electron_configuration_semantic, symbol: element.symbol))
             }
         }
         currentGuess = 0
+    }
+    
+    private func getRandomSelectors(){
+        var ar:[ConfigGameItem] = []
+        while(ar.count<2){
+            let rand = Int.random(in: 0...gameArr.count-1)
+            if(gameArr[rand].name != currentItem.name && !ar.contains(where: {$0.name==gameArr[rand].name})){
+                ar.append(gameArr[rand])
+            }
+        }
+        print(ar)
+        ar.append(currentItem)
+        elemSet = ar.shuffled()
     }
 }
 
