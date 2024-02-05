@@ -75,7 +75,7 @@ struct CustomAlertView:View {
                         .multilineTextAlignment(.center)
                     Button("playAgain") {
                         model.restartGame()
-                        model.gData.showAlert.toggle()
+                        model.showAlertToggle()
                     }
                     .font(.headline)
                     .foregroundStyle(Color.white)

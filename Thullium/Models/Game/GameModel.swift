@@ -11,8 +11,7 @@ import SwiftUI
 
 ///Managing  the game with Periodic Table.
 @Observable
-class GameModel{
-    
+class GameModel:GamingModel{
 // MARK: - Variables
     var gData = GameData()
     var categories:[Category] = []
@@ -37,6 +36,10 @@ class GameModel{
             categories.append(Category(name: cat, selected: true))
         }
         gData.ready = true
+    }
+    
+    func showAlertToggle(){
+        gData.showAlert.toggle()
     }
     
     ///Initialises the game data and filter them

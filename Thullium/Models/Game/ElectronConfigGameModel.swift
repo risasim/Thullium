@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @Observable
-class ElectronConfigGameModel{
+class ElectronConfigGameModel:GamingModel{
     private var elements = JSONtoSwiftDataconverter().eData
     private let JConfig:[String] =  ["Se", "Mn", "Cr", "Be", "Pt", "Ni", "Ge", "Cs", "O", "Sn", "Ne", "K", "Ga", "Fe", "B", "Sb", "Ar", "Li", "Ca", "F", "Rb", "S", "Xe", "Ag", "P", "He", "Co", "Ba", "Na", "Hg", "P", "N", "Cl", "Sr", "Te", "Au", "Br", "C", "As", "I", "Cu", "Zn", "Al", "Kr", "H", "Ra", "G", "Si"]
     private let RConfig:[String] =  ["N", "H", "Si"]
@@ -17,6 +17,7 @@ class ElectronConfigGameModel{
     var currentGuess = 0
     var currentItem:ConfigGameItem
     var gameEnded = false
+    var showAlert = false
     
     init(){
         currentItem = ConfigGameItem(name: "", config: "", configSemantic: "", symbol: "")
@@ -52,9 +53,13 @@ class ElectronConfigGameModel{
         }
     }
     
-    func gameRestart(){
+    func restartGame() {
         gameEnded = false
         prepare()
+    }
+    
+    func showAlertToggle() {
+        showAlert.toggle()
     }
     
     private func prepare(config: Bool = true){
