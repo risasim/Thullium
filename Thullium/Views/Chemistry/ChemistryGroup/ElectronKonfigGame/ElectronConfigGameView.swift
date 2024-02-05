@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ElectronConfigGameView: View {
-    @FocusState private var isFocused: Bool
     @AppStorage("showNobleGases") var showNobleGases = true
     @AppStorage("playNames") var playNames  = true
+    
     @State var model = ElectronConfigGameModel()
     @State var text = ""
     @State var status:Bool? = nil
+    
+    @FocusState private var focusFieldText:Bool
+    
     var body: some View {
         VStack{
             if playNames{
@@ -26,19 +29,41 @@ struct ElectronConfigGameView: View {
                     .padding(.bottom)
             }
             ElectronConfigStatusBar(stat: $status)
-            TextField(LocalizedStringKey("Text Field"), text: $text, prompt: Text(playNames ? "electronConfigGame.textFieldName": "electronConfigGame.textField"))
-                .focused($isFocused)
-                .onSubmit {
+            HStack{
+                TextField(LocalizedStringKey("Text Field"), text: $text, prompt: Text(playNames ? "electronConfigGame.textFieldName": "electronConfigGame.textField"))
+                    .focused($focusFieldText)
+                    .onSubmit {
+                        focusFieldText=true
+                        status = model.checkCurrentGuess(text: text)
+                        if status!{
+                            text = ""
+                        }else{
+#if os(iOS)
+                            feedbackGenerator.notificationOccurred(.success)
+#endif
+                        }
+                    }
+                    .padding()
+                    .background{
+                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                            .foregroundStyle(.ultraThinMaterial)
+                }
+                Button {
                     status = model.checkCurrentGuess(text: text)
                     if status!{
                         text = ""
                     }
+                } label: {
+                    Text("Submit")
+                        .padding()
                 }
-                .padding()
                 .background{
                     RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                         .foregroundStyle(.ultraThinMaterial)
                 }
+                .buttonStyle(.plain)
+
+            }
             Spacer()
         }
         .padding()

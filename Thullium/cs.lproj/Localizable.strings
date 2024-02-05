@@ -151,6 +151,8 @@
 "electronConfigGame.textField"="Napište elektronovou konfiguraci...";
 "gameConfiGame"="Nauč se elektronové konfigurace";
 "electronConfigGame.textFieldName"="Napiš název prvku...";
+"electronConfigGame.sucess"="Máš to správně";
+"electronConfigGame.wrong"="Ups netrefil jsi to";
 
 //Formula actions
 "formulaHiddenTextButton"="Ukázat informace";
