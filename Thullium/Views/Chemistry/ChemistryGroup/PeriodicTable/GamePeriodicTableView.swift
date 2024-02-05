@@ -54,9 +54,9 @@ struct GamePeriodicTableView: View {
 
 
 /// View that shows up after the game has ended
-struct CustomAlertView:View {
+struct CustomAlertView<T:GamingModel>:View {
     @AppStorage("gameConfetti") var gameConfetti:Bool = true
-    @Binding var model:GameModel
+    @Binding var model:T
     @State var counter = 0
     
     var body: some View {

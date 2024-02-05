@@ -15,68 +15,44 @@ struct ElectronConfigGameView: View {
     @State var text = ""
     @State var status:Bool? = nil
     
-    @FocusState private var focusFieldText:Bool
+    @FocusState var focusFieldText:Bool
     
     var body: some View {
-        VStack{
-            if playNames{
-                Text(LocalizedStringKey(model.currentItem.configSemantic))
-                    .font(.title)
-                    .bold()
-                    .padding()
-            }else{
-                InfoSign(symbol: model.currentItem.symbol, name: model.currentItem.name)
-                    .padding(.bottom)
-            }
-            ElectronConfigStatusBar(stat: $status)
-            HStack{
-                TextField(LocalizedStringKey("Text Field"), text: $text, prompt: Text(playNames ? "electronConfigGame.textFieldName": "electronConfigGame.textField"))
-                    .focused($focusFieldText)
-                    .onSubmit {
-                        focusFieldText=true
-                        status = model.checkCurrentGuess(text: text)
-                        if status!{
-                            text = ""
-                        }else{
-#if os(iOS)
-                            feedbackGenerator.notificationOccurred(.success)
-#endif
-                        }
-                    }
-                    .padding()
-                    .background{
-                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                            .foregroundStyle(.ultraThinMaterial)
-                }
-                Button {
-                    status = model.checkCurrentGuess(text: text)
-                    if status!{
-                        text = ""
-                    }
-                } label: {
-                    Text("Submit")
+        ZStack {
+            VStack{
+                if playNames{
+                    Text(LocalizedStringKey(model.currentItem.configSemantic))
+                        .font(.title)
+                        .bold()
                         .padding()
+                }else{
+                    InfoSign(symbol: model.currentItem.symbol, name: model.currentItem.name)
+                        .padding(.bottom)
                 }
-                .background{
-                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                        .foregroundStyle(.ultraThinMaterial)
+                ElectronConfigStatusBar(stat: $status)
+                ElectronConfigGameTextField(model: $model, status: $status, focusFieldText: $focusFieldText)
+                Spacer()
+            }
+            .padding()
+            .toolbar(content: {
+                ToolbarItem{
+                    Text("\(model.currentGuess+1) out of \(model.gameArr.count)")
                 }
-                .buttonStyle(.plain)
-
-            }
-            Spacer()
-        }
-        .padding()
-        .toolbar(content: {
-            ToolbarItem{
-                Text("\(model.currentGuess) out of \(model.gameArr.count)")
-            }
         })
+            .onChange(of: model.showAlert) { oldValue, newValue in
+                focusFieldText = false
+                status = nil
+            }
+            if model.showAlert{
+                CustomAlertView(model: $model)
+            }
+        }
     }
 }
 
 #Preview {
     NavigationStack{
         ElectronConfigGameView()
+            .environment(\.locale, .init(identifier: "cs"))
     }
 }

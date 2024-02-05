@@ -34,6 +34,7 @@
 		793E1A642B701B130008667C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A632B701B130008667C /* AppEnvironment.swift */; };
 		793E1A682B701C820008667C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A672B701C820008667C /* AppSettings.swift */; };
 		793E1A6B2B70D4B00008667C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A6A2B70D4B00008667C /* Protocols.swift */; };
+		793E1A6E2B70D94D0008667C /* ElectronConfigGameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */; };
 		7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */; };
 		7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7957033D2B6F88220054DC53 /* FormulaModel.swift */; };
 		795703452B6F94DE0054DC53 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795703442B6F94DE0054DC53 /* FormulaView.swift */; };
@@ -106,6 +107,7 @@
 		793E1A632B701B130008667C /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		793E1A672B701C820008667C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		793E1A6A2B70D4B00008667C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronConfigGameTextField.swift; sourceTree = "<group>"; };
 		7956532C2AC05BA600193275 /* ChemistryMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryMenuItemView.swift; sourceTree = "<group>"; };
 		7957033D2B6F88220054DC53 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		795703442B6F94DE0054DC53 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
@@ -255,8 +257,8 @@
 		793E1A5C2B6FDC6F0008667C /* ElectronKonfigGame */ = {
 			isa = PBXGroup;
 			children = (
+				793E1A6C2B70D9320008667C /* Components */,
 				793E1A5F2B6FE4380008667C /* ElectronConfigGameView.swift */,
-				793E1A612B6FFB530008667C /* ElectronConfigStatusBar.swift */,
 			);
 			path = ElectronKonfigGame;
 			sourceTree = "<group>";
@@ -269,12 +271,29 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		793E1A6C2B70D9320008667C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				793E1A612B6FFB530008667C /* ElectronConfigStatusBar.swift */,
+				793E1A6D2B70D94D0008667C /* ElectronConfigGameTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		793E1A702B70E6C80008667C /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				795703442B6F94DE0054DC53 /* FormulaView.swift */,
+				793E1A582B6F9DEF0008667C /* FormulasView.swift */,
+			);
+			path = Formulas;
+			sourceTree = "<group>";
+		};
 		7957033A2B6F87C80054DC53 /* Formulas */ = {
 			isa = PBXGroup;
 			children = (
 				793E1A532B6F9AA10008667C /* SmallViews */,
-				795703442B6F94DE0054DC53 /* FormulaView.swift */,
-				793E1A582B6F9DEF0008667C /* FormulasView.swift */,
+				793E1A702B70E6C80008667C /* Formulas */,
 			);
 			path = Formulas;
 			sourceTree = "<group>";
@@ -624,6 +643,7 @@
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
+				793E1A6E2B70D94D0008667C /* ElectronConfigGameTextField.swift in Sources */,
 				793E1A5E2B6FDC940008667C /* ElectronConfigGameModel.swift in Sources */,
 				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
 				795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */,

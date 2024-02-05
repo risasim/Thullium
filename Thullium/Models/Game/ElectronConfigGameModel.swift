@@ -28,7 +28,7 @@ class ElectronConfigGameModel:GamingModel{
     func checkCurrentGuess(text:String) -> Bool{
         //here will be the change if we play name or config
         if UserDefaults.standard.bool(forKey: "playNames")==true{
-            if currentItem.name.lowercased()==text.lowercased(){
+            if currentItem.name.lowercased()==text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() || text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()==currentItem.name.localized(forLanguageCode: "cs").lowercased(){
                 newGuess()
                 return true
             }else{
@@ -50,11 +50,13 @@ class ElectronConfigGameModel:GamingModel{
             currentItem = gameArr[currentGuess]
         }else{
             gameEnded=true
+            showAlert = true
         }
     }
     
     func restartGame() {
         gameEnded = false
+        gameArr = []
         prepare()
     }
     
@@ -85,5 +87,22 @@ struct ConfigGameItem{
         self.config = config
         self.configSemantic = configSemantic
         self.symbol = symbol
+    }
+}
+
+
+extension String {
+    func localized(forLanguageCode lanCode: String) -> String {
+        guard
+            let bundlePath = Bundle.main.path(forResource: lanCode, ofType: "lproj"),
+            let bundle = Bundle(path: bundlePath)
+        else { return "" }
+        
+        return NSLocalizedString(
+            self,
+            bundle: bundle,
+            value: " ",
+            comment: ""
+        )
     }
 }

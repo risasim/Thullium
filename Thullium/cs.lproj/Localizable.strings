@@ -153,6 +153,8 @@
 "electronConfigGame.textFieldName"="Napiš název prvku...";
 "electronConfigGame.sucess"="Máš to správně";
 "electronConfigGame.wrong"="Ups netrefil jsi to";
+"formula.constants"="Konstanty";
+"formula.equations"="Rovnice";
 
 //Formula actions
 "formulaHiddenTextButton"="Ukázat informace";

@@ -37,8 +37,8 @@ struct FormulaView: View {
                                 Image(systemName:"ellipsis")
                                     .font(.title)
                                     .padding(.bottom,2)
-                                Text("formulaHiddenTextButton")
-                                    .font(.callout)
+                             //   Text("formulaHiddenTextButton")
+                            //      .font(.callout)
                             }
                             Spacer()
                         }

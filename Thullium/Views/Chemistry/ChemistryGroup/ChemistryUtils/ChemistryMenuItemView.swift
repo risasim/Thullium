@@ -22,6 +22,7 @@ struct ChemistryMenuItemView: View {
                 .font(.largeTitle)
                 .lineLimit(1)
                 .minimumScaleFactor(0.01)
+                .padding()
         }
         
     }
