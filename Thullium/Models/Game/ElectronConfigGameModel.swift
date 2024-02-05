@@ -66,7 +66,7 @@ class ElectronConfigGameModel:GamingModel{
     
     private func prepare(config: Bool = true){
         for element in elements.shuffled(){
-            if RConfig.contains(element.symbol){
+            if JConfig.contains(element.symbol){
                 print("\(element.name) and the symbol \(element.symbol) added")
                 self.gameArr.append(ConfigGameItem(name: element.name, config: element.electron_configuration, configSemantic: element.electron_configuration_semantic, symbol: element.symbol))
             }
