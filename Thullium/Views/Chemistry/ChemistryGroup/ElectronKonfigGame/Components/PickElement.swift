@@ -10,6 +10,8 @@ import SwiftUI
 struct PickElement: View {
     @Binding var rand:[ConfigGameItem]
     @Binding var selected:String
+    @Binding var model:ElectronConfigGameModel
+    @Binding var status:Bool?
     var body: some View {
         HStack{
             ForEach(rand, id: \.name) { elem in
@@ -31,6 +33,12 @@ struct PickElement: View {
                 })
                 .onTapGesture {
                     selected = elem.name
+                    status = model.checkCurrentGuess(text: selected,with: true)
+                    if status!{
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            selected = ""
+                        }
+                    }
                 }
                
             }
@@ -40,5 +48,5 @@ struct PickElement: View {
 }
 
 #Preview {
-    PickElement(rand: .constant([ConfigGameItem(name: "Hydrogen", config: "1s1", configSemantic: "1s1", symbol: "H"),ConfigGameItem(name: "Silicon", config: "1s1", configSemantic: "1s1", symbol: "S"),ConfigGameItem(name: "Nitrogen", config: "1s1", configSemantic: "1s1", symbol: "N")]), selected: .constant("Hydrogen"))
+    PickElement(rand: .constant([ConfigGameItem(name: "Hydrogen", config: "1s1", configSemantic: "1s1", symbol: "H"),ConfigGameItem(name: "Silicon", config: "1s1", configSemantic: "1s1", symbol: "S"),ConfigGameItem(name: "Nitrogen", config: "1s1", configSemantic: "1s1", symbol: "N")]), selected: .constant("Hydrogen"),model: .constant(ElectronConfigGameModel()), status: .constant(false))
 }
