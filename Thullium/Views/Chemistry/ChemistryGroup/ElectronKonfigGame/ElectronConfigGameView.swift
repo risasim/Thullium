@@ -31,7 +31,7 @@ struct ElectronConfigGameView: View {
                         .padding(.bottom)
                 }
                 ElectronConfigStatusBar(stat: $status)
-                if showNobleGases{
+                if showNobleGases && playNames{
                     PickElement(rand: $model.elemSet,selected: $selected, model: $model,status: $status)
                         .padding()
                 }else{

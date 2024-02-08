@@ -12,6 +12,7 @@ struct MathView: UIViewRepresentable {
 
     var equation: String
     var fontSize: CGFloat
+    var textAlignment:MTTextAlignment?
     
     func makeUIView(context: Context) -> MTMathUILabel {
         let view = MTMathUILabel()
@@ -22,8 +23,13 @@ struct MathView: UIViewRepresentable {
         uiView.latex = equation
        // uiView.fontSize = fontSize
        // uiView.font = MTFontManager().termesFont(withSize: fontSize)
-        uiView.textAlignment = .center
+        if let alignment = textAlignment{
+            uiView.textAlignment = alignment
+        }else{
+            uiView.textAlignment = .center
+        }
         uiView.labelMode = .text
+        uiView.contentInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
         uiView.textColor = UIColor { tc in
             switch tc.userInterfaceStyle {
             case .dark:

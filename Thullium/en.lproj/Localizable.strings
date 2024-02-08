@@ -50,6 +50,7 @@
 "set.gameConfetti"="Winning confetti";
 "set.showNotifications"="Notifications";
 "set.playNames"="Game with electron config. with names of the elements";
+"set.shownNobleGases"="Show 3 elements during the electron. config game";
 
 //Notifications
 "not.generalAchievemetTitle"="You now have new achievement";

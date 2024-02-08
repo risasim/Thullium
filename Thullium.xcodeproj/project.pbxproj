@@ -59,6 +59,9 @@
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
+		79BC3FA82B73F0CC00A4C318 /* FormulaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */; };
+		79BC3FAA2B73F13F00A4C318 /* FormulaEquationVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC3FA92B73F13F00A4C318 /* FormulaEquationVariable.swift */; };
+		79BC3FAD2B74001E00A4C318 /* FormulaVariableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC3FAC2B74001E00A4C318 /* FormulaVariableViews.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
 		79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA02B35D27A00F4D17F /* AchievementViews.swift */; };
 		79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA42B35EA5100F4D17F /* HexagonParams.swift */; };
@@ -136,6 +139,9 @@
 		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
+		79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDetailView.swift; sourceTree = "<group>"; };
+		79BC3FA92B73F13F00A4C318 /* FormulaEquationVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaEquationVariable.swift; sourceTree = "<group>"; };
+		79BC3FAC2B74001E00A4C318 /* FormulaVariableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaVariableViews.swift; sourceTree = "<group>"; };
 		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		79E56FA02B35D27A00F4D17F /* AchievementViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViews.swift; sourceTree = "<group>"; };
 		79E56FA42B35EA5100F4D17F /* HexagonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParams.swift; sourceTree = "<group>"; };
@@ -286,8 +292,10 @@
 		793E1A702B70E6C80008667C /* Formulas */ = {
 			isa = PBXGroup;
 			children = (
+				79BC3FAB2B74000600A4C318 /* SmallViews */,
 				795703442B6F94DE0054DC53 /* FormulaView.swift */,
 				793E1A582B6F9DEF0008667C /* FormulasView.swift */,
+				79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */,
 			);
 			path = Formulas;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				7957033D2B6F88220054DC53 /* FormulaModel.swift */,
+				79BC3FA92B73F13F00A4C318 /* FormulaEquationVariable.swift */,
 			);
 			path = Formulas;
 			sourceTree = "<group>";
@@ -412,6 +421,14 @@
 				793E1A672B701C820008667C /* AppSettings.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		79BC3FAB2B74000600A4C318 /* SmallViews */ = {
+			isa = PBXGroup;
+			children = (
+				79BC3FAC2B74001E00A4C318 /* FormulaVariableViews.swift */,
+			);
+			path = SmallViews;
 			sourceTree = "<group>";
 		};
 		79E56FA22B35D7DD00F4D17F /* Badges */ = {
@@ -621,11 +638,14 @@
 				7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */,
 				3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
+				79BC3FA82B73F0CC00A4C318 /* FormulaDetailView.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
+				79BC3FAA2B73F13F00A4C318 /* FormulaEquationVariable.swift in Sources */,
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
 				79645AA22B2EEBE900A79653 /* TipKitViews.swift in Sources */,
+				79BC3FAD2B74001E00A4C318 /* FormulaVariableViews.swift in Sources */,
 				793E1A642B701B130008667C /* AppEnvironment.swift in Sources */,
 				79645AAB2B2F08D400A79653 /* SettingsRowView.swift in Sources */,
 				793E1A682B701C820008667C /* AppSettings.swift in Sources */,

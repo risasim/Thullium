@@ -43,6 +43,7 @@
 "set.gameConfetti"="Konfety při výhře";
 "set.showNotifications"="Notifikace";
 "set.playNames"="Hra s elektron. konfiguraci se jmeny prvků";
+"set.shownNobleGases"="Ukazovat výběr prvků, během hádaní elektron. konfigurace";
 
 //Notifikace
 "not.generalAchievemetTitle"="You now have new achievement";

@@ -13,6 +13,7 @@ struct FormulaView: View {
     var formula:Formula
     @Binding var desc:Bool
     @State var hiddenText = false
+    @State var showVar = false
     var body: some View {
         if formula != nil{
             VStack{
@@ -23,9 +24,24 @@ struct FormulaView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.01)
                 if let f = data.formulaDir[formula.equation]{
-                    MathView(equation: f, fontSize: 40)
+                    VStack{
+                        MathView(equation: f, fontSize: 40)
+                    }
                         .fixedSize()
                         .padding()
+                        .overlay(alignment: .bottom, content: {
+                         //   HStack{
+                         //       Spacer()
+                         //       Button(action: {showVar.toggle()}, label: {
+                         //           Image(systemName: "info.circle")
+                         //               .font(.caption)
+                         //               .padding(4)
+                         //       })
+                         //   }
+                         //   if showVar{
+                         //       FormulaDetailView(isOpened: $showVar)
+                         //   }
+                        })
                         .background{
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
                                 .foregroundStyle(.ultraThinMaterial)
