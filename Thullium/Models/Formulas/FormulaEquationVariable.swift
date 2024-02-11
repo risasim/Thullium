@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FormulaEquationVariable{
+struct FormulaEquationVariable:Codable{
     let sign:String
     let name:String
     let unit:String?

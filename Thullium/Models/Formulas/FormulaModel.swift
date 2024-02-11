@@ -15,6 +15,7 @@ struct Formula:Codable{
     let title:String
     let equation: String
     let info:String?
+    let variables: [FormulaEquationVariable]?
 }
 
 

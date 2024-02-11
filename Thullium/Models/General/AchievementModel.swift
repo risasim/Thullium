@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import StoreKit
 
 ///Model adding gameficitation in this app. Saving them to Userdefaults in ``Achievements`` structure
 @Observable

@@ -10,7 +10,7 @@ import SwiftMath
 
 struct FormulaDetailView: View {
     
-    let variables:[FormulaEquationVariable]=[FormulaEquationVariable(sign: "e", name: "Energy", unit: nil),FormulaEquationVariable(sign: "m", name: "Mass", unit: "kg"),FormulaEquationVariable(sign: "c", name: "Speed of light", unit: "km/s")]
+    let variables:[FormulaEquationVariable]
     @Binding var isOpened:Bool
     
     var body: some View {
@@ -51,5 +51,5 @@ struct FormulaDetailView: View {
 }
 
 #Preview {
-    FormulaDetailView(isOpened: .constant(true))
+    FormulaDetailView(variables: [FormulaEquationVariable(sign: "e", name: "Energy", unit: nil),FormulaEquationVariable(sign: "m", name: "Mass", unit: "kg"),FormulaEquationVariable(sign: "c", name: "Speed of light", unit: "km/s")], isOpened: .constant(true))
 }

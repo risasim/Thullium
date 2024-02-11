@@ -30,17 +30,22 @@ struct FormulaView: View {
                         .fixedSize()
                         .padding()
                         .overlay(alignment: .bottom, content: {
-                         //   HStack{
-                         //       Spacer()
-                         //       Button(action: {showVar.toggle()}, label: {
-                         //           Image(systemName: "info.circle")
-                         //               .font(.caption)
-                         //               .padding(4)
-                         //       })
-                         //   }
-                         //   if showVar{
-                         //       FormulaDetailView(isOpened: $showVar)
-                         //   }
+                            if let vars = formula.variables{
+                                HStack{
+                                    Spacer()
+                                    Button(action: {showVar.toggle()}, label: {
+                                        Image(systemName: "info.circle")
+                                            .font(.caption)
+                                            .padding(4)
+                                    })
+                                }
+                                .popover(isPresented: $showVar, content: {
+                                    FormulaDetailView(variables: vars,isOpened: $showVar)
+                                        .fixedSize()
+                                        .frame( maxWidth: .infinity, maxHeight: .infinity)
+                                        .presentationCompactAdaptation(.popover)
+                                })
+                            }
                         })
                         .background{
                             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))

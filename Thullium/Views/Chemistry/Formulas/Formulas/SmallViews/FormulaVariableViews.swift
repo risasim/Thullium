@@ -20,14 +20,20 @@ struct FormulaVariableView: View {
                     """)
                 .multilineTextAlignment(.trailing)
                 .italic()
+                .lineLimit(2)
+                .minimumScaleFactor(0.01)
+                
             }else{
                 Text(v.name)
                     .italic()
+                    .lineLimit(1)
             }
+            Spacer()
         }
+        .frame(minWidth: 300)
     }
 }
 
 #Preview {
-    FormulaVariableView(v: FormulaEquationVariable(sign: "m", name: "Mass", unit: "Kg"))
+    FormulaVariableView(v: FormulaEquationVariable(sign: "m", name: "Mass", unit: "m\u{00B3}"))
 }

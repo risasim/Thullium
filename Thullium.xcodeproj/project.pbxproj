@@ -57,6 +57,7 @@
 		7982CD512B3626830095A9FC /* NotUnlockedOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD502B3626830095A9FC /* NotUnlockedOverView.swift */; };
 		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
+		79AE61322B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE61312B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79BC3FA82B73F0CC00A4C318 /* FormulaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */; };
@@ -137,6 +138,7 @@
 		7982CD5A2B3813730095A9FC /* ThulliumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThulliumTests.swift; sourceTree = "<group>"; };
 		7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementModelTest.swift; path = "Unit Tests/AchievementModelTest.swift"; sourceTree = "<group>"; };
 		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
+		79AE61312B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoViewARQuickLook.swift; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDetailView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				793464752AB573FA00407F15 /* InfoSign.swift */,
 				793464772AB57F7A00407F15 /* InfoBasic.swift */,
 				3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */,
+				79AE61312B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift */,
 			);
 			path = ElementInfoGroup;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */,
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
+				79AE61322B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
 				793E1A6E2B70D94D0008667C /* ElectronConfigGameTextField.swift in Sources */,
 				793E1A5E2B6FDC940008667C /* ElectronConfigGameModel.swift in Sources */,

@@ -22,6 +22,7 @@ struct PickElement: View {
                     Text(LocalizedStringKey(elem.name))
                         .font(.title2)
                 }
+                .hoverEffect()
                 .lineLimit(1)
                 .minimumScaleFactor(0.01)
                 .padding()
