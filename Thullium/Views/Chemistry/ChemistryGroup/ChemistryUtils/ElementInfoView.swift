@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ARKit
 
 
 /// View presenting data about element
@@ -35,6 +36,9 @@ struct ElementInfoView: View {
                         }
                     }
                     Divider()
+                   // if let link = element.bohr_model_3d{
+                    //
+                   // }
              //       #if os(visionOS)
              //       Button {
              //           openWindow(id:"molecule")
