@@ -11,64 +11,22 @@ struct FormulasView: View {
     
     @State var descHidden = false
     var data = JSONtoSwiftDataconverter()
+    @State var searchedData:[Formula] = []
     @State var showConstants = true
     @State var showEquations = true
+    @State var search = ""
     
     var body: some View {
         NavigationStack{
-            List{
-                Section {
-                    if showConstants{
-                        ForEach(data.formulas.filter({ $0.title.contains("const") }), id: \.title) { form in
-                            FormulaView(formula: form,desc: $descHidden)
-                                .padding()
-                                .listRowSeparator(.hidden)
-                                .overlay(content: {
-                                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                                        .stroke(Color.primary.opacity(0.6), lineWidth:3)
-                                })
-                                .background{
-                                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                                        .foregroundStyle(.ultraThinMaterial)
-                                }
-                        }
-                    }
-                } header: {
-                    HStack{
-                        Text("formula.constants")
-                        Image(systemName: showConstants ? "chevron.down" : "chevron.up")
-                    }
-                    .onTapGesture {
-                        showConstants.toggle()
-                    }
-                }
-                Section {
-                    if showEquations{
-                        ForEach(data.formulas.filter({ $0.title.lowercased().contains("eq") ||  $0.title.lowercased().contains("law")}), id: \.title) { form in
-                            FormulaView(formula: form,desc: $descHidden)
-                                .padding()
-                                .listRowSeparator(.hidden)
-                                .overlay(content: {
-                                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                                        .stroke(Color.primary.opacity(0.6), lineWidth:3)
-                                })
-                                .background{
-                                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                                        .foregroundStyle(.ultraThinMaterial)
-                                }
-                        }
-                    }
-                } header: {
-                    HStack{
-                        Text("formula.equations")
-                        Image(systemName: showEquations ? "chevron.down" : "chevron.up")
-                    }
-                    .onTapGesture {
-                        showEquations.toggle()
-                    }
+            VStack{
+                if searchedData.count==0 && search == ""{
+                    FormulasBasicListView(descHidden: $descHidden, data: data.formulas)
+                }else if searchedData.count==0{
+                    Text("Not found")
+                }else{
+                    FormulaResultsListView(descHidden: $descHidden, data: data.formulas)
                 }
             }
-            .listStyle(.plain)
             .toolbar(content: {
                 ToolbarItem(placement: .primaryAction) {
                     Image(systemName: descHidden ? "book.closed":"book")
@@ -86,6 +44,14 @@ struct FormulasView: View {
                 }
             })
         }
+        .searchable(text: $search, prompt: "Search...")
+        .onChange(of: search) { oldValue, newValue in
+            searchedData = searchData()
+        }
+    }
+    
+    func searchData()->[Formula]{
+        return data.formulas.filter({$0.title.lowercased().contains(search.lowercased())})
     }
 }
 

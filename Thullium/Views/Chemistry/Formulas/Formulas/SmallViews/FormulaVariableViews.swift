@@ -25,8 +25,10 @@ struct FormulaVariableView: View {
                 
             }else{
                 Text(v.name)
+                    .multilineTextAlignment(.trailing)
                     .italic()
                     .lineLimit(1)
+                    .minimumScaleFactor(0.01)
             }
             Spacer()
         }

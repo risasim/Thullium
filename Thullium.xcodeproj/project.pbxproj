@@ -58,6 +58,8 @@
 		7982CD5B2B3813730095A9FC /* ThulliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD5A2B3813730095A9FC /* ThulliumTests.swift */; };
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
 		79AE61322B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE61312B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift */; };
+		79AE61342B78CF24006DEB3A /* FormulasBasicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE61332B78CF24006DEB3A /* FormulasBasicListView.swift */; };
+		79AE61362B78D3CD006DEB3A /* FormulaResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE61352B78D3CD006DEB3A /* FormulaResultsListView.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
 		79BC3FA82B73F0CC00A4C318 /* FormulaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */; };
@@ -139,6 +141,8 @@
 		7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementModelTest.swift; path = "Unit Tests/AchievementModelTest.swift"; sourceTree = "<group>"; };
 		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
 		79AE61312B77F1A3006DEB3A /* ElementInfoViewARQuickLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoViewARQuickLook.swift; sourceTree = "<group>"; };
+		79AE61332B78CF24006DEB3A /* FormulasBasicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulasBasicListView.swift; sourceTree = "<group>"; };
+		79AE61352B78D3CD006DEB3A /* FormulaResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaResultsListView.swift; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
 		79BC3FA72B73F0CC00A4C318 /* FormulaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDetailView.swift; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				79BC3FAC2B74001E00A4C318 /* FormulaVariableViews.swift */,
+				79AE61332B78CF24006DEB3A /* FormulasBasicListView.swift */,
+				79AE61352B78D3CD006DEB3A /* FormulaResultsListView.swift */,
 			);
 			path = SmallViews;
 			sourceTree = "<group>";
@@ -627,6 +633,7 @@
 				793E1A6B2B70D4B00008667C /* Protocols.swift in Sources */,
 				793E1A622B6FFB530008667C /* ElectronConfigStatusBar.swift in Sources */,
 				793E1A592B6F9DEF0008667C /* FormulasView.swift in Sources */,
+				79AE61342B78CF24006DEB3A /* FormulasBasicListView.swift in Sources */,
 				7957033E2B6F88220054DC53 /* FormulaModel.swift in Sources */,
 				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
@@ -666,6 +673,7 @@
 				791C59752ABB3392007CCAB8 /* SearchTable.swift in Sources */,
 				795C6E4F2AB4976000BB077C /* JSONtoSwiftDataconverter.swift in Sources */,
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
+				79AE61362B78D3CD006DEB3A /* FormulaResultsListView.swift in Sources */,
 				79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */,
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,

@@ -27,7 +27,7 @@
         {
             "title": "Ideal Gas Law",
             "equation": "IdealGasLaw",
-            "info": "The Ideal Gas Law, succinctly expressed as is a fundamental concept in thermodynamics encapsulating the relationship between pressure P, volume V, number of moles n, and temperature T of an ideal gas. It serves as a cornerstone in scientific calculations, enabling the determination of gas properties and behaviors under diverse conditions. Despite its simplicity, this law provides valuable insights into gas dynamics and finds extensive applications across disciplines, from chemistry and physics to engineering, facilitating the analysis of gases in various practical scenarios.",
+            "info": "The Ideal Gas Law, succinctly expressed as is a fundamental concept in thermodynamics encapsulating the relationship between pressure, volume , number of moles, and temperature of an ideal gas. It serves as a cornerstone in scientific calculations, enabling the determination of gas properties and behaviors under diverse conditions. Despite its simplicity, this law provides valuable insights into gas dynamics and finds extensive applications across disciplines, from chemistry and physics to engineering, facilitating the analysis of gases in various practical scenarios.",
             "variables": [
                 {"sign": "P", "name": "Pressure", "unit": "Pa"},
                 {"sign": "V", "name": "Volume", "unit": "m³"},
