@@ -138,6 +138,7 @@ struct Element:Codable {
     let cpk_hex: String?
     let image: ElementImage
     let block: String
+    let bohr_model_3D_usdz:String?
  }
 
  // MARK: - Image

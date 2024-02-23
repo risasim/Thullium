@@ -12,6 +12,7 @@ import SwiftUI
 struct ElementInfoView: View {
     @Environment(\.openWindow) private var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
+    @State private var openedMolecule = false
     var element:Element
     var body: some View {
         ZStack {
@@ -35,14 +36,17 @@ struct ElementInfoView: View {
                         }
                     }
                     Divider()
-             //       #if os(visionOS)
-             //       Button {
-             //           openWindow(id:"molecule")
-             //       } label: {
-             //           Text("Show the molecule")
-             //       }
-             //       #endif
-
+                    #if os(visionOS)
+                    if let usdz = element.bohr_model_3D_usdz{
+                        Button {
+                            openWindow(id:"molecule",value: usdz)
+                            openedMolecule = true
+                        } label: {
+                            Text("Show the molecule")
+                        }
+                        .padding()
+                    }
+                    #endif
                 }
                 .background{
                     RoundedRectangle(cornerRadius: 20.0, style: .circular)
@@ -57,6 +61,6 @@ struct ElementInfoView: View {
 }
 
 #Preview {
-    ElementInfoView(element: JSONtoSwiftDataconverter().eData[50])
+    ElementInfoView(element: JSONtoSwiftDataconverter().eData[34])
         .environment(\.locale, .init(identifier: "cs"))
 }

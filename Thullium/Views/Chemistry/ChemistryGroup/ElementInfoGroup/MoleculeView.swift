@@ -11,15 +11,25 @@ import ARKit
 
 #if os(visionOS)
 struct MoleculeView: View {
+    var usdzLink:String
     var body: some View {
-       Model3D(named: "element_003_lithium")
-            .aspectRatio(contentMode: .fit)
-            //.resizable()
+     //   Model3D(named: "element_003_lithium"){model in
+     //       model
+     //           .resizable()
+     //
+     //   }placeholder: {
+     //       ProgressView()
+     //   }
+        Model3D(url: URL(string: usdzLink)!){model in
+            model
+                .resizable()
+        }placeholder: {
+            ProgressView()
+        }
     }
 }
 
 #Preview {
-    MoleculeView()
+    MoleculeView(usdzLink: "https://storage.googleapis.com/thullium_assets/element_002_helium.usdz")
 }
-
 #endif

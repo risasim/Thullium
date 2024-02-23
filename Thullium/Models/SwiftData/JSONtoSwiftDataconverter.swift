@@ -37,7 +37,7 @@ struct JSONtoSwiftDataconverter{
     }
     
     init(){
-        self.eData = loadJson(filename: "PeriodicTableJSON")!
+        self.eData = loadJson(filename: "UpdatedPeriodicTableJSON")!
         
     }
 }
