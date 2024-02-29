@@ -32,8 +32,11 @@ struct ElectronConfigGameView: View {
                 }
                 ElectronConfigStatusBar(stat: $status)
                 if showNobleGases && playNames{
+                    Spacer()
                     PickElement(rand: $model.elemSet,selected: $selected, model: $model,status: $status)
                         .padding()
+                    Spacer()
+                    Spacer(minLength: 400)
                 }else{
                     ElectronConfigGameTextField(model: $model, status: $status, focusFieldText: $focusFieldText)
                 }

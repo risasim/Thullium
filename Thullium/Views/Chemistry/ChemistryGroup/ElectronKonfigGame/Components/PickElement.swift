@@ -15,24 +15,7 @@ struct PickElement: View {
     var body: some View {
         HStack{
             ForEach(rand, id: \.name) { elem in
-                VStack{
-                    Text(elem.symbol)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text(LocalizedStringKey(elem.name))
-                        .font(.title2)
-                }
-                .hoverEffect()
-                .lineLimit(1)
-                .minimumScaleFactor(0.01)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .overlay(content: {
-                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                        .stroke(selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
-                        .aspectRatio(1.0,contentMode: .fill)
-                })
-                .onTapGesture {
+                Button(action: {
                     selected = elem.name
                     status = model.checkCurrentGuess(text: selected,with: true)
                     if status!{
@@ -40,10 +23,30 @@ struct PickElement: View {
                             selected = ""
                         }
                     }
-                }
-               
+                }, label: {
+                    VStack{
+                        Text(elem.symbol)
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Text(LocalizedStringKey(elem.name))
+                            .font(.title2)
+                    }
+                    .foregroundStyle(Color.primary)
+                    .hoverEffect()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.01)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                            .stroke(selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
+                            .frame(maxHeight: 200)
+                            .aspectRatio(1.0,contentMode: .fill)
+                    }
+                })
             }
         }
+        .padding(.top,15)
         
     }
 }
