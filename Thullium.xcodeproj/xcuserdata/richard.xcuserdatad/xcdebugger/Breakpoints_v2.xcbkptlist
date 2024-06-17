@@ -18,98 +18,6 @@
             endingLineNumber = "1"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - 14fd811ad02d288"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.getter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium9GameModelC16numberOfAttempts18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - e913f46358a32695"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.setter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium9GameModelC16numberOfAttempts18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1"
-                  endingLineNumber = "1"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - 4536a7cfc90535a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.modify : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium9GameModelC16numberOfAttempts18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1"
-                  endingLineNumber = "1"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - 195f1b0bb06b074d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - e913f46358a326b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.setter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium9GameModelC16numberOfAttempts18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "EF22BDF1-54A8-4E5E-BA66-E8DC0EA48516 - e913f46358a326b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameModel._numberOfAttempts.setter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium9GameModelC16numberOfAttempts18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,68 +34,6 @@
             endingLineNumber = "1"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "7723F59E-56B7-4F01-BEA8-805B6A949AA1 - 583df6e4a7ccc7a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.SearchTable._search.getter : Swift.String"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium11SearchTableC6search18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "7723F59E-56B7-4F01-BEA8-805B6A949AA1 - ea777fa16133f7fd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.SearchTable._search.setter : Swift.String"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium11SearchTableC6search18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1"
-                  endingLineNumber = "1"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "7723F59E-56B7-4F01-BEA8-805B6A949AA1 - 4ed25bc811c813cc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.SearchTable._search.modify : Swift.String"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium11SearchTableC6search18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1"
-                  endingLineNumber = "1"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "7723F59E-56B7-4F01-BEA8-805B6A949AA1 - abb41e654e7f504d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.SearchTable._search.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -204,83 +50,6 @@
             endingLineNumber = "1"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "71E22E60-3ECC-432C-BC04-BD7DCBBD5605 - edb485d30646c742"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._alreadyGuessed.getter : Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium8GameDataC14alreadyGuessed18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "71E22E60-3ECC-432C-BC04-BD7DCBBD5605 - 15063e15a11c12cc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._alreadyGuessed.setter : Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium8GameDataC14alreadyGuessed18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2"
-                  endingLineNumber = "2"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "71E22E60-3ECC-432C-BC04-BD7DCBBD5605 - 9d5d0ec456d142cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._alreadyGuessed.modify : Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium8GameDataC14alreadyGuessed18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "2"
-                  endingLineNumber = "2"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "71E22E60-3ECC-432C-BC04-BD7DCBBD5605 - bfe8e50edffef8e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._alreadyGuessed.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "71E22E60-3ECC-432C-BC04-BD7DCBBD5605 - bfe8e50edffef8e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._alreadyGuessed.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "17">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -297,38 +66,6 @@
             endingLineNumber = "1"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "1109B36E-F802-4C92-A697-58CD61712C66 - 5f3ed2d3f1a89d8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._numAt.setter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium8GameDataC5numAt18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "1109B36E-F802-4C92-A697-58CD61712C66 - 5f3ed2d3f1a89d8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.GameData._numAt.setter : Swift.Int"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///var/folders/w1/xzm1dmcj6x786k9w8vnkghg00000gn/T/swift-generated-sources/@__swiftmacro_8Thullium8GameDataC5numAt18ObservationTrackedfMp_.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -345,38 +82,6 @@
             endingLineNumber = "12"
             landmarkName = "AchievementModel"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "35822552-C746-4466-885D-1C84407854E4 - 2c637730136570e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.AchievementModel.deinit"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/Thullium/Models/General/AchievementModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "35822552-C746-4466-885D-1C84407854E4 - 4d140f12928cee17"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Thullium.AchievementModel.__deallocating_deinit"
-                  moduleName = "Thullium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/richard/devel/Swift/MyProjects/FlashCards/Thullium/Models/General/AchievementModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

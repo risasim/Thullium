@@ -12,6 +12,7 @@ struct SettingsView: View {
     @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
     @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
+    @AppStorage("scrollingTable") private var scrollingTable:Bool = true
     @State var achs = AchievementModel()
     @Binding var closeButton:Bool
     
@@ -30,6 +31,14 @@ struct SettingsView: View {
                     GroupBox {
                         HStack{
                             Toggle("set.gameConfetti", isOn: $gameConfetti)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
+                                .foregroundColor(.gray)
+#endif
+                        }
+                        HStack{
+                            Toggle("set.scrollingTable", isOn: $scrollingTable)
 #if os(visionOS)
                                 .foregroundColor(.primary)
 #else

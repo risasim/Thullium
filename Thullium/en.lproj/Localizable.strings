@@ -45,6 +45,7 @@
 "set.gameShowDetails"="Show details during game";
 "set.gameConfetti"="Winning confetti";
 "set.showNotifications"="Notifications";
+"set.scrollingTable"="Moving gestures on table";
 
 //Notifications
 "not.generalAchievemetTitle"="You now have new achievement";

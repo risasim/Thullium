@@ -38,6 +38,7 @@
 "set.gameShowDetails"="Po uhádnutí rozkliknutelné prvky";
 "set.gameConfetti"="Konfety při výhře";
 "set.showNotifications"="Notifikace";
+"set.scrollingTable"="Pohyb tabulky gesty";
 
 //Notifikace
 "not.generalAchievemetTitle"="You now have new achievement";
