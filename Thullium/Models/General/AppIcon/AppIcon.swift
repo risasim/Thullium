@@ -12,6 +12,7 @@ enum AppIcon: String, CaseIterable, Identifiable {
     case primary = "AppIcon"
     case lightMode = "AltIcon1"
     case original = "AltIcon2"
+    case secret = "SecIcon"
 
     var id: String { rawValue }
     var iconName: String? {
@@ -32,6 +33,21 @@ enum AppIcon: String, CaseIterable, Identifiable {
             return "AltIcon1Desc"
         case .original:
             return "AltIcon2Desc"
+        case .secret:
+            return "SecIconDesc"
+        }
+    }
+    
+    var isSecret: Bool {
+        switch self {
+        case .primary:
+            return false
+        case .lightMode:
+            return false
+        case .original:
+            return false
+        case .secret:
+            return true
         }
     }
 

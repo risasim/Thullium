@@ -13,6 +13,7 @@ struct SettingsView: View {
     @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
     @AppStorage("scrollingTable") private var scrollingTable:Bool = true
+    @AppStorage("showSecIcons") private var showSecIcons:Bool = false
     @State var achs = AchievementModel()
     @StateObject var changeIconVm = ChangeAppIconViewModel()
     @Binding var closeButton:Bool
@@ -71,10 +72,16 @@ struct SettingsView: View {
 // MARK: - Select Icon
                     GroupBox {
                         ForEach(AppIcon.allCases) { appIcon in
-                            ChangeAppIconRowView(appIconVM: changeIconVm, appIcon: appIcon)
+                            if !appIcon.isSecret || showSecIcons{
+                                ChangeAppIconRowView(appIconVM: changeIconVm, appIcon: appIcon)
+                            }
                         }
                     } label: {
                         SettingsLabelView(label: "set.icon", image: "square")
+                            .onLongPressGesture(minimumDuration: 3) {
+                                showSecIcons.toggle()
+                                print("It happened")
+                            }
                     }
 #endif
 

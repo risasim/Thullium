@@ -45,6 +45,7 @@
 "AppIconDesc"="Základní tmavá ikona";
 "AltIcon1Desc"="Světlé ikona";
 "AltIcon2Desc"="Original ikona aplikace";
+"SecIconDesc"="Easter egg ikona";
 
 //Notifikace
 "not.generalAchievemetTitle"="You now have new achievement";
