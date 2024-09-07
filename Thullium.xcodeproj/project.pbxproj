@@ -46,6 +46,9 @@
 		7982CD652B38CAD00095A9FC /* AchievementModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982CD642B38CAD00095A9FC /* AchievementModelTest.swift */; };
 		79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */; };
 		79BBAB1A2ABB4C8800971A25 /* GamePSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */; };
+		79C5F89F2C8C4FFD00504E54 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C5F89E2C8C4FFD00504E54 /* AppIcon.swift */; };
+		79C5F8A12C8C508D00504E54 /* ChangeAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C5F8A02C8C508D00504E54 /* ChangeAppIconViewModel.swift */; };
+		79C5F8A32C8C51BC00504E54 /* ChangeAppIconRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C5F8A22C8C51BC00504E54 /* ChangeAppIconRowView.swift */; };
 		79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56F9E2B35D27000F4D17F /* AchievementsView.swift */; };
 		79E56FA12B35D27A00F4D17F /* AchievementViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA02B35D27A00F4D17F /* AchievementViews.swift */; };
 		79E56FA52B35EA5100F4D17F /* HexagonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E56FA42B35EA5100F4D17F /* HexagonParams.swift */; };
@@ -110,6 +113,9 @@
 		79A11D302B3B66F80038FDCF /* Thullium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thullium.entitlements; sourceTree = "<group>"; };
 		79BBAB172ABB491F00971A25 /* ActualPeriodicTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPeriodicTable.swift; sourceTree = "<group>"; };
 		79BBAB192ABB4C8800971A25 /* GamePSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePSetupView.swift; sourceTree = "<group>"; };
+		79C5F89E2C8C4FFD00504E54 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		79C5F8A02C8C508D00504E54 /* ChangeAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAppIconViewModel.swift; sourceTree = "<group>"; };
+		79C5F8A22C8C51BC00504E54 /* ChangeAppIconRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAppIconRowView.swift; sourceTree = "<group>"; };
 		79E56F9E2B35D27000F4D17F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		79E56FA02B35D27A00F4D17F /* AchievementViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViews.swift; sourceTree = "<group>"; };
 		79E56FA42B35EA5100F4D17F /* HexagonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParams.swift; sourceTree = "<group>"; };
@@ -248,6 +254,7 @@
 				79645AA82B2F087A00A79653 /* SettingsView.swift */,
 				79645AAA2B2F08D400A79653 /* SettingsRowView.swift */,
 				79645AAC2B2F08FF00A79653 /* SettingsLabelView.swift */,
+				79C5F8A22C8C51BC00504E54 /* ChangeAppIconRowView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -286,12 +293,22 @@
 		799F7E8E2B2E23A3004B0077 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				79C5F89D2C8C4FF000504E54 /* AppIcon */,
 				791A90232B2E1E4700F6510E /* PreferencesModel.swift */,
 				7968576D2AB72E9000A0594C /* ReusableFunc.swift */,
 				79645AA42B2EFBB900A79653 /* AchievementModel.swift */,
 				79645AB22B33470700A79653 /* NotificationsModel.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		79C5F89D2C8C4FF000504E54 /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				79C5F89E2C8C4FFD00504E54 /* AppIcon.swift */,
+				79C5F8A02C8C508D00504E54 /* ChangeAppIconViewModel.swift */,
+			);
+			path = AppIcon;
 			sourceTree = "<group>";
 		};
 		79E56FA22B35D7DD00F4D17F /* Badges */ = {
@@ -484,6 +501,7 @@
 			files = (
 				79E56FA92B35EF7D00F4D17F /* BadgeView.swift in Sources */,
 				7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */,
+				79C5F89F2C8C4FFD00504E54 /* AppIcon.swift in Sources */,
 				793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */,
 				79E56FA72B35EB4A00F4D17F /* BadgeBackgroundView.swift in Sources */,
 				79E56F9F2B35D27000F4D17F /* AchievementsView.swift in Sources */,
@@ -495,6 +513,7 @@
 				3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */,
 				790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */,
 				79BBAB182ABB491F00971A25 /* ActualPeriodicTable.swift in Sources */,
+				79C5F8A32C8C51BC00504E54 /* ChangeAppIconRowView.swift in Sources */,
 				796857712AB885D800A0594C /* GameModel.swift in Sources */,
 				7956532D2AC05BA600193275 /* ChemistryMenuItemView.swift in Sources */,
 				791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */,
@@ -513,6 +532,7 @@
 				7968576E2AB72E9000A0594C /* ReusableFunc.swift in Sources */,
 				79645AB32B33470700A79653 /* NotificationsModel.swift in Sources */,
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
+				79C5F8A12C8C508D00504E54 /* ChangeAppIconViewModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
 				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
@@ -711,6 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -749,6 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Thullium/Thullium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

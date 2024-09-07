@@ -14,6 +14,7 @@ struct SettingsView: View {
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
     @AppStorage("scrollingTable") private var scrollingTable:Bool = true
     @State var achs = AchievementModel()
+    @StateObject var changeIconVm = ChangeAppIconViewModel()
     @Binding var closeButton:Bool
     
     var body: some View {
@@ -66,11 +67,22 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(label: "set.settings", image: "gear")
                     }
+#if !os(visionOS)
+// MARK: - Select Icon
+                    GroupBox {
+                        ForEach(AppIcon.allCases) { appIcon in
+                            ChangeAppIconRowView(appIconVM: changeIconVm, appIcon: appIcon)
+                        }
+                    } label: {
+                        SettingsLabelView(label: "set.icon", image: "square")
+                    }
+#endif
+
 // MARK: - Application info
                     GroupBox(content: {
                         Divider().padding(.vertical, 4)
                         HStack(alignment: .center, spacing: 10){
-                            Image(.logo)
+                            Image(uiImage: changeIconVm.selectedAppIcon.preview)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)

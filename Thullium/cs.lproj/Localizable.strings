@@ -39,6 +39,12 @@
 "set.gameConfetti"="Konfety při výhře";
 "set.showNotifications"="Notifikace";
 "set.scrollingTable"="Pohyb tabulky gesty";
+"set.icon"="Ikona";
+
+//Icons
+"AppIconDesc"="Základní tmavá ikona";
+"AltIcon1Desc"="Světlé ikona";
+"AltIcon2Desc"="Original ikona aplikace";
 
 //Notifikace
 "not.generalAchievemetTitle"="You now have new achievement";
