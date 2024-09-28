@@ -15,6 +15,7 @@
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
 		790070D72AB39A0A00D1CD3A /* ElementOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D62AB39A0A00D1CD3A /* ElementOverview.swift */; };
+		790722C42CA882D40046F66D /* PeriodicTableBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790722C32CA882D40046F66D /* PeriodicTableBaseView.swift */; };
 		791A90222B2DB5D000F6510E /* GSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A90212B2DB5D000F6510E /* GSetupModel.swift */; };
 		791A90242B2E1E4700F6510E /* PreferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A90232B2E1E4700F6510E /* PreferencesModel.swift */; };
 		791C596C2ABB2EAE007CCAB8 /* PerodicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */; };
@@ -78,6 +79,7 @@
 		790070D02AB37C8E00D1CD3A /* ElementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementModel.swift; sourceTree = "<group>"; };
 		790070D42AB399FA00D1CD3A /* ChemistryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryView.swift; sourceTree = "<group>"; };
 		790070D62AB39A0A00D1CD3A /* ElementOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementOverview.swift; sourceTree = "<group>"; };
+		790722C32CA882D40046F66D /* PeriodicTableBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableBaseView.swift; sourceTree = "<group>"; };
 		791A90212B2DB5D000F6510E /* GSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSetupModel.swift; sourceTree = "<group>"; };
 		791A90232B2E1E4700F6510E /* PreferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModel.swift; sourceTree = "<group>"; };
 		791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerodicTest.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		791C596D2ABB307D007CCAB8 /* PeriodicTable */ = {
 			isa = PBXGroup;
 			children = (
+				790722C32CA882D40046F66D /* PeriodicTableBaseView.swift */,
 				7938C57C2AB70018001189D2 /* PeriodicTableView.swift */,
 				791C596B2ABB2EAE007CCAB8 /* PerodicTest.swift */,
 				796857722AB8906500A0594C /* GamePeriodicTableView.swift */,
@@ -534,6 +537,7 @@
 				79645AA52B2EFBB900A79653 /* AchievementModel.swift in Sources */,
 				79C5F8A12C8C508D00504E54 /* ChangeAppIconViewModel.swift in Sources */,
 				790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */,
+				790722C42CA882D40046F66D /* PeriodicTableBaseView.swift in Sources */,
 				793464742AB572EA00407F15 /* InfoImage.swift in Sources */,
 				793464762AB573FA00407F15 /* InfoSign.swift in Sources */,
 				795C6E542AB4E33B00BB077C /* ElementInfoView.swift in Sources */,

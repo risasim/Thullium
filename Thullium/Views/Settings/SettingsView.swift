@@ -14,6 +14,7 @@ struct SettingsView: View {
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
     @AppStorage("scrollingTable") private var scrollingTable:Bool = true
     @AppStorage("showSecIcons") private var showSecIcons:Bool = false
+    @AppStorage("tableZoom") private var tableZoom:Bool = false
     @State var achs = AchievementModel()
     @StateObject var changeIconVm = ChangeAppIconViewModel()
     @Binding var closeButton:Bool
@@ -39,6 +40,16 @@ struct SettingsView: View {
                                 .foregroundColor(.gray)
 #endif
                         }
+                        Divider().padding(.vertical, 4)
+                        HStack{
+                            Toggle("set.zoom", isOn: $tableZoom)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
+                                .foregroundColor(.gray)
+#endif
+                        }
+                        Divider().padding(.vertical, 4)
                         HStack{
                             Toggle("set.scrollingTable", isOn: $scrollingTable)
 #if os(visionOS)

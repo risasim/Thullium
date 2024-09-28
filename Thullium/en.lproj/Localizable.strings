@@ -46,6 +46,7 @@
 "set.gameConfetti"="Winning confetti";
 "set.showNotifications"="Notifications";
 "set.scrollingTable"="Moving gestures on table";
+"set.zoom"="Zoom in on table";
 
 //Icons
 "AppIconDesc"="Default dark icon";
