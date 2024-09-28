@@ -122,8 +122,6 @@ class GameModel{
             #if os(iOS)
             feedbackGenerator.notificationOccurred(.error)
             #endif
-            print("This happened")
-            print(gData.numAt)
             gData.numAt += 1
             print("Got here")
             return false

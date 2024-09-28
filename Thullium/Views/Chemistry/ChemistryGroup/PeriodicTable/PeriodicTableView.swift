@@ -20,11 +20,14 @@ struct PeriodicTableView: View {
     @State var searchEngine:SearchTable?
     @State private var tableScale : CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 1.0 : 0.46
     @State private var tableOffset: CGSize = CGSize(width: 3, height: 4)
+    @GestureState private var magnifyBy = 1.0
+
     
     var body: some View {
         // ScrollView([.vertical, .horizontal]){
         ZStack{
-            Color.clear
+            Rectangle()
+                .foregroundStyle(Color.clear)
             Grid{
                 // MARK: - First
                 GridRow {
@@ -126,64 +129,32 @@ struct PeriodicTableView: View {
             }
         }
 #if os(iOS)
-        .scaleEffect(tableScale)
-        .offset(x: tableOffset.width, y: tableOffset.height)
+        .scaleEffect(tableScale * magnifyBy)
+        .offset(tableOffset)
         .gesture(
             MagnificationGesture()
-                .onChanged({ value in
-                    withAnimation(.linear(duration: 1)){
-                        if UIDevice.current.userInterfaceIdiom == .pad {
-                            if tableScale >= 0.5 && tableScale <= 2.5{
-                                tableScale = value
-                            }else if tableScale > 2.5{
-                                tableScale = 2.5
-                            }
-                        }else{
-                            if tableScale >= 0.46 && tableScale <= 4{
-                                tableScale = value
-                            }else if tableScale > 4{
-                                tableScale = 4
-                            }
-                        }
-                    }
-                    print(tableScale)
-                })
-                .onEnded({ _ in
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        if tableScale > 2.5{
-                            tableScale = 2.5
-                        }else if tableScale <= 0.5{
-                            resetImageState()
-                        }
-                    }else{
-                        if tableScale > 4{
-                            tableScale = 4
-                        }else if tableScale <= 0.46{
-                            resetImageState()
-                        }
-                    }
-                })
+                .updating($magnifyBy) { currentState, gestureState, _ in
+                    gestureState = currentState
+                }
+                .onEnded { value in
+                    tableScale *= value
+                    tableScale = min(max(tableScale, 0.5), 4.0)
+                }
         )
-        .highPriorityGesture(
+        .simultaneousGesture(
             DragGesture()
-                .onChanged({ value in
-                    withAnimation(.linear(duration: 1)){
-                        tableOffset = value.translation
-                        print(value.translation)
+                .onChanged { value in
+                    tableOffset = value.translation
+                }
+                .onEnded { _ in
+                    if tableScale <= 0.5 {
+                        resetImageState()
                     }
-                })
-                .onEnded({ _ in
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        if tableScale <= 0.5{
-                            resetImageState()
-                        }
-                    }else{
-                        if tableScale <= 0.46{
-                            resetImageState()
-                        }
-                    }
-                })
+                }
         )
+        .onTapGesture(count: 2) {
+            resetImageState()
+        }
 #endif
     }
     /// React to tap on element and then either add to alreadyGuessed or increment numAt in ``GameData``
