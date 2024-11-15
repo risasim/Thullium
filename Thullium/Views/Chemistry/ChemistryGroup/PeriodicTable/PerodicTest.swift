@@ -88,7 +88,7 @@ struct PeriodicTest:View {
                 if(searchModel != nil){
                     searchModel!.achieveModel.elementTapped(num: el.number)
                 }
-                if let gModel = gameModel{
+                if gameModel != nil{
                     if (showDetails==true){
                         popUp.toggle()
                     }
@@ -107,7 +107,7 @@ struct PeriodicTest:View {
                 .background(determineColorFromCategory(category: el.category).ignoresSafeArea())
             })
         #else
-            .popover(isPresented: $popUp, content: {
+            .sheet(isPresented: $popUp, content: {
                 ZStack{
                     ElementInfoView(element: el)
                         .padding(.top)
