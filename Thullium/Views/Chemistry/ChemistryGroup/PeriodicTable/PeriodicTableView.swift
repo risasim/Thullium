@@ -25,44 +25,46 @@ struct PeriodicTableView: View {
 
     
     var body: some View {
-        // ScrollView([.vertical, .horizontal]){
-        ZStack{
-            Rectangle()
-                .foregroundStyle(Color.clear)
-            PeriodicTableBaseView(gameModel: gameModel,searchEngine: searchEngine)
-        }
+        GeometryReader {view in 
+            ZStack{
+                Rectangle()
+                    .foregroundStyle(Color.clear)
+                PeriodicTableBaseView(gameModel: gameModel,searchEngine: searchEngine)
+            }
 #if os(iOS)
-        .if(zoom){view in
-            view
-                .scaleEffect(tableScale * magnifyBy)
-                .offset(tableOffset)
-                .gesture(
-                    MagnificationGesture()
-                        .updating($magnifyBy) { currentState, gestureState, _ in
-                            gestureState = currentState
-                        }
-                        .onEnded { value in
-                            tableScale *= value
-                            tableScale = min(max(tableScale, 0.5), 4.0)
-                        }
-                )
-                .simultaneousGesture(
-                    DragGesture()
-                        .onChanged { value in
-                            tableOffset = value.translation
-                        }
-                        .onEnded { _ in
-                            if tableScale <= 0.5 {
-                                resetImageState()
+            .if(zoom){view in
+                view
+                    .scaleEffect(tableScale * magnifyBy)
+                    .offset(tableOffset)
+                    .gesture(
+                        MagnificationGesture()
+                            .updating($magnifyBy) { currentState, gestureState, _ in
+                                gestureState = currentState
                             }
-                        }
-                )
-                .onTapGesture(count: 2) {
-                    resetImageState()
-                }
-            
-        }
+                            .onEnded { value in
+                                tableScale *= value
+                                tableScale = min(max(tableScale, 0.5), 4.0)
+                            }
+                    )
+                    .simultaneousGesture(
+                        DragGesture()
+                            .onChanged { value in
+                                tableOffset = value.translation
+                            }
+                            .onEnded { _ in
+                                if tableScale <= 0.5 {
+                                    resetImageState()
+                                }
+                            }
+                    )
+                    .onTapGesture(count: 2) {
+                        resetImageState()
+                    }
+                
+            }
 #endif
+        }
+        .ignoresSafeArea(.keyboard)
     }
 }
 
