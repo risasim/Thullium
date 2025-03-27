@@ -12,6 +12,7 @@ struct FormulaResultsListView: View {
     @State var showConstants : Bool = true
     @State var showEquations = true
     @State var show: Bool = true
+    @Binding var search:String
     @Binding var descHidden:Bool
     let data: [Formula]
     
@@ -19,7 +20,7 @@ struct FormulaResultsListView: View {
         List{
             Section {
                 if showConstants{
-                    ForEach(data.filter({ $0.title.contains("const") }), id: \.title) { form in
+                    ForEach(data.filter({ $0.title.contains("const") && $0.title.localizedCaseInsensitiveContains(search) }), id: \.title) { form in
                         FormulaView(formula: form,desc: $descHidden)
                             .padding()
                             .listRowSeparator(.hidden)
@@ -44,7 +45,7 @@ struct FormulaResultsListView: View {
             }
             Section {
                 if showEquations{
-                    ForEach(data.filter({ $0.title.lowercased().contains("eq") ||  $0.title.lowercased().contains("law")}), id: \.title) { form in
+                    ForEach(data.filter({ ($0.title.lowercased().contains("eq") ||  $0.title.lowercased().contains("law")) && $0.title.localizedCaseInsensitiveContains(search)}), id: \.title) { form in
                         FormulaView(formula: form,desc: $descHidden)
                             .padding()
                             .listRowSeparator(.hidden)
@@ -72,5 +73,5 @@ struct FormulaResultsListView: View {
 }
 
 #Preview {
-    FormulaResultsListView(descHidden: .constant(false), data: JSONtoSwiftDataconverter().formulas)
+    FormulaResultsListView(search: .constant("Avog"), descHidden: .constant(false), data: JSONtoSwiftDataconverter().formulas)
 }

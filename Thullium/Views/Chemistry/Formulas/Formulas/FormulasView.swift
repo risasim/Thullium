@@ -24,7 +24,7 @@ struct FormulasView: View {
                 }else if searchedData.count==0{
                     Text("Not found")
                 }else{
-                    FormulaResultsListView(descHidden: $descHidden, data: data.formulas)
+                    FormulaResultsListView(search:$search, descHidden: $descHidden, data: data.formulas)
                 }
             }
             .toolbar(content: {
