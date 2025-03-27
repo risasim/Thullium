@@ -36,12 +36,11 @@ struct PickElement: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.01)
                     .padding()
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity,maxHeight: 200)
                     .background {
                         RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                             .stroke(selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
-                            .frame(maxHeight: 200)
-                            .aspectRatio(1.0,contentMode: .fill)
+                          //  .aspectRatio(1.0,contentMode: .fill)
                     }
                 })
             }
