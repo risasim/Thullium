@@ -23,6 +23,7 @@ struct FormulasBasicListView: View {
                         FormulaView(formula: form,desc: $descHidden)
                             .padding()
                             .listRowSeparator(.hidden)
+                            .frame(maxWidth:.infinity)
                             .overlay(content: {
                                 RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                     .stroke(Color.primary.opacity(0.6), lineWidth:3)
@@ -48,6 +49,7 @@ struct FormulasBasicListView: View {
                         FormulaView(formula: form,desc: $descHidden)
                             .padding()
                             .listRowSeparator(.hidden)
+                            .frame(maxWidth:.infinity)
                             .overlay(content: {
                                 RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                     .stroke(Color.primary.opacity(0.6), lineWidth:3)
