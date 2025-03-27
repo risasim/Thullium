@@ -15,8 +15,7 @@ struct ActualPeriodicTable: View {
     
     var body: some View {
         PeriodicTableView(searchEngine: searchEng)
-            .searchable(text: $searchEng.search, prompt: "searchElement")
-        
+            .searchable(text: $searchEng.search,placement: .navigationBarDrawer, prompt: "searchElement")
     }
 }
 

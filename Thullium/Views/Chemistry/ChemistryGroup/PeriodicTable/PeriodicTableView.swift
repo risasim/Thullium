@@ -15,6 +15,8 @@ import TipKit
 struct PeriodicTableView: View {
     
     @Environment(\.modelContext) private var modelContext
+//    @Environment(\.currentScreenWidth) private var screenWidth
+//    @Environment(\.currentScreenHeight) private var screenHeight
     @State var gameModel: GameModel?
     var elements = JSONtoSwiftDataconverter().eData
     @State var searchEngine:SearchTable?
@@ -25,12 +27,14 @@ struct PeriodicTableView: View {
 
     
     var body: some View {
-        GeometryReader {view in 
+        GeometryReader {view in
             ZStack{
                 Rectangle()
                     .foregroundStyle(Color.clear)
                 PeriodicTableBaseView(gameModel: gameModel,searchEngine: searchEngine)
             }
+            .environment(\.currentScreenWidth, view.size.width)
+            .environment(\.currentScreenHeight, view.size.height)
 #if os(iOS)
             .if(zoom){view in
                 view

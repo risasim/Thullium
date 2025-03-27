@@ -33,25 +33,7 @@ struct SettingsView: View {
                     // numOfAttemps+=1
                     GroupBox {
                         HStack{
-                            Toggle("set.gameConfetti", isOn: $gameConfetti)
-#if os(visionOS)
-                                .foregroundColor(.primary)
-#else
-                                .foregroundColor(.gray)
-#endif
-                        }
-                        Divider().padding(.vertical, 4)
-                        HStack{
                             Toggle("set.zoom", isOn: $tableZoom)
-#if os(visionOS)
-                                .foregroundColor(.primary)
-#else
-                                .foregroundColor(.gray)
-#endif
-                        }
-                        Divider().padding(.vertical, 4)
-                        HStack{
-                            Toggle("set.scrollingTable", isOn: $scrollingTable)
 #if os(visionOS)
                                 .foregroundColor(.primary)
 #else
