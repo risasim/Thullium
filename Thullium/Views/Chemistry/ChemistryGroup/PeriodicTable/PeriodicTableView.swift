@@ -13,15 +13,18 @@ import TipKit
 /// Complete view of periodic table.
 /// - Warning: This view does not work on it's own, ``GameModel`` or  ``SearchTable`` is needed as a paramter
 struct PeriodicTableView: View {
-    
     @Environment(\.modelContext) private var modelContext
     @Query private var realElements: [ElementsData]
     @State var gameModel: GameModel?
     var elements = JSONtoSwiftDataconverter().eData
     @State var searchEngine:SearchTable?
+    @State private var tableScale : CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 1.0 : 0.46
+    @State private var tableOffset: CGSize = CGSize(width: 3, height: 4)
     
     var body: some View {
-        ScrollView([.vertical, .horizontal]){
+        // ScrollView([.vertical, .horizontal]){
+        ZStack{
+            Color.clear
             Grid{
                 // MARK: - First
                 GridRow {
@@ -117,25 +120,84 @@ struct PeriodicTableView: View {
                     }
                     ForEach(0..<15, id: \.self){i in
                         PeriodicTest(el: elements[i+88], searchModel: $searchEngine,gameModel: $gameModel)
-                            
+                            .id(elements[i+88].name)
                     }
                 }
             }
         }
-        .scrollIndicators(.hidden)
+#if os(iOS)
+        .scaleEffect(tableScale)
+        .offset(x: tableOffset.width, y: tableOffset.height)
+        .gesture(
+            MagnificationGesture()
+                .onChanged({ value in
+                    withAnimation(.linear(duration: 1)){
+                        if UIDevice.current.userInterfaceIdiom == .pad {
+                            if tableScale >= 0.5 && tableScale <= 2.5{
+                                tableScale = value
+                            }else if tableScale > 2.5{
+                                tableScale = 2.5
+                            }
+                        }else{
+                            if tableScale >= 0.46 && tableScale <= 4{
+                                tableScale = value
+                            }else if tableScale > 4{
+                                tableScale = 4
+                            }
+                        }
+                    }
+                    print(tableScale)
+                })
+                .onEnded({ _ in
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        if tableScale > 2.5{
+                            tableScale = 2.5
+                        }else if tableScale <= 0.5{
+                            resetImageState()
+                        }
+                    }else{
+                        if tableScale > 4{
+                            tableScale = 4
+                        }else if tableScale <= 0.46{
+                            resetImageState()
+                        }
+                    }
+                })
+        )
+        .highPriorityGesture(
+            DragGesture()
+                .onChanged({ value in
+                    withAnimation(.linear(duration: 1)){
+                        tableOffset = value.translation
+                        print(value.translation)
+                    }
+                })
+                .onEnded({ _ in
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        if tableScale <= 0.5{
+                            resetImageState()
+                        }
+                    }else{
+                        if tableScale <= 0.46{
+                            resetImageState()
+                        }
+                    }
+                })
+        )
+#endif
     }
     /// React to tap on element and then either add to alreadyGuessed or increment numAt in ``GameData``
     private func manageTap(gameModel : GameModel?, index i: Int){
         if gameModel != nil{
             if gameModel!.gData.currentGuess == elements[i].name{
                 gameModel!.addToGuessed(name: elements[i].name)
-                #if os(iOS)
+#if os(iOS)
                 feedbackGenerator.notificationOccurred(.success)
-                #endif
+#endif
             }else{
-                #if os(iOS)
+#if os(iOS)
                 feedbackGenerator.notificationOccurred(.error)
-                #endif
+#endif
                 print("This happened")
                 print(gameModel!.gData.numAt)
                 gameModel!.gData.numAt += 1
@@ -148,4 +210,18 @@ struct PeriodicTableView: View {
 
 #Preview {
     PeriodicTableView(searchEngine: SearchTable())
+}
+
+extension PeriodicTableView{
+    func resetImageState(){
+        return withAnimation(.spring()){
+            if UIDevice.current.userInterfaceIdiom == .pad{
+                tableScale = 1.0
+                tableOffset = .zero
+            }else{
+                tableScale = 0.46
+                tableOffset = .zero
+            }
+        }
+    }
 }

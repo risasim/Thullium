@@ -76,7 +76,7 @@ struct InfoBasic: View {
                             .scaledToFit()
                             .minimumScaleFactor(0.01)
                             .lineLimit(1)
-                        Text(LocalizedStringKey("Elecron config."))
+                        Text(LocalizedStringKey("Electron config."))
                             .font(.footnote)
                     })
                 })

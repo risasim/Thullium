@@ -12,7 +12,10 @@ struct SettingsView: View {
     @AppStorage("showDetailsInSettigs") private var showDetails:Bool = false
     @AppStorage("numberOfAttemps") private var numberOfAttemps:Int = 5
     @AppStorage("gameConfetti") private var gameConfetti:Bool = true
+    @AppStorage("scrollingTable") private var scrollingTable:Bool = true
+    @AppStorage("showSecIcons") private var showSecIcons:Bool = false
     @State var achs = AchievementModel()
+    @StateObject var changeIconVm = ChangeAppIconViewModel()
     @Binding var closeButton:Bool
     
     var body: some View {
@@ -30,6 +33,14 @@ struct SettingsView: View {
                     GroupBox {
                         HStack{
                             Toggle("set.gameConfetti", isOn: $gameConfetti)
+#if os(visionOS)
+                                .foregroundColor(.primary)
+#else
+                                .foregroundColor(.gray)
+#endif
+                        }
+                        HStack{
+                            Toggle("set.scrollingTable", isOn: $scrollingTable)
 #if os(visionOS)
                                 .foregroundColor(.primary)
 #else
@@ -57,11 +68,28 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(label: "set.settings", image: "gear")
                     }
+#if !os(visionOS)
+// MARK: - Select Icon
+                    GroupBox {
+                        ForEach(AppIcon.allCases) { appIcon in
+                            if !appIcon.isSecret || showSecIcons{
+                                ChangeAppIconRowView(appIconVM: changeIconVm, appIcon: appIcon)
+                            }
+                        }
+                    } label: {
+                        SettingsLabelView(label: "set.icon", image: "square")
+                            .onLongPressGesture(minimumDuration: 3) {
+                                showSecIcons.toggle()
+                                print("It happened")
+                            }
+                    }
+#endif
+
 // MARK: - Application info
                     GroupBox(content: {
                         Divider().padding(.vertical, 4)
                         HStack(alignment: .center, spacing: 10){
-                            Image(.logo)
+                            Image(uiImage: changeIconVm.selectedAppIcon.preview)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)

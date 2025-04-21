@@ -13,16 +13,10 @@ import ARKit
 struct MoleculeView: View {
     var usdzLink:String
     var body: some View {
-     //   Model3D(named: "element_003_lithium"){model in
-     //       model
-     //           .resizable()
-     //
-     //   }placeholder: {
-     //       ProgressView()
-     //   }
         Model3D(url: URL(string: usdzLink)!){model in
             model
                 .resizable()
+                .aspectRatio(contentMode: .fit)
         }placeholder: {
             ProgressView()
         }
