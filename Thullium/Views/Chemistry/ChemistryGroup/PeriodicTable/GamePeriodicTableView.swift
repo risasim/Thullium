@@ -17,26 +17,29 @@ struct GamePeriodicTableView: View {
     
     var body: some View {
         ZStack{
-            PeriodicTableView(gameModel: gameModel)
-                .overlay {
-                    VStack{
-                        HStack{
-                            Spacer()
-                            Text(LocalizedStringKey(JSONtoSwiftConverted.eData[JSONtoSwiftConverted.eData.firstIndex(where: {$0.name == gameModel.gData.currentGuess})!].name))
-                                .bold()
-                                .font(.title)
-                                .padding()
-                            Button {
-                                gameModel.gData.numAt=6
-                            } label: {
-                                Image(systemName: "lightbulb.max")
-                                    .popoverTip(GameHint())
+            ScrollViewReader { proxy in
+                PeriodicTableView(gameModel: gameModel)
+                    .overlay {
+                        VStack{
+                            HStack{
+                                Spacer()
+                                Text(LocalizedStringKey(JSONtoSwiftConverted.eData[JSONtoSwiftConverted.eData.firstIndex(where: {$0.name == gameModel.gData.currentGuess})!].name))
+                                    .bold()
+                                    .font(.title)
+                                    .padding()
+                                Button {
+                                    gameModel.gData.numAt=6
+                                    proxy.scrollTo(gameModel.gData.hint)
+                                } label: {
+                                    Image(systemName: "lightbulb.max")
+                                        .popoverTip(GameHint())
+                                }
+                                Spacer()
                             }
                             Spacer()
                         }
-                        Spacer()
-                    }
                 }
+            }
             if gameModel.gData.showAlert{
                 CustomAlertView(model: $gameModel)
             }

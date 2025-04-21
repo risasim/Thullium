@@ -45,6 +45,14 @@
 "set.gameShowDetails"="Show details during game";
 "set.gameConfetti"="Winning confetti";
 "set.showNotifications"="Notifications";
+"set.scrollingTable"="Moving gestures on table";
+
+//Icons
+"AppIconDesc"="Default dark icon";
+"AltIcon1Desc"="Light icon";
+"AltIcon2Desc"="Original icon of this app";
+"set.icon"="Icon";
+"SecIconDesc"="Easter egg icon";
 
 //Notifications
 "not.generalAchievemetTitle"="You now have new achievement";

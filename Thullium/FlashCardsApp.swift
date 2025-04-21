@@ -41,7 +41,7 @@ struct FlashCardsApp: App {
             }
         }
         .windowStyle(.volumetric)
-        .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
+        .defaultSize(width: 0.3, height: 0.3, depth: 0.3, in: .meters)
         .windowResizability(.contentSize)
         #endif
     }
