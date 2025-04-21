@@ -25,7 +25,9 @@ struct FormulaView: View {
                     .minimumScaleFactor(0.01)
                 if let f = data.formulaDir[formula.equation]{
                     VStack{
+#if !os(visionOS)
                         MathView(equation: f, fontSize: 40)
+#endif
                     }
                         .fixedSize()
                         .padding()

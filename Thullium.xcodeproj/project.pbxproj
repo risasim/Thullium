@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E48E08F2B68E5EB00B9FEEA /* MoleculeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E48E08E2B68E5EB00B9FEEA /* MoleculeView.swift */; };
 		3E48E0912B69147300B9FEEA /* element_003_lithium.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3E48E0902B69147300B9FEEA /* element_003_lithium.scn */; };
+		4AB55BD42DB6D3C5003E4D8F /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 4AB55BD32DB6D3C5003E4D8F /* SwiftMath */; };
 		790070CF2AB37C6F00D1CD3A /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 790070CE2AB37C6F00D1CD3A /* PeriodicTableJSON.json */; };
 		790070D12AB37C8E00D1CD3A /* ElementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D02AB37C8E00D1CD3A /* ElementModel.swift */; };
 		790070D52AB399FA00D1CD3A /* ChemistryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790070D42AB399FA00D1CD3A /* ChemistryView.swift */; };
@@ -23,7 +24,6 @@
 		793464762AB573FA00407F15 /* InfoSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464752AB573FA00407F15 /* InfoSign.swift */; };
 		793464782AB57F7A00407F15 /* InfoBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793464772AB57F7A00407F15 /* InfoBasic.swift */; };
 		7938C57D2AB70018001189D2 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938C57C2AB70018001189D2 /* PeriodicTableView.swift */; };
-		793E1A522B6F9A790008667C /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 793E1A512B6F9A790008667C /* SwiftMath */; };
 		793E1A552B6F9AB10008667C /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A542B6F9AB10008667C /* MathView.swift */; };
 		793E1A572B6F9C8C0008667C /* ChemistryMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A562B6F9C8C0008667C /* ChemistryMenu.swift */; };
 		793E1A592B6F9DEF0008667C /* FormulasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793E1A582B6F9DEF0008667C /* FormulasView.swift */; };
@@ -173,7 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				793E1A522B6F9A790008667C /* SwiftMath in Frameworks */,
+				4AB55BD42DB6D3C5003E4D8F /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +540,7 @@
 			);
 			name = Thullium;
 			packageProductDependencies = (
-				793E1A512B6F9A790008667C /* SwiftMath */,
+				4AB55BD32DB6D3C5003E4D8F /* SwiftMath */,
 			);
 			productName = FlashCards;
 			productReference = 79F93DD42AB21F400075DC69 /* Thullium.app */;
@@ -576,7 +576,7 @@
 			);
 			mainGroup = 79F93DCB2AB21F3F0075DC69;
 			packageReferences = (
-				793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				4AB55BD22DB6D3C5003E4D8F /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			productRefGroup = 79F93DD52AB21F400075DC69 /* Products */;
 			projectDirPath = "";
@@ -979,20 +979,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+		4AB55BD22DB6D3C5003E4D8F /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				kind = revision;
+				revision = f73b8a1f734dcee75eb01765ce8cfb6fbe4bb0e6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		793E1A512B6F9A790008667C /* SwiftMath */ = {
+		4AB55BD32DB6D3C5003E4D8F /* SwiftMath */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 793E1A502B6F9A790008667C /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			package = 4AB55BD22DB6D3C5003E4D8F /* XCRemoteSwiftPackageReference "SwiftMath" */;
 			productName = SwiftMath;
 		};
 /* End XCSwiftPackageProductDependency section */
