@@ -26,15 +26,15 @@ struct PickElement: View {
                     .foregroundStyle(Color.primary)
                     .hoverEffect()
                     .lineLimit(1)
-                    .minimumScaleFactor(0.01)
                     .padding()
-                    .frame(maxWidth: .infinity,maxHeight: 200)
-                    .background {
-                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-                            .stroke(model.selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
-                          //  .aspectRatio(1.0,contentMode: .fill)
-                    }
+                 //   .minimumScaleFactor(0.01)
                 })
+                .background{
+                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                        .stroke(model.selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
+                      //  .aspectRatio(1.0,contentMode: .fill)
+                }
+                .frame(maxWidth: .infinity,maxHeight: 700)
             }
         }
         .padding(.top,15)
