@@ -7,11 +7,11 @@
 
 import SwiftUI
 
+///Text field for the ElectrongConfig game in the mode where the user is supposed to write the correct configuration 
 struct ElectronConfigGameTextField:View {
     @AppStorage("playNames") var playNames  = true
     
     @Binding var model:ElectronConfigGameModel
-    @Binding var status: Bool?
     @State var text = ""
     
     @FocusState.Binding var focusFieldText:Bool
@@ -21,18 +21,10 @@ struct ElectronConfigGameTextField:View {
             TextField(LocalizedStringKey("Text Field"), text: $text, prompt: Text(playNames ? "electronConfigGame.textFieldName": "electronConfigGame.textField"))
                 .focused($focusFieldText)
                 .onSubmit {
-                    focusFieldText=true
-                    status = model.checkCurrentGuess(text: text)
-                    if status!{
-                        text = ""
-                        #if os(iOS)
-                        feedbackGenerator.notificationOccurred(.success)
-                        #endif
-                    }else{
-#if os(iOS)
-                        feedbackGenerator.notificationOccurred(.error)
-#endif
-                    }
+                    self.focusFieldText=true
+                    self.model.selectElement(elementName: text)
+                    self.text=""
+                    
                 }
                 .padding()
                 .background{
@@ -40,8 +32,8 @@ struct ElectronConfigGameTextField:View {
                         .foregroundStyle(.ultraThinMaterial)
             }
             Button {
-                status = model.checkCurrentGuess(text: text)
-                if status!{
+                model.selectElement(elementName: text)
+                if model.status!{
                     text = ""
                 }
             } label: {

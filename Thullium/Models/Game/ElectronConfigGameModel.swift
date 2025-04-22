@@ -31,11 +31,37 @@ class ElectronConfigGameModel:GamingModel{
     var showAlert = false
     //Current elements that are displayed with two wrong ones and one correct
     var elemSet:[ConfigGameItem] = []
+    ///Text that is shown in the status bar
+    var text = ""
+    ///
+    var status:Bool? = nil
+    ///Selected item
+    var selected = ""
     
     init(){
         prepare()
         currentItem = gameArr[currentGuess]
         getRandomSelectors()
+    }
+    
+    ///Used in the UI of the button to select Element, does do the selected and the runs ``checkCurrentGuess(text:with:)`` on the element to determine if it was correct or not
+    ///-    Parameters:
+    ///     -   elementName:  name of the element
+    func selectElement(elementName:String){
+        selected = elementName
+        status = self.checkCurrentGuess(text: selected,with: true)
+        if status!{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.selected = ""
+            }
+#if os(iOS)
+            feedbackGenerator.notificationOccurred(.success)
+#endif
+        }else{
+#if os(iOS)
+            feedbackGenerator.notificationOccurred(.error)
+#endif
+        }
     }
     
     ///Checks whether inputed either element or the description is correct
@@ -62,10 +88,12 @@ class ElectronConfigGameModel:GamingModel{
     private func newGuess(with:Bool = false){
         if currentGuess<gameArr.count-1{
             if with{
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     self.currentGuess+=1
                     self.currentItem = self.gameArr[self.currentGuess]
                     self.getRandomSelectors()
+                    self.status = nil
+                    
                 }
             }else{
                 currentGuess+=1
@@ -86,6 +114,7 @@ class ElectronConfigGameModel:GamingModel{
     
     func showAlertToggle() {
         showAlert.toggle()
+        status = nil
     }
     
     ///Prepares the game by adding all  the elemtns based on the configuration.

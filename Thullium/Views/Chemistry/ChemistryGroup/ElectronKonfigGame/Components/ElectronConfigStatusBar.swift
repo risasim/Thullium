@@ -9,14 +9,15 @@ import SwiftUI
 
 ///Status bar that shows if the user shall pick one element or wheteher such a choice was successfull
 struct ElectronConfigStatusBar: View {
-    ///
-    @Binding var stat:Bool?
+    @Binding var model:ElectronConfigGameModel
     ///If we are playing on the names or on the configruation
     @AppStorage("playNames") var playNames  = true
     
     var body: some View {
-        if stat != nil{
-            if stat!{
+        //If the status is nil it means that the game should show default game text
+        if model.status != nil{
+            //If teh status is true it shows success
+            if model.status!{
                 HStack{
                     Spacer()
                     Image(systemName: "checkmark")
@@ -32,6 +33,7 @@ struct ElectronConfigStatusBar: View {
                     RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                         .foregroundStyle(.ultraThinMaterial)
                 }
+                //If the status is false it shows that the guess was unsuccessful
             }else{
                 HStack{
                     Spacer()
@@ -68,5 +70,5 @@ struct ElectronConfigStatusBar: View {
 }
 
 #Preview {
-    ElectronConfigStatusBar(stat: .constant(true))
+    ElectronConfigStatusBar(model: .constant(ElectronConfigGameModel()))
 }

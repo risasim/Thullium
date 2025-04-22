@@ -9,19 +9,17 @@ import SwiftUI
 
 struct ElectronConfigGameView: View {
     @AppStorage("showNobleGases") var showNobleGases = true
-    @AppStorage("playNames") var playNames  = true
+    @AppStorage("playNames") var gameWithPickingRightElementFromThree  = true
     
     @State var model = ElectronConfigGameModel()
-    @State var text = ""
-    @State var status:Bool? = nil
-    @State var selected = ""
+   
     
     @FocusState var focusFieldText:Bool
     
     var body: some View {
         ZStack {
             VStack{
-                if playNames{
+                if gameWithPickingRightElementFromThree{
                     Text(LocalizedStringKey(model.currentItem.configSemantic))
                         .font(.title)
                         .bold()
@@ -30,14 +28,14 @@ struct ElectronConfigGameView: View {
                     InfoSign(symbol: model.currentItem.symbol, name: model.currentItem.name)
                         .padding(.bottom)
                 }
-                ElectronConfigStatusBar(stat: $status)
-                if showNobleGases && playNames{
+                ElectronConfigStatusBar(model: $model)
+                if showNobleGases && gameWithPickingRightElementFromThree{
                     Spacer()
-                    PickElement(rand: $model.elemSet,selected: $selected, model: $model,status: $status)
+                    PickElement(rand: $model.elemSet,model: $model)
                         .padding()
                     Spacer(minLength: 400)
                 }else{
-                    ElectronConfigGameTextField(model: $model, status: $status, focusFieldText: $focusFieldText)
+                    ElectronConfigGameTextField(model: $model, focusFieldText: $focusFieldText)
                 }
                 Spacer()
             }
@@ -49,7 +47,6 @@ struct ElectronConfigGameView: View {
         })
             .onChange(of: model.showAlert) { oldValue, newValue in
                 focusFieldText = false
-                status = nil
             }
             if model.showAlert{
                 CustomAlertView(model: $model)
