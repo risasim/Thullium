@@ -23,18 +23,23 @@ struct PickElement: View {
                         Text(LocalizedStringKey(elem.name))
                             .font(.title2)
                     }
-                    .foregroundStyle(Color.primary)
+                    .padding()
                     .hoverEffect()
                     .lineLimit(1)
-                    .padding()
                  //   .minimumScaleFactor(0.01)
                 })
+                #if !os(visionOS)
                 .background{
                     RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                         .stroke(model.selected==elem.name ? Color.blue : Color.primary, lineWidth: 3)
                       //  .aspectRatio(1.0,contentMode: .fill)
                 }
+                #else
+                .padding()
+                #endif
                 .frame(maxWidth: .infinity,maxHeight: 700)
+                .buttonBorderShape(.roundedRectangle(radius: 25))
+
             }
         }
         .padding(.top,15)

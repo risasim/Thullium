@@ -112,6 +112,7 @@ class ElectronConfigGameModel:GamingModel{
         prepare()
     }
     
+    ///Toggles the alert and sets the ``status`` to nil to show the default message
     func showAlertToggle() {
         showAlert.toggle()
         status = nil
