@@ -111,6 +111,8 @@ class GameModel{
         }
     }
     
+    ///Manages the tap while in the game
+    /// -WARNING: This may be redundant look at the ActualPeriodicTable
     func manageTap(index i: Int,name:String)->Bool{
         if gData.currentGuess == name{
             addToGuessed(name:name)

@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-
+///Viewmodel that takes care of changing the app icon.
 final class ChangeAppIconViewModel: ObservableObject {
     
-    
+    ///Which one of the alternative app icon is selected
     @Published private(set) var selectedAppIcon: AppIcon
     
     init() {
@@ -21,7 +21,8 @@ final class ChangeAppIconViewModel: ObservableObject {
             selectedAppIcon = .primary
         }
     }
-    
+
+    ///Updates the app icon
     func updateAppIcon(to icon: AppIcon) {
         let previousAppIcon = selectedAppIcon
         selectedAppIcon = icon
