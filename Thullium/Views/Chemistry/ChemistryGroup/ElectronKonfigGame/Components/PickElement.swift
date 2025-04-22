@@ -53,3 +53,12 @@ struct PickElement: View {
 #Preview {
     PickElement(rand: .constant([ConfigGameItem(name: "Hydrogen", config: "1s1", configSemantic: "1s1", symbol: "H"),ConfigGameItem(name: "Silicon", config: "1s1", configSemantic: "1s1", symbol: "S"),ConfigGameItem(name: "Nitrogen", config: "1s1", configSemantic: "1s1", symbol: "N")]), selected: .constant("Hydrogen"),model: .constant(ElectronConfigGameModel()), status: .constant(false))
 }
+
+
+#Preview {
+    NavigationStack{
+        ElectronConfigGameView()
+            .environment(\.locale, .init(identifier: "cs"))
+    }
+}
+

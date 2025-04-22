@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+///Status bar that shows if the user shall pick one element or wheteher such a choice was successfull
 struct ElectronConfigStatusBar: View {
-    
+    ///
     @Binding var stat:Bool?
+    ///If we are playing on the names or on the configruation
     @AppStorage("playNames") var playNames  = true
     
     var body: some View {
